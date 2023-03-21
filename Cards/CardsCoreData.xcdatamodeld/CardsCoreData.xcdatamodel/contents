@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G320" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CardData" representedClassName="CardData" syncable="YES" codeGenerationType="class">
+        <attribute name="cardColor" optional="YES" attributeType="String"/>
+        <attribute name="cardType" optional="YES" attributeType="String"/>
+        <relationship name="views" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ViewData"/>
+    </entity>
+    <entity name="GameData" representedClassName="GameData" syncable="YES" codeGenerationType="class">
+        <attribute name="cardsCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countTouchesOnCard" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="numberOfCardFlips" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="CardData"/>
+    </entity>
+    <entity name="ViewData" representedClassName="ViewData" syncable="YES" codeGenerationType="class">
+        <attribute name="backSideType" optional="YES" attributeType="String"/>
+        <attribute name="isFlipped" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+</model>

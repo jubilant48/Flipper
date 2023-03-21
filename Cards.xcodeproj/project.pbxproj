@@ -1,0 +1,858 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA0AC6112997EF530005DD97 /* SelectCardBackViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */; };
+		FA0AC6152997F6AC0005DD97 /* SelectTableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */; };
+		FA0AC626299823770005DD97 /* SelectCardColorViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */; };
+		FA0AC62A29982A440005DD97 /* SelectCardTypeViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */; };
+		FA28B48E29B79C7800F4A9B1 /* BoardGameViewModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B48D29B79C7800F4A9B1 /* BoardGameViewModelVC.swift */; };
+		FA28B49029B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */; };
+		FA28B49329B7A7BB00F4A9B1 /* BoardGameButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B49229B7A7BB00F4A9B1 /* BoardGameButtonType.swift */; };
+		FA28B49529B7CF3600F4A9B1 /* BoardGameViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B49429B7CF3600F4A9B1 /* BoardGameViewModelError.swift */; };
+		FA297E8E2959E5DD00E86552 /* CardViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA297E8D2959E5DD00E86552 /* CardViewFactory.swift */; };
+		FA29CD9A291FFF3600E76DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29CD99291FFF3600E76DF5 /* AppDelegate.swift */; };
+		FA29CD9C291FFF3600E76DF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29CD9B291FFF3600E76DF5 /* SceneDelegate.swift */; };
+		FA29CDA1291FFF3600E76DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA29CD9F291FFF3600E76DF5 /* Main.storyboard */; };
+		FA29CDA3291FFF3A00E76DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */; };
+		FA29CDA6291FFF3A00E76DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA29CDA4291FFF3A00E76DF5 /* LaunchScreen.storyboard */; };
+		FA75D44D29AD177600537916 /* MenuViewModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D44C29AD177600537916 /* MenuViewModelVC.swift */; };
+		FA75D44F29AD271E00537916 /* MenuViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D44E29AD271E00537916 /* MenuViewViewModelType.swift */; };
+		FA75D45129AD27DA00537916 /* NameSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45029AD27DA00537916 /* NameSpaces.swift */; };
+		FA75D45329AD280900537916 /* MenuButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45229AD280900537916 /* MenuButtonType.swift */; };
+		FA75D45729AD2A9500537916 /* ContinueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45629AD2A9500537916 /* ContinueProtocol.swift */; };
+		FA75D45929AD2B0700537916 /* ContinueProtocol + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45829AD2B0700537916 /* ContinueProtocol + Extension.swift */; };
+		FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45A29AD2DAA00537916 /* ContinueError.swift */; };
+		FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */; };
+		FA7A0680297C38EC00823470 /* SettingsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */; };
+		FA7A0683297C40A000823470 /* SettingsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0682297C40A000823470 /* SettingsError.swift */; };
+		FA7A0685297C441F00823470 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0684297C441F00823470 /* UIViewController + Extension.swift */; };
+		FA7A0687297C4AFD00823470 /* LabelAndSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */; };
+		FA7A0689297C777100823470 /* SelectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0688297C777100823470 /* SelectTVC.swift */; };
+		FA84952C296C9B3800D201FA /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84952B296C9B3800D201FA /* MenuVC.swift */; };
+		FA849530296C9C0C00D201FA /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84952F296C9C0C00D201FA /* UIButton + Extension.swift */; };
+		FA849532296C9D9600D201FA /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA849531296C9D9600D201FA /* UIColor + Extension.swift */; };
+		FA849534296CA0B400D201FA /* UILabel + Extesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA849533296CA0B400D201FA /* UILabel + Extesion.swift */; };
+		FA849536296CA0F000D201FA /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA849535296CA0F000D201FA /* UIFont + Extension.swift */; };
+		FA849538296CA72800D201FA /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA849537296CA72800D201FA /* UIStackView + Extension.swift */; };
+		FA922C472988211700737D4D /* CardsCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA922C452988211700737D4D /* CardsCoreData.xcdatamodeld */; };
+		FA922C4929882A2D00737D4D /* StorageService .swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4829882A2D00737D4D /* StorageService .swift */; };
+		FA922C4B29882E8900737D4D /* StorageServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4A29882E8900737D4D /* StorageServiceError.swift */; };
+		FA922C4D2988337A00737D4D /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */; };
+		FAAB0289299FEED900C68B13 /* SettingsViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */; };
+		FAAB028C299FF77400C68B13 /* LabelAndStepperViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */; };
+		FAAB028E299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */; };
+		FAAB029129A0066500C68B13 /* SettingsTableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */; };
+		FAAB029329A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB029229A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift */; };
+		FAAB029529A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB029429A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift */; };
+		FAAB029729A00C3000C68B13 /* SettingsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB029629A00C3000C68B13 /* SettingsTVCell.swift */; };
+		FAAB029929A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB029829A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift */; };
+		FAAB029B29A00D1B00C68B13 /* SettingsTVViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB029A29A00D1B00C68B13 /* SettingsTVViewModelCell.swift */; };
+		FAB1BF7529C21F61001D5C2D /* ClimbBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF7429C21F61001D5C2D /* ClimbBehavior.swift */; };
+		FAB1BF7929C2278A001D5C2D /* FlipBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF7829C2278A001D5C2D /* FlipBehavior.swift */; };
+		FAB1BF7D29C22C9D001D5C2D /* UIResponder + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF7C29C22C9D001D5C2D /* UIResponder + Extension.swift */; };
+		FAB1BF7F29C232AF001D5C2D /* TouchBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF7E29C232AF001D5C2D /* TouchBehavior.swift */; };
+		FAB1BF8329C23815001D5C2D /* BehaviorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF8229C23815001D5C2D /* BehaviorError.swift */; };
+		FAB1BF8629C24730001D5C2D /* CardViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF8529C24730001D5C2D /* CardViewViewModelType.swift */; };
+		FAB1BF8929C24898001D5C2D /* CardViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF8829C24898001D5C2D /* CardViewModelView.swift */; };
+		FAB2F2AD29523600002CBF79 /* ForwardSideShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2AC29523600002CBF79 /* ForwardSideShapes.swift */; };
+		FAB2F2AF29523616002CBF79 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2AE29523616002CBF79 /* CardView.swift */; };
+		FAB2F2B329523A64002CBF79 /* BoardGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */; };
+		FAB2F2B629523F75002CBF79 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2B529523F75002CBF79 /* Card.swift */; };
+		FAB2F2B829524232002CBF79 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2B729524232002CBF79 /* Game.swift */; };
+		FACF7AB2297090070045DB23 /* AnimationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF7AB1297090070045DB23 /* AnimationService.swift */; };
+		FAD1F79C2992A0780048E17F /* ViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F79B2992A0780048E17F /* ViewInfo.swift */; };
+		FAD1F79E2992B5DF0048E17F /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F79D2992B5DF0048E17F /* CardType.swift */; };
+		FAD1F7A02992B6180048E17F /* CardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F79F2992B6180048E17F /* CardColor.swift */; };
+		FAD1F7A22992B64D0048E17F /* CardBackSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F7A12992B64D0048E17F /* CardBackSide.swift */; };
+		FADDE91C296896FE00A6FA2F /* BackSideShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDE91B296896FE00A6FA2F /* BackSideShapes.swift */; };
+		FADDE91F2968B62700A6FA2F /* ShapeLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDE91E2968B62700A6FA2F /* ShapeLayerProtocol.swift */; };
+		FADDE9212968B69200A6FA2F /* FlippableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDE9202968B69200A6FA2F /* FlippableView.swift */; };
+		FAEBB0F429770342000650A8 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0F329770342000650A8 /* SettingsTVC.swift */; };
+		FAEBB0F7297703EF000650A8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0F6297703EF000650A8 /* Settings.swift */; };
+		FAEBB0F9297704BE000650A8 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0F8297704BE000650A8 /* SettingsProtocol.swift */; };
+		FAEBB0FB29770642000650A8 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0FA29770642000650A8 /* Stepper.swift */; };
+		FAEBB0FF297734D3000650A8 /* LabelAndStepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0FE297734D3000650A8 /* LabelAndStepperCell.swift */; };
+		FAEBC17829CA2B62000652FF /* ClimbInBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */; };
+		FAEBC17A29CA2B6C000652FF /* CardTouchesBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */; };
+		FAEBC17C29CA2B75000652FF /* CardFlipBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardBackViewModelTVC.swift; sourceTree = "<group>"; };
+		FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewViewModelType.swift; sourceTree = "<group>"; };
+		FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardColorViewModelTVC.swift; sourceTree = "<group>"; };
+		FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardTypeViewModelTVC.swift; sourceTree = "<group>"; };
+		FA28B48D29B79C7800F4A9B1 /* BoardGameViewModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModelVC.swift; sourceTree = "<group>"; };
+		FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewViewModelType.swift; sourceTree = "<group>"; };
+		FA28B49229B7A7BB00F4A9B1 /* BoardGameButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameButtonType.swift; sourceTree = "<group>"; };
+		FA28B49429B7CF3600F4A9B1 /* BoardGameViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModelError.swift; sourceTree = "<group>"; };
+		FA297E8D2959E5DD00E86552 /* CardViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewFactory.swift; sourceTree = "<group>"; };
+		FA29CD96291FFF3600E76DF5 /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA29CD99291FFF3600E76DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA29CD9B291FFF3600E76DF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA29CDA0291FFF3600E76DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA29CDA5291FFF3A00E76DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA29CDA7291FFF3A00E76DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA75D44C29AD177600537916 /* MenuViewModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelVC.swift; sourceTree = "<group>"; };
+		FA75D44E29AD271E00537916 /* MenuViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewViewModelType.swift; sourceTree = "<group>"; };
+		FA75D45029AD27DA00537916 /* NameSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpaces.swift; sourceTree = "<group>"; };
+		FA75D45229AD280900537916 /* MenuButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonType.swift; sourceTree = "<group>"; };
+		FA75D45629AD2A9500537916 /* ContinueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueProtocol.swift; sourceTree = "<group>"; };
+		FA75D45829AD2B0700537916 /* ContinueProtocol + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContinueProtocol + Extension.swift"; sourceTree = "<group>"; };
+		FA75D45A29AD2DAA00537916 /* ContinueError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueError.swift; sourceTree = "<group>"; };
+		FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTVC.swift; sourceTree = "<group>"; };
+		FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorageProtocol.swift; sourceTree = "<group>"; };
+		FA7A0682297C40A000823470 /* SettingsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsError.swift; sourceTree = "<group>"; };
+		FA7A0684297C441F00823470 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndSwitchCell.swift; sourceTree = "<group>"; };
+		FA7A0688297C777100823470 /* SelectTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTVC.swift; sourceTree = "<group>"; };
+		FA84952B296C9B3800D201FA /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		FA84952F296C9C0C00D201FA /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		FA849531296C9D9600D201FA /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		FA849533296CA0B400D201FA /* UILabel + Extesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extesion.swift"; sourceTree = "<group>"; };
+		FA849535296CA0F000D201FA /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		FA849537296CA72800D201FA /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		FA922C462988211700737D4D /* CardsCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardsCoreData.xcdatamodel; sourceTree = "<group>"; };
+		FA922C4829882A2D00737D4D /* StorageService .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageService .swift"; sourceTree = "<group>"; };
+		FA922C4A29882E8900737D4D /* StorageServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceError.swift; sourceTree = "<group>"; };
+		FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelError.swift; sourceTree = "<group>"; };
+		FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndStepperViewModelCell.swift; sourceTree = "<group>"; };
+		FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndSwitchViewModelCell.swift; sourceTree = "<group>"; };
+		FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewViewModelType.swift; sourceTree = "<group>"; };
+		FAAB029229A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndSwitchCellViewModelType.swift; sourceTree = "<group>"; };
+		FAAB029429A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndStepperCellViewModelType.swift; sourceTree = "<group>"; };
+		FAAB029629A00C3000C68B13 /* SettingsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVCell.swift; sourceTree = "<group>"; };
+		FAAB029829A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		FAAB029A29A00D1B00C68B13 /* SettingsTVViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVViewModelCell.swift; sourceTree = "<group>"; };
+		FAB1BF7429C21F61001D5C2D /* ClimbBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimbBehavior.swift; sourceTree = "<group>"; };
+		FAB1BF7829C2278A001D5C2D /* FlipBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipBehavior.swift; sourceTree = "<group>"; };
+		FAB1BF7C29C22C9D001D5C2D /* UIResponder + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder + Extension.swift"; sourceTree = "<group>"; };
+		FAB1BF7E29C232AF001D5C2D /* TouchBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBehavior.swift; sourceTree = "<group>"; };
+		FAB1BF8229C23815001D5C2D /* BehaviorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorError.swift; sourceTree = "<group>"; };
+		FAB1BF8529C24730001D5C2D /* CardViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewViewModelType.swift; sourceTree = "<group>"; };
+		FAB1BF8829C24898001D5C2D /* CardViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelView.swift; sourceTree = "<group>"; };
+		FAB2F2AC29523600002CBF79 /* ForwardSideShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardSideShapes.swift; sourceTree = "<group>"; };
+		FAB2F2AE29523616002CBF79 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameVC.swift; sourceTree = "<group>"; };
+		FAB2F2B529523F75002CBF79 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FAB2F2B729524232002CBF79 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FACF7AB1297090070045DB23 /* AnimationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationService.swift; sourceTree = "<group>"; };
+		FAD1F79B2992A0780048E17F /* ViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInfo.swift; sourceTree = "<group>"; };
+		FAD1F79D2992B5DF0048E17F /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		FAD1F79F2992B6180048E17F /* CardColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardColor.swift; sourceTree = "<group>"; };
+		FAD1F7A12992B64D0048E17F /* CardBackSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackSide.swift; sourceTree = "<group>"; };
+		FADDE91B296896FE00A6FA2F /* BackSideShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackSideShapes.swift; sourceTree = "<group>"; };
+		FADDE91E2968B62700A6FA2F /* ShapeLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLayerProtocol.swift; sourceTree = "<group>"; };
+		FADDE9202968B69200A6FA2F /* FlippableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableView.swift; sourceTree = "<group>"; };
+		FAEBB0F329770342000650A8 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		FAEBB0F6297703EF000650A8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		FAEBB0F8297704BE000650A8 /* SettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
+		FAEBB0FA29770642000650A8 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		FAEBB0FE297734D3000650A8 /* LabelAndStepperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndStepperCell.swift; sourceTree = "<group>"; };
+		FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbInBehavior.swift; sourceTree = "<group>"; };
+		FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTouchesBehavior.swift; sourceTree = "<group>"; };
+		FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFlipBehavior.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA29CD93291FFF3600E76DF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA0AC60E2997E9EA0005DD97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA0AC6182997FBEB0005DD97 /* Controller */,
+				FAAB028A299FF75500C68B13 /* Cell */,
+				FAB1BF8729C2485C001D5C2D /* View */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA0AC60F2997EA030005DD97 /* MVVM protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA0AC61C2997FCA10005DD97 /* Controllers */,
+				FAAB028F29A0063A00C68B13 /* Cells */,
+				FAB1BF8429C246FD001D5C2D /* Custom view */,
+			);
+			path = "MVVM protocols";
+			sourceTree = "<group>";
+		};
+		FA0AC6182997FBEB0005DD97 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA75D44C29AD177600537916 /* MenuViewModelVC.swift */,
+				FA28B48D29B79C7800F4A9B1 /* BoardGameViewModelVC.swift */,
+				FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */,
+				FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */,
+				FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */,
+				FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA0AC61C2997FCA10005DD97 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA75D44E29AD271E00537916 /* MenuViewViewModelType.swift */,
+				FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */,
+				FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */,
+				FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA28B49129B7A77F00F4A9B1 /* for Board Game */ = {
+			isa = PBXGroup;
+			children = (
+				FA28B49229B7A7BB00F4A9B1 /* BoardGameButtonType.swift */,
+			);
+			path = "for Board Game";
+			sourceTree = "<group>";
+		};
+		FA29CD8D291FFF3600E76DF5 = {
+			isa = PBXGroup;
+			children = (
+				FA29CD98291FFF3600E76DF5 /* Cards */,
+				FA29CD97291FFF3600E76DF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA29CD97291FFF3600E76DF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA29CD96291FFF3600E76DF5 /* Cards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA29CD98291FFF3600E76DF5 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				FA29CD99291FFF3600E76DF5 /* AppDelegate.swift */,
+				FA29CD9B291FFF3600E76DF5 /* SceneDelegate.swift */,
+				FAB2F2B429523AA2002CBF79 /* Model */,
+				FAB2F2AB295235D6002CBF79 /* View */,
+				FA0AC60E2997E9EA0005DD97 /* ViewModel */,
+				FADDE91D2968B61100A6FA2F /* Protocols */,
+				FA84952D296C9BE900D201FA /* Extensions */,
+				FA7A0681297C407F00823470 /* Helpers */,
+				FA922C452988211700737D4D /* CardsCoreData.xcdatamodeld */,
+				FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */,
+				FA29CDA7291FFF3A00E76DF5 /* Info.plist */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		FA75D45429AD299800537916 /* for Error */ = {
+			isa = PBXGroup;
+			children = (
+				FA75D45A29AD2DAA00537916 /* ContinueError.swift */,
+				FA7A0682297C40A000823470 /* SettingsError.swift */,
+				FA28B49429B7CF3600F4A9B1 /* BoardGameViewModelError.swift */,
+				FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */,
+				FA922C4A29882E8900737D4D /* StorageServiceError.swift */,
+				FAB1BF8229C23815001D5C2D /* BehaviorError.swift */,
+			);
+			path = "for Error";
+			sourceTree = "<group>";
+		};
+		FA75D45529AD29C800537916 /* for Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FA75D45229AD280900537916 /* MenuButtonType.swift */,
+			);
+			path = "for Menu";
+			sourceTree = "<group>";
+		};
+		FA7A0676297C2AA800823470 /* View protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FADDE91E2968B62700A6FA2F /* ShapeLayerProtocol.swift */,
+				FADDE9202968B69200A6FA2F /* FlippableView.swift */,
+			);
+			path = "View protocols";
+			sourceTree = "<group>";
+		};
+		FA7A0678297C2B3400823470 /* Settings model protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBB0F8297704BE000650A8 /* SettingsProtocol.swift */,
+				FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */,
+			);
+			path = "Settings model protocols";
+			sourceTree = "<group>";
+		};
+		FA7A0681297C407F00823470 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA75D45029AD27DA00537916 /* NameSpaces.swift */,
+				FA75D45529AD29C800537916 /* for Menu */,
+				FA28B49129B7A77F00F4A9B1 /* for Board Game */,
+				FA75D45429AD299800537916 /* for Error */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA84952D296C9BE900D201FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA75D45829AD2B0700537916 /* ContinueProtocol + Extension.swift */,
+				FA84952E296C9BF800D201FA /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA84952E296C9BF800D201FA /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FA84952F296C9C0C00D201FA /* UIButton + Extension.swift */,
+				FA849531296C9D9600D201FA /* UIColor + Extension.swift */,
+				FA849533296CA0B400D201FA /* UILabel + Extesion.swift */,
+				FA849535296CA0F000D201FA /* UIFont + Extension.swift */,
+				FA849537296CA72800D201FA /* UIStackView + Extension.swift */,
+				FA7A0684297C441F00823470 /* UIViewController + Extension.swift */,
+				FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */,
+				FAB1BF7C29C22C9D001D5C2D /* UIResponder + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		FAAB028A299FF75500C68B13 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */,
+				FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */,
+				FAAB029A29A00D1B00C68B13 /* SettingsTVViewModelCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FAAB028F29A0063A00C68B13 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAAB029229A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift */,
+				FAAB029429A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift */,
+				FAAB029829A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAB1BF8429C246FD001D5C2D /* Custom view */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1BF8529C24730001D5C2D /* CardViewViewModelType.swift */,
+			);
+			path = "Custom view";
+			sourceTree = "<group>";
+		};
+		FAB1BF8729C2485C001D5C2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1BF8829C24898001D5C2D /* CardViewModelView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB2F2AB295235D6002CBF79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F2B1295238A6002CBF79 /* Controllers */,
+				FAEBB0FC29773486000650A8 /* Cells */,
+				FAB2F2AE29523616002CBF79 /* CardView.swift */,
+				FAEBB0FA29770642000650A8 /* Stepper.swift */,
+				FADDE91B296896FE00A6FA2F /* BackSideShapes.swift */,
+				FAB2F2AC29523600002CBF79 /* ForwardSideShapes.swift */,
+				FAB2F2B029523870002CBF79 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAB2F2B029523870002CBF79 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA29CD9F291FFF3600E76DF5 /* Main.storyboard */,
+				FA29CDA4291FFF3A00E76DF5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FAB2F2B1295238A6002CBF79 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA84952B296C9B3800D201FA /* MenuVC.swift */,
+				FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */,
+				FAEBB0F329770342000650A8 /* SettingsTVC.swift */,
+				FA7A0688297C777100823470 /* SelectTVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAB2F2B429523AA2002CBF79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBC17D29CA2B85000652FF /* Behavior */,
+				FAEBB0F5297703B0000650A8 /* Service */,
+				FAD1F79D2992B5DF0048E17F /* CardType.swift */,
+				FAD1F79F2992B6180048E17F /* CardColor.swift */,
+				FAD1F7A12992B64D0048E17F /* CardBackSide.swift */,
+				FAB2F2B529523F75002CBF79 /* Card.swift */,
+				FAD1F79B2992A0780048E17F /* ViewInfo.swift */,
+				FAB2F2B729524232002CBF79 /* Game.swift */,
+				FAEBB0F6297703EF000650A8 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FADDE91D2968B61100A6FA2F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA75D45629AD2A9500537916 /* ContinueProtocol.swift */,
+				FA0AC60F2997EA030005DD97 /* MVVM protocols */,
+				FA7A0676297C2AA800823470 /* View protocols */,
+				FAEBC17F29CA2BBB000652FF /* Behavior protocol */,
+				FA7A0678297C2B3400823470 /* Settings model protocols */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FAEBB0F5297703B0000650A8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FACF7AB1297090070045DB23 /* AnimationService.swift */,
+				FA297E8D2959E5DD00E86552 /* CardViewFactory.swift */,
+				FA922C4829882A2D00737D4D /* StorageService .swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FAEBB0FC29773486000650A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBB0FE297734D3000650A8 /* LabelAndStepperCell.swift */,
+				FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */,
+				FAAB029629A00C3000C68B13 /* SettingsTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAEBC17D29CA2B85000652FF /* Behavior */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBC17E29CA2B8C000652FF /* for CardView */,
+			);
+			path = Behavior;
+			sourceTree = "<group>";
+		};
+		FAEBC17E29CA2B8C000652FF /* for CardView */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */,
+				FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */,
+				FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */,
+			);
+			path = "for CardView";
+			sourceTree = "<group>";
+		};
+		FAEBC17F29CA2BBB000652FF /* Behavior protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FAB1BF7829C2278A001D5C2D /* FlipBehavior.swift */,
+				FAB1BF7E29C232AF001D5C2D /* TouchBehavior.swift */,
+				FAB1BF7429C21F61001D5C2D /* ClimbBehavior.swift */,
+			);
+			path = "Behavior protocol";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA29CD95291FFF3600E76DF5 /* Cards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA29CDAA291FFF3A00E76DF5 /* Build configuration list for PBXNativeTarget "Cards" */;
+			buildPhases = (
+				FA29CD92291FFF3600E76DF5 /* Sources */,
+				FA29CD93291FFF3600E76DF5 /* Frameworks */,
+				FA29CD94291FFF3600E76DF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cards;
+			productName = Cards;
+			productReference = FA29CD96291FFF3600E76DF5 /* Cards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA29CD8E291FFF3600E76DF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					FA29CD95291FFF3600E76DF5 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = FA29CD91291FFF3600E76DF5 /* Build configuration list for PBXProject "Cards" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA29CD8D291FFF3600E76DF5;
+			productRefGroup = FA29CD97291FFF3600E76DF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA29CD95291FFF3600E76DF5 /* Cards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA29CD94291FFF3600E76DF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA29CDA6291FFF3A00E76DF5 /* LaunchScreen.storyboard in Resources */,
+				FA29CDA3291FFF3A00E76DF5 /* Assets.xcassets in Resources */,
+				FA29CDA1291FFF3600E76DF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA29CD92291FFF3600E76DF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB2F2B329523A64002CBF79 /* BoardGameVC.swift in Sources */,
+				FA849536296CA0F000D201FA /* UIFont + Extension.swift in Sources */,
+				FAB2F2B629523F75002CBF79 /* Card.swift in Sources */,
+				FAB2F2B829524232002CBF79 /* Game.swift in Sources */,
+				FAB2F2AF29523616002CBF79 /* CardView.swift in Sources */,
+				FAAB029B29A00D1B00C68B13 /* SettingsTVViewModelCell.swift in Sources */,
+				FAD1F7A02992B6180048E17F /* CardColor.swift in Sources */,
+				FAB1BF8629C24730001D5C2D /* CardViewViewModelType.swift in Sources */,
+				FAB1BF8329C23815001D5C2D /* BehaviorError.swift in Sources */,
+				FA75D45729AD2A9500537916 /* ContinueProtocol.swift in Sources */,
+				FAD1F79C2992A0780048E17F /* ViewInfo.swift in Sources */,
+				FA29CD9A291FFF3600E76DF5 /* AppDelegate.swift in Sources */,
+				FAEBB0FB29770642000650A8 /* Stepper.swift in Sources */,
+				FAAB029729A00C3000C68B13 /* SettingsTVCell.swift in Sources */,
+				FAAB028C299FF77400C68B13 /* LabelAndStepperViewModelCell.swift in Sources */,
+				FA922C472988211700737D4D /* CardsCoreData.xcdatamodeld in Sources */,
+				FAEBB0F7297703EF000650A8 /* Settings.swift in Sources */,
+				FA75D45329AD280900537916 /* MenuButtonType.swift in Sources */,
+				FAD1F79E2992B5DF0048E17F /* CardType.swift in Sources */,
+				FA297E8E2959E5DD00E86552 /* CardViewFactory.swift in Sources */,
+				FAAB029929A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift in Sources */,
+				FA28B49329B7A7BB00F4A9B1 /* BoardGameButtonType.swift in Sources */,
+				FAB1BF8929C24898001D5C2D /* CardViewModelView.swift in Sources */,
+				FA84952C296C9B3800D201FA /* MenuVC.swift in Sources */,
+				FA75D44F29AD271E00537916 /* MenuViewViewModelType.swift in Sources */,
+				FA28B48E29B79C7800F4A9B1 /* BoardGameViewModelVC.swift in Sources */,
+				FA75D44D29AD177600537916 /* MenuViewModelVC.swift in Sources */,
+				FADDE9212968B69200A6FA2F /* FlippableView.swift in Sources */,
+				FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */,
+				FAEBB0F9297704BE000650A8 /* SettingsProtocol.swift in Sources */,
+				FA922C4929882A2D00737D4D /* StorageService .swift in Sources */,
+				FA849532296C9D9600D201FA /* UIColor + Extension.swift in Sources */,
+				FAD1F7A22992B64D0048E17F /* CardBackSide.swift in Sources */,
+				FA7A0685297C441F00823470 /* UIViewController + Extension.swift in Sources */,
+				FA7A0680297C38EC00823470 /* SettingsStorageProtocol.swift in Sources */,
+				FAB1BF7F29C232AF001D5C2D /* TouchBehavior.swift in Sources */,
+				FA7A0687297C4AFD00823470 /* LabelAndSwitchCell.swift in Sources */,
+				FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */,
+				FA849530296C9C0C00D201FA /* UIButton + Extension.swift in Sources */,
+				FA75D45929AD2B0700537916 /* ContinueProtocol + Extension.swift in Sources */,
+				FA922C4D2988337A00737D4D /* UIApplication + Extension.swift in Sources */,
+				FAEBC17C29CA2B75000652FF /* CardFlipBehavior.swift in Sources */,
+				FA7A0689297C777100823470 /* SelectTVC.swift in Sources */,
+				FA849534296CA0B400D201FA /* UILabel + Extesion.swift in Sources */,
+				FA7A0683297C40A000823470 /* SettingsError.swift in Sources */,
+				FAEBB0F429770342000650A8 /* SettingsTVC.swift in Sources */,
+				FA0AC6112997EF530005DD97 /* SelectCardBackViewModelTVC.swift in Sources */,
+				FAAB029129A0066500C68B13 /* SettingsTableViewViewModelType.swift in Sources */,
+				FA922C4B29882E8900737D4D /* StorageServiceError.swift in Sources */,
+				FAEBC17A29CA2B6C000652FF /* CardTouchesBehavior.swift in Sources */,
+				FAAB029529A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift in Sources */,
+				FADDE91C296896FE00A6FA2F /* BackSideShapes.swift in Sources */,
+				FA28B49529B7CF3600F4A9B1 /* BoardGameViewModelError.swift in Sources */,
+				FACF7AB2297090070045DB23 /* AnimationService.swift in Sources */,
+				FA29CD9C291FFF3600E76DF5 /* SceneDelegate.swift in Sources */,
+				FAAB028E299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift in Sources */,
+				FA849538296CA72800D201FA /* UIStackView + Extension.swift in Sources */,
+				FAEBB0FF297734D3000650A8 /* LabelAndStepperCell.swift in Sources */,
+				FA0AC62A29982A440005DD97 /* SelectCardTypeViewModelTVC.swift in Sources */,
+				FAB1BF7529C21F61001D5C2D /* ClimbBehavior.swift in Sources */,
+				FAAB029329A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift in Sources */,
+				FA0AC6152997F6AC0005DD97 /* SelectTableViewViewModelType.swift in Sources */,
+				FA28B49029B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift in Sources */,
+				FA75D45129AD27DA00537916 /* NameSpaces.swift in Sources */,
+				FAB2F2AD29523600002CBF79 /* ForwardSideShapes.swift in Sources */,
+				FAAB0289299FEED900C68B13 /* SettingsViewModelError.swift in Sources */,
+				FADDE91F2968B62700A6FA2F /* ShapeLayerProtocol.swift in Sources */,
+				FAB1BF7929C2278A001D5C2D /* FlipBehavior.swift in Sources */,
+				FAEBC17829CA2B62000652FF /* ClimbInBehavior.swift in Sources */,
+				FA0AC626299823770005DD97 /* SelectCardColorViewModelTVC.swift in Sources */,
+				FAB1BF7D29C22C9D001D5C2D /* UIResponder + Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA29CD9F291FFF3600E76DF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA29CDA0291FFF3600E76DF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA29CDA4291FFF3A00E76DF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA29CDA5291FFF3A00E76DF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA29CDA8291FFF3A00E76DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA29CDA9291FFF3A00E76DF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA29CDAB291FFF3A00E76DF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RD328L84B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cards/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA29CDAC291FFF3A00E76DF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RD328L84B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cards/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA29CD91291FFF3600E76DF5 /* Build configuration list for PBXProject "Cards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA29CDA8291FFF3A00E76DF5 /* Debug */,
+				FA29CDA9291FFF3A00E76DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA29CDAA291FFF3A00E76DF5 /* Build configuration list for PBXNativeTarget "Cards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA29CDAB291FFF3A00E76DF5 /* Debug */,
+				FA29CDAC291FFF3A00E76DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA922C452988211700737D4D /* CardsCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA922C462988211700737D4D /* CardsCoreData.xcdatamodel */,
+			);
+			currentVersion = FA922C462988211700737D4D /* CardsCoreData.xcdatamodel */;
+			path = CardsCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FA29CD8E291FFF3600E76DF5 /* Project object */;
+}
