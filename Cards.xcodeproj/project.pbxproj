@@ -44,6 +44,12 @@
 		FA922C4929882A2D00737D4D /* StorageService .swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4829882A2D00737D4D /* StorageService .swift */; };
 		FA922C4B29882E8900737D4D /* StorageServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4A29882E8900737D4D /* StorageServiceError.swift */; };
 		FA922C4D2988337A00737D4D /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */; };
+		FA9A7F9629D1F5BB00B60FC9 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */; };
+		FA9A7F9829D1F6D000B60FC9 /* SondError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A7F9729D1F6D000B60FC9 /* SondError.swift */; };
+		FA9A7F9A29D1FB4800B60FC9 /* SoundNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A7F9929D1FB4800B60FC9 /* SoundNames.swift */; };
+		FA9A7FAF29D2151400B60FC9 /* flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA9A7FAE29D2151400B60FC9 /* flip.mp3 */; };
+		FA9A7FB529D224FE00B60FC9 /* remove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA9A7FB429D224FE00B60FC9 /* remove.mp3 */; };
+		FA9A7FB729D2307C00B60FC9 /* push_to_limits.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA9A7FB629D2307C00B60FC9 /* push_to_limits.mp3 */; };
 		FAAB0289299FEED900C68B13 /* SettingsViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */; };
 		FAAB028C299FF77400C68B13 /* LabelAndStepperViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */; };
 		FAAB028E299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */; };
@@ -123,6 +129,12 @@
 		FA922C4829882A2D00737D4D /* StorageService .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageService .swift"; sourceTree = "<group>"; };
 		FA922C4A29882E8900737D4D /* StorageServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceError.swift; sourceTree = "<group>"; };
 		FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		FA9A7F9729D1F6D000B60FC9 /* SondError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SondError.swift; sourceTree = "<group>"; };
+		FA9A7F9929D1FB4800B60FC9 /* SoundNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNames.swift; sourceTree = "<group>"; };
+		FA9A7FAE29D2151400B60FC9 /* flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flip.mp3; sourceTree = "<group>"; };
+		FA9A7FB429D224FE00B60FC9 /* remove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = remove.mp3; sourceTree = "<group>"; };
+		FA9A7FB629D2307C00B60FC9 /* push_to_limits.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = push_to_limits.mp3; sourceTree = "<group>"; };
 		FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelError.swift; sourceTree = "<group>"; };
 		FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndStepperViewModelCell.swift; sourceTree = "<group>"; };
 		FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndSwitchViewModelCell.swift; sourceTree = "<group>"; };
@@ -252,8 +264,8 @@
 				FADDE91D2968B61100A6FA2F /* Protocols */,
 				FA84952D296C9BE900D201FA /* Extensions */,
 				FA7A0681297C407F00823470 /* Helpers */,
+				FA9A7F9B29D207E800B60FC9 /* Resources */,
 				FA922C452988211700737D4D /* CardsCoreData.xcdatamodeld */,
-				FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */,
 				FA29CDA7291FFF3A00E76DF5 /* Info.plist */,
 			);
 			path = Cards;
@@ -268,6 +280,7 @@
 				FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */,
 				FA922C4A29882E8900737D4D /* StorageServiceError.swift */,
 				FAB1BF8229C23815001D5C2D /* BehaviorError.swift */,
+				FA9A7F9729D1F6D000B60FC9 /* SondError.swift */,
 			);
 			path = "for Error";
 			sourceTree = "<group>";
@@ -302,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				FA75D45029AD27DA00537916 /* NameSpaces.swift */,
+				FA9A7F9929D1FB4800B60FC9 /* SoundNames.swift */,
 				FA75D45529AD29C800537916 /* for Menu */,
 				FA28B49129B7A77F00F4A9B1 /* for Board Game */,
 				FA75D45429AD299800537916 /* for Error */,
@@ -331,6 +345,25 @@
 				FAB1BF7C29C22C9D001D5C2D /* UIResponder + Extension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		FA9A7F9B29D207E800B60FC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */,
+				FA9A7F9C29D207F400B60FC9 /* Sound */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA9A7F9C29D207F400B60FC9 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				FA9A7FAE29D2151400B60FC9 /* flip.mp3 */,
+				FA9A7FB429D224FE00B60FC9 /* remove.mp3 */,
+				FA9A7FB629D2307C00B60FC9 /* push_to_limits.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		FAAB028A299FF75500C68B13 /* Cell */ = {
@@ -437,6 +470,7 @@
 				FACF7AB1297090070045DB23 /* AnimationService.swift */,
 				FA297E8D2959E5DD00E86552 /* CardViewFactory.swift */,
 				FA922C4829882A2D00737D4D /* StorageService .swift */,
+				FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -538,8 +572,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA29CDA6291FFF3A00E76DF5 /* LaunchScreen.storyboard in Resources */,
+				FA9A7FAF29D2151400B60FC9 /* flip.mp3 in Resources */,
 				FA29CDA3291FFF3A00E76DF5 /* Assets.xcassets in Resources */,
 				FA29CDA1291FFF3600E76DF5 /* Main.storyboard in Resources */,
+				FA9A7FB529D224FE00B60FC9 /* remove.mp3 in Resources */,
+				FA9A7FB729D2307C00B60FC9 /* push_to_limits.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +594,7 @@
 				FAB2F2AF29523616002CBF79 /* CardView.swift in Sources */,
 				FAAB029B29A00D1B00C68B13 /* SettingsTVViewModelCell.swift in Sources */,
 				FAD1F7A02992B6180048E17F /* CardColor.swift in Sources */,
+				FA9A7F9629D1F5BB00B60FC9 /* SoundService.swift in Sources */,
 				FAB1BF8629C24730001D5C2D /* CardViewViewModelType.swift in Sources */,
 				FAB1BF8329C23815001D5C2D /* BehaviorError.swift in Sources */,
 				FA75D45729AD2A9500537916 /* ContinueProtocol.swift in Sources */,
@@ -565,6 +603,7 @@
 				FAEBB0FB29770642000650A8 /* Stepper.swift in Sources */,
 				FAAB029729A00C3000C68B13 /* SettingsTVCell.swift in Sources */,
 				FAAB028C299FF77400C68B13 /* LabelAndStepperViewModelCell.swift in Sources */,
+				FA9A7F9A29D1FB4800B60FC9 /* SoundNames.swift in Sources */,
 				FA922C472988211700737D4D /* CardsCoreData.xcdatamodeld in Sources */,
 				FAEBB0F7297703EF000650A8 /* Settings.swift in Sources */,
 				FA75D45329AD280900537916 /* MenuButtonType.swift in Sources */,
@@ -608,6 +647,7 @@
 				FAAB028E299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift in Sources */,
 				FA849538296CA72800D201FA /* UIStackView + Extension.swift in Sources */,
 				FAEBB0FF297734D3000650A8 /* LabelAndStepperCell.swift in Sources */,
+				FA9A7F9829D1F6D000B60FC9 /* SondError.swift in Sources */,
 				FA0AC62A29982A440005DD97 /* SelectCardTypeViewModelTVC.swift in Sources */,
 				FAB1BF7529C21F61001D5C2D /* ClimbBehavior.swift in Sources */,
 				FAAB029329A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift in Sources */,

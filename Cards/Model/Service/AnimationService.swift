@@ -14,8 +14,8 @@ final class AnimationService {
     
     static func removeCards(arrayOfCards cards: [UIView], compliteion: (() -> Void)?) {
         UIView.animate(withDuration: 0.2, delay: 0.2) {
-            cards.first!.layer.opacity = 0
-            cards.last!.layer.opacity = 0
+            cards.first!.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            cards.last!.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         } completion: { _ in
             cards.first!.removeFromSuperview()
             cards.last!.removeFromSuperview()

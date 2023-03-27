@@ -43,6 +43,10 @@ final class BoardGameViewModelVC: BoardGameViewViewModelType {
         
         return CGPoint(x: randomXCoordinate, y: randomYCoordinate)
     }
+    
+    func play(sound: SoundNames) throws {
+        try SoundService.play(sound: sound)
+    }
 }
 
 // MARK: - Beginning game
@@ -60,11 +64,12 @@ extension BoardGameViewModelVC {
 // MARK: - Game methods
 
 extension BoardGameViewModelVC {
-    func checkCards(firstCard: Card, secondCard: Card, completion: () -> Void) {
+    func checkCards(firstCard: Card, secondCard: Card, completion: () -> Void) throws {
         if game.checkCards(firstCard, secondCard) {
             let flippedCards = self.flippedCards
             
-            AnimationService.setupCardsBordersAnimating(arrayOfCards: flippedCards, color: .getLimeColor())
+            try SoundService.play(sound: .remove)
+            
             AnimationService.removeCards(arrayOfCards: flippedCards) { self.flippedCards = [] }
     
             self.removeCheckedCardsFromCardView()

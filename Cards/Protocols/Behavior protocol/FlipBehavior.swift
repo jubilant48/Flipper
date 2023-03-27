@@ -12,6 +12,6 @@ import UIKit
 protocol FlipBehavior {
     // MARK: - Methods
     
-    func beforeFlip(_ view: UIView)
+    func beforeFlip(_ view: UIView) throws
     func inFlipping(_ view: UIView) throws
 }

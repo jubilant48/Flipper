@@ -26,6 +26,12 @@ final class ClimbInBehavior: ClimbBehavior {
         let borderHeightLimitCards = (0...(superview.bounds.height - view.bounds.height))
         
         if !borderWidthLimitCards.contains(view.frame.origin.x) || !borderHeightLimitCards.contains(view.frame.origin.y) {
+            do {
+                try SoundService.play(sound: .pushToLimits)
+            } catch {
+                view.parentViewController?.showErrorAlert(description: error.localizedDescription)
+            }
+            
             AnimationService.returnToStartTouchPoint(superview: superview, subview: view, startPoint: startPoint)
         }
     }

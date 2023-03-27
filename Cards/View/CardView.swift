@@ -77,7 +77,12 @@ final class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
         let fromView = isFlipped ? frontSideView : backSideView
         let toView = isFlipped ? backSideView : frontSideView
         
-        viewModel.flipBehavior.beforeFlip(self)
+        do {
+            try viewModel.flipBehavior.beforeFlip(self)
+        } catch {
+            self.parentViewController?.showErrorAlert(description: error.localizedDescription)
+        }
+        
         UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionFlipFromBottom]) { _ in
             do {
                 try self.viewModel.flipBehavior.inFlipping(self)

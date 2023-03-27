@@ -35,6 +35,7 @@ protocol BoardGameViewViewModelType {
     // MARK: - Methods
     
     func getViewModelforCardView() -> CardViewViewModelType
+    func play(sound: SoundNames) throws
     
     // MARK: - Beginning game
     
@@ -43,7 +44,7 @@ protocol BoardGameViewViewModelType {
     
     // MARK: - Game methods
     
-    func checkCards(firstCard: Card, secondCard: Card, completion: () -> Void)
+    func checkCards(firstCard: Card, secondCard: Card, completion: () -> Void) throws
     
     // MARK: - Remove and Reset
     

@@ -16,8 +16,10 @@ final class CardFlipBehavior: FlipBehavior {
     
     // MARK: Methods
     
-    func beforeFlip(_ view: UIView) {
+    func beforeFlip(_ view: UIView) throws {
         view.superview?.bringSubviewToFront(view)
+        
+        try SoundService.play(sound: .flip) 
     }
     
     private func getCardAndVC(_ view: UIView) throws -> (FlippableView, BoardGameVC, BoardGameViewViewModelType) {
@@ -57,8 +59,12 @@ final class CardFlipBehavior: FlipBehavior {
             if boardGameVC.viewModel.flippedCards.count == 2 {
                 let firstCard = viewModel.game.allExistingCards[viewModel.flippedCards.first!.tag]
                 let secondCard = viewModel.game.allExistingCards[viewModel.flippedCards.last!.tag]
-            
-                viewModel.checkCards(firstCard: firstCard, secondCard: secondCard, completion: boardGameVC.resetTouchesOnCard)
+                
+                do {
+                    try viewModel.checkCards(firstCard: firstCard, secondCard: secondCard, completion: boardGameVC.resetTouchesOnCard)
+                } catch {
+                    boardGameVC.parentViewController?.showErrorAlert(description: error.localizedDescription)
+                }
             }
             
         } catch {
