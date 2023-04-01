@@ -39,6 +39,10 @@ final class MenuViewModelVC: MenuViewViewModelType {
     func viewModelForSttings() -> SettingsTableViewViewModelType {
         return SettingsViewModelTVC()
     }
+    
+    func play(sound: SoundNames) throws {
+        try SoundService.play(sound: sound)
+    }
 }
 
 // MARK: - Subview

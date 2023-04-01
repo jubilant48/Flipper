@@ -27,6 +27,12 @@ final class SoundService {
             url = try findSound(name: SoundNames.remove.rawValue)
         case .pushToLimits:
             url = try findSound(name: SoundNames.pushToLimits.rawValue)
+        case .showScoreSheet:
+            url = try findSound(name: SoundNames.showScoreSheet.rawValue)
+        case .backToMenu:
+            url = try findSound(name: SoundNames.backToMenu.rawValue)
+        case .click:
+            url = try findSound(name: SoundNames.click.rawValue)
         }
         
         audioPlayer = AVPlayer(url: url)

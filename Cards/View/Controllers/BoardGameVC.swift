@@ -13,10 +13,15 @@ final class BoardGameVC: UIViewController {
     var viewModel: BoardGameViewViewModelType!
     
     private lazy var startButtonView = viewModel.getStartButtonView()
+    private lazy var timerButtonView = viewModel.getTimerButtonView()
     lazy var buttonForNumberOfCardFlips = viewModel.getButtonView(for: .restart)
     private lazy var reverseCardsButtonView = viewModel.getButtonView(for: .reverse)
     lazy var dismissButton = viewModel.getDismissButton()
     private lazy var boardGameView = viewModel.getBoardGameView()
+    
+    var timer: Timer?
+    var second: Int = 0
+    var timerIsRinning: Bool = true
     
     // MARK: - Init
     
@@ -66,6 +71,10 @@ final class BoardGameVC: UIViewController {
             addTargetFor(buttonType: .reverse)
             view.addSubview(reverseCardsButtonView)
         } else {
+            setupTimerButtonView()
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            view.addSubview(timerButtonView)
+            
             setup(button: buttonForNumberOfCardFlips)
             addTargetFor(buttonType: .restart)
             view.addSubview(buttonForNumberOfCardFlips)
@@ -95,10 +104,12 @@ extension BoardGameVC {
     }
     
     private func resetGame() {
-        resetTouchesOnCard()
+        viewModel.countTouchesOnCard = 0
         viewModel.flippedCards = []
 
+        second = 0
         buttonForNumberOfCardFlips.setTitle("0", for: .normal)
+        timerButtonView.setTitle("00:00", for: .normal)
     }
     
     private func getCardsBy(modelData: [Card], isContinue: Bool = false) -> [UIView] {
@@ -174,13 +185,50 @@ extension BoardGameVC {
         }
     }
     
+    @objc private func updateTimer() {
+        second += 1
+        
+        timerButtonView.setTitle(timeFormatted(second), for: .normal)
+    }
+    
+    @objc private func switchTimer() {
+        
+        if timerIsRinning {
+            timer?.invalidate()
+            timer = nil
+            
+            UIView.animate(withDuration: 0.5) {
+                self.timerButtonView.backgroundColor = .getBlue()
+                self.boardGameView.backgroundColor = .blue
+                self.boardGameView.isUserInteractionEnabled = false
+            }
+        } else {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            
+            UIView.animate(withDuration: 0.5) {
+                self.timerButtonView.backgroundColor = .getGrayWhiteColor()
+                self.boardGameView.backgroundColor = UIColor(red: 0.1, green: 0.9, blue: 0.1, alpha: 0.3)
+                self.boardGameView.isUserInteractionEnabled = true
+            }
+        }
+        
+        timerIsRinning.toggle()
+    }
+    
     @objc private func startGameTapped(_ sender: UIButton) {
+        do {
+            try viewModel.play(sound: .click)
+        } catch {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
+        
         startGame()
     }
     
     @objc func dismissToMenu(_ sender: UIButton) {
         do {
             try viewModel.saveGame()
+            try viewModel.play(sound: .backToMenu)
         } catch {
             showErrorAlert(description: error.localizedDescription)
         }
@@ -188,6 +236,12 @@ extension BoardGameVC {
     }
     
     @objc func reverseCards(_ sender: UIButton) {
+        do {
+            try viewModel.play(sound: .click)
+        } catch {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
+        
         viewModel.flippedCards = []
         viewModel.countTouchesOnCard = 0
         
@@ -233,11 +287,21 @@ extension BoardGameVC {
         view.isExclusiveTouch = true
     }
     
+    private func setupInCenter(_ myView: UIView) {
+        myView.center.x = view.center.x
+        myView.frame.origin.y = getTopPadding()
+    }
+    
     private func setupStartButtonView() {
-        startButtonView.center.x = view.center.x
-        startButtonView.frame.origin.y = getTopPadding()
+        setupInCenter(startButtonView)
         
         startButtonView.addTarget(self, action: #selector(startGameTapped), for: .touchUpInside)
+    }
+    
+    private func setupTimerButtonView() {
+        setupInCenter(timerButtonView)
+        
+        timerButtonView.addTarget(self, action: #selector(switchTimer), for: .touchUpInside)
     }
     
     private func setup(button: UIButton) {

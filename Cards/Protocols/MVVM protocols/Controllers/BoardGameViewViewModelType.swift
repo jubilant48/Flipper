@@ -28,6 +28,7 @@ protocol BoardGameViewViewModelType {
     // MARK: - Setup subview
     
     func getStartButtonView() -> UIButton
+    func getTimerButtonView() -> UIButton
     func getButtonView(for buttonType: BoardGameButtonType) -> UIButton
     func getDismissButton() -> UIButton
     func getBoardGameView() -> UIView

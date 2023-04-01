@@ -47,6 +47,8 @@ final class MenuVC: UIViewController {
     
     @objc private func continueButtonTapped() {
         do {
+            try viewModel.play(sound: .click)
+            
             let gameData = try viewModel.getGameData()
             let boardGameController = viewModel.getBoardGameViewController(isContinue: true)
             
@@ -63,18 +65,36 @@ final class MenuVC: UIViewController {
     }
     
     @objc private func startNewGameButtonTapped() {
+        do {
+            try viewModel.play(sound: .click)
+        } catch {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
+        
         let boardGameController = viewModel.getBoardGameViewController(isContinue: false)
         
         self.present(boardGameController, animated: true)
     }
     
     @objc private func settingsButtonTapped() {
+        do {
+            try viewModel.play(sound: .click)
+        } catch {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
+        
         let viewModel = viewModel.viewModelForSttings()
         
         navigationController?.pushViewController(SettingsTVC(style: .insetGrouped, viewModel: viewModel), animated: true)
     }
     
     @objc private func exitButtonTapped() {
+        do {
+            try viewModel.play(sound: .click)
+        } catch {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
         }

@@ -59,3 +59,15 @@ extension UIViewController {
         return window
     }
 }
+
+// MARK: - Extension of timer
+
+extension UIViewController {
+    // MARK: - Methods
+    
+    func timeFormatted(_ totalSeconds: Int) -> String {
+            let seconds: Int = totalSeconds % 60
+            let minutes: Int = (totalSeconds / 60) % 60
+            return String(format: "%02d:%02d", minutes, seconds)
+    }
+}

@@ -68,7 +68,11 @@ extension BoardGameViewModelVC {
         if game.checkCards(firstCard, secondCard) {
             let flippedCards = self.flippedCards
             
-            try SoundService.play(sound: .remove)
+            if cardViews.count == 2 {
+                try SoundService.play(sound: .showScoreSheet)
+            } else {
+                try SoundService.play(sound: .remove)
+            }
             
             AnimationService.removeCards(arrayOfCards: flippedCards) { self.flippedCards = [] }
     
@@ -115,12 +119,23 @@ extension BoardGameViewModelVC {
     func getStartButtonView() -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
 
-            
         button.backgroundColor = .getGrayWhiteColor()
         button.layer.cornerRadius = 10
         button.setTitleColor(.black, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
         button.setTitle(NameSpaces.newParty.rawValue, for: .normal)
+        
+        return button
+    }
+    
+    func getTimerButtonView() -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        
+        button.backgroundColor = .getGrayWhiteColor()
+        button.layer.cornerRadius = 10
+        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.gray, for: .highlighted)
+        button.setTitle("00:00", for: .normal)
         
         return button
     }
