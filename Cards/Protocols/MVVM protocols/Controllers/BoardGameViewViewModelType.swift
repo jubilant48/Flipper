@@ -23,6 +23,7 @@ protocol BoardGameViewViewModelType {
     var isContinueGame: Bool { get set }
     var countTouchesOnCard: Int { get set }
     
+    var timerService: TimerService { get }
     var game: Game! { get set }
 
     // MARK: - Setup subview

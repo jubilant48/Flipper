@@ -24,6 +24,8 @@ final class BoardGameViewModelVC: BoardGameViewViewModelType {
     var isContinueGame: Bool = false
     var countTouchesOnCard: Int = 0
     
+    var timerService: TimerService = TimerService()
+    
     var game: Game!
     
     // MARK: - Init
@@ -223,7 +225,7 @@ extension BoardGameViewModelVC {
         game.remainingCards = try createCardsForSave(from: self.cardViews)
         
         do {
-            try storage.saveGameData(cardsCount: Int16(game.cardsCount), numberOfCardFlips: Int16(game.numberOfCardFlips), countTouchesOnCard: Int16(countTouchesOnCard), cards: game.remainingCards)
+            try storage.saveGameData(cardsCount: Int16(game.cardsCount), numberOfCardFlips: Int16(game.numberOfCardFlips), countTouchesOnCard: Int16(countTouchesOnCard), cards: game.remainingCards, second: Int64(timerService.returnSecond()))
         } catch {
             let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
             let viewController = scene!.windows[0].rootViewController

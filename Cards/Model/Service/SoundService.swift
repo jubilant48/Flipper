@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-// MARK: Class
+// MARK: - Class
 
 final class SoundService {
     // MARK: Propertis

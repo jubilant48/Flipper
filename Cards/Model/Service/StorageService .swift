@@ -68,7 +68,7 @@ final class StorageService {
         }
     }
     
-    func saveGameData(cardsCount: Int16, numberOfCardFlips: Int16, countTouchesOnCard: Int16, cards: [Card]) throws {
+    func saveGameData(cardsCount: Int16, numberOfCardFlips: Int16, countTouchesOnCard: Int16, cards: [Card], second: Int64) throws {
         removeGameData()
         
         guard let entity = NSEntityDescription.entity(forEntityName: "GameData", in: context) else {
@@ -83,6 +83,7 @@ final class StorageService {
         gameDataObject.numberOfCardFlips = numberOfCardFlips
         gameDataObject.cardsCount = cardsCount
         gameDataObject.countTouchesOnCard = countTouchesOnCard
+        gameDataObject.second = second
 
         try saveCardData(cards: cards, setCards: setCards)
         

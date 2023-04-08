@@ -21,7 +21,7 @@ extension UIViewController {
         self.present(alertController, animated: true)
     }
     
-    func showStartNewGameAlert(title: String = "Сессия завершена!", description: String, acceptCompletion: (() -> Void)?, quitCompletion: (() -> Void)?) {
+    func showStartNewGameAlert(title: String = "Партия завершена!", description: String, acceptCompletion: (() -> Void)?, quitCompletion: (() -> Void)?) {
         let alertController = UIAlertController(title: title, message: description, preferredStyle: .actionSheet)
         
         let newGameAction = UIAlertAction(title: "Навая игра", style: .default) { _ in
@@ -57,17 +57,5 @@ extension UIViewController {
         let window = scene!.windows[0]
         
         return window
-    }
-}
-
-// MARK: - Extension of timer
-
-extension UIViewController {
-    // MARK: - Methods
-    
-    func timeFormatted(_ totalSeconds: Int) -> String {
-            let seconds: Int = totalSeconds % 60
-            let minutes: Int = (totalSeconds / 60) % 60
-            return String(format: "%02d:%02d", minutes, seconds)
     }
 }

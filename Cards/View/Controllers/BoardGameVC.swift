@@ -19,10 +19,6 @@ final class BoardGameVC: UIViewController {
     lazy var dismissButton = viewModel.getDismissButton()
     private lazy var boardGameView = viewModel.getBoardGameView()
     
-    var timer: Timer?
-    var second: Int = 0
-    var timerIsRinning: Bool = true
-    
     // MARK: - Init
     
     init(viewModel: BoardGameViewViewModelType) {
@@ -57,6 +53,24 @@ final class BoardGameVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if !viewModel.isShowReverseCardsButton && !viewModel.timerService.isRinning {
+            viewModel.timerService.createTimer(self, selector: #selector(updateTimer))
+            viewModel.timerService.isRinning = true
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if !viewModel.isShowReverseCardsButton && viewModel.timerService.isRinning {
+            viewModel.timerService.stopTime()
+            viewModel.timerService.isRinning = false
+        }
+    }
+    
     // MARK: - Update UI
     
     private func addingSubviews() {
@@ -72,7 +86,6 @@ final class BoardGameVC: UIViewController {
             view.addSubview(reverseCardsButtonView)
         } else {
             setupTimerButtonView()
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
             view.addSubview(timerButtonView)
             
             setup(button: buttonForNumberOfCardFlips)
@@ -98,6 +111,10 @@ extension BoardGameVC {
     func startGame() {
         viewModel.newGame()
         
+        if !viewModel.isShowReverseCardsButton && viewModel.timerService.isRinning {
+            viewModel.timerService.createTimer(self, selector: #selector(updateTimer))
+        }
+        
         let cards = getCardsBy(modelData: viewModel.game.allExistingCards)
         resetGame()
         placeCardsOnBoard(cards)
@@ -106,10 +123,13 @@ extension BoardGameVC {
     private func resetGame() {
         viewModel.countTouchesOnCard = 0
         viewModel.flippedCards = []
-
-        second = 0
+        
+        if !viewModel.isShowReverseCardsButton {
+            timerButtonView.setTitle("00:00", for: .normal)
+            viewModel.timerService.resetSecond()
+        }
+        
         buttonForNumberOfCardFlips.setTitle("0", for: .normal)
-        timerButtonView.setTitle("00:00", for: .normal)
     }
     
     private func getCardsBy(modelData: [Card], isContinue: Bool = false) -> [UIView] {
@@ -168,6 +188,11 @@ extension BoardGameVC {
 extension BoardGameVC {
     private func updateViewForContinueGame() {
         buttonForNumberOfCardFlips.setTitle("\(viewModel.game.numberOfCardFlips)", for: .normal)
+        
+        if !viewModel.isShowReverseCardsButton {
+            timerButtonView.setTitle(viewModel.timerService.returnTime(), for: .normal)
+            viewModel.timerService.createTimer(self, selector: #selector(updateTimer))
+        }
 
         let cards = getCardsBy(modelData: viewModel.game.allExistingCards, isContinue: true)
         placeCardsOnBoard(cards, isContinue: true)
@@ -178,24 +203,33 @@ extension BoardGameVC {
 
 extension BoardGameVC {
     @objc func startNewGameWithAlert() {
-        self.showStartNewGameAlert(description: "Количество переворотов карт \(viewModel.game.numberOfCardFlips)") {
-            self.startGame()
-        } quitCompletion: {
-            self.dismiss(animated: true)
+        if viewModel.isShowReverseCardsButton {
+            self.showStartNewGameAlert(description: "Сыграем ещё?") {
+                self.startGame()
+            } quitCompletion: {
+                self.dismiss(animated: true)
+            }
+        } else {
+            self.showStartNewGameAlert(description: "Количество переворотов карт \(viewModel.game.numberOfCardFlips)\nВремя: \(viewModel.timerService.returnTime())") {
+                self.startGame()
+            } quitCompletion: {
+                self.dismiss(animated: true)
+            }
+            
+            viewModel.timerService.stopTime()
         }
     }
     
     @objc private func updateTimer() {
-        second += 1
+        viewModel.timerService.increaseSecond()
         
-        timerButtonView.setTitle(timeFormatted(second), for: .normal)
+        timerButtonView.setTitle(viewModel.timerService.returnTime(), for: .normal)
     }
     
     @objc private func switchTimer() {
-        
-        if timerIsRinning {
-            timer?.invalidate()
-            timer = nil
+        if viewModel.timerService.isRinning {
+            viewModel.timerService.stopTime()
+            viewModel.timerService.isRinning = false
             
             UIView.animate(withDuration: 0.5) {
                 self.timerButtonView.backgroundColor = .getBlue()
@@ -203,7 +237,8 @@ extension BoardGameVC {
                 self.boardGameView.isUserInteractionEnabled = false
             }
         } else {
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            viewModel.timerService.createTimer(self, selector: #selector(updateTimer))
+            viewModel.timerService.isRinning = true
             
             UIView.animate(withDuration: 0.5) {
                 self.timerButtonView.backgroundColor = .getGrayWhiteColor()
@@ -211,8 +246,6 @@ extension BoardGameVC {
                 self.boardGameView.isUserInteractionEnabled = true
             }
         }
-        
-        timerIsRinning.toggle()
     }
     
     @objc private func startGameTapped(_ sender: UIButton) {
@@ -222,10 +255,18 @@ extension BoardGameVC {
             self.showErrorAlert(description: error.localizedDescription)
         }
         
+        if !viewModel.isShowReverseCardsButton && viewModel.timerService.isRinning {
+                viewModel.timerService.stopTime()
+        }
+        
         startGame()
     }
     
     @objc func dismissToMenu(_ sender: UIButton) {
+        if !viewModel.isShowReverseCardsButton {
+            viewModel.timerService.stopTime()
+        }
+        
         do {
             try viewModel.saveGame()
             try viewModel.play(sound: .backToMenu)

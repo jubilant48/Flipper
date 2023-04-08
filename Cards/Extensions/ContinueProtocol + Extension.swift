@@ -37,6 +37,7 @@ extension ContinueProtocol {
         
         boardGameController.viewModel.game = game
         boardGameController.viewModel.countTouchesOnCard = Int(gameData.countTouchesOnCard)
+        boardGameController.viewModel.timerService.setSecond(Int(gameData.second))
         
         guard let setCard = gameData.cards as? NSMutableOrderedSet else { return }
         
