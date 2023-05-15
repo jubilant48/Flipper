@@ -24,7 +24,7 @@ final class StorageService {
         self.context = appDelegate.persistentContainer.viewContext
     }
     
-    // MARK: Methods
+    // MARK: - Methods for GameData
     
     private func removeGameData() {
         let fetchRequest: NSFetchRequest<GameData> = GameData.fetchRequest()
@@ -84,7 +84,7 @@ final class StorageService {
         gameDataObject.cardsCount = cardsCount
         gameDataObject.countTouchesOnCard = countTouchesOnCard
         gameDataObject.second = second
-
+        
         try saveCardData(cards: cards, setCards: setCards)
         
         gameDataObject.cards = setCards
@@ -107,5 +107,81 @@ final class StorageService {
         }
         
         return gameData
+    }
+    
+    // MARK: - Methods for Record
+    
+    func saveRecordData(from record: Record) throws {
+        let recordData = RecordData(context: context)
+        
+        recordData.numberOfPairsCards = record.numberOfPairsCards
+        recordData.numberOfTypes = record.numberOfTypes
+        recordData.numberOfColors = record.numberOfColors
+        
+        recordData.second = record.second
+        recordData.flips = record.flips
+        recordData.date = record.date
+        
+        do {
+            try context.save()
+        } catch let error as NSError {
+            throw error
+        }
+    }
+    
+    func getRecords() throws -> [RecordData] {
+        let fetchRequest = RecordData.fetchRequest()
+        var recordData: [RecordData] = []
+        
+        do {
+            recordData = try context.fetch(fetchRequest)
+        } catch let error as NSError {
+            throw error
+        }
+        
+        return recordData
+    }
+    
+    func getRecords(at numberOfPairsCards: Int) throws -> [RecordData] {
+        let fetchRequest = RecordData.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "numberOfPairsCards == %@", String(numberOfPairsCards))
+        var recordData: [RecordData] = []
+        
+        do {
+            recordData = try context.fetch(fetchRequest)
+        } catch let error as NSError {
+            throw error
+        }
+        
+        return recordData
+    }
+    
+    func getRecords(at numberOfPairsCards: Int, and numberOfTypes: Int) throws -> [RecordData] {
+        let fetchRequest = RecordData.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "numberOfPairsCards == %@ AND numberOfTypes == %@", String(numberOfPairsCards), String(numberOfTypes))
+        var recordData: [RecordData] = []
+        
+        do {
+            recordData = try context.fetch(fetchRequest)
+        } catch let error as NSError {
+            throw error
+        }
+        
+        return recordData
+    }
+    
+    func getRecords(at numberOfPairsCards: Int, and numberOfTypes: Int, and numberOfColors: Int) throws -> [RecordData] {
+        let fetchRequest = RecordData.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "numberOfPairsCards == %@ AND numberOfTypes == %@ AND numberOfColors == %@", String(numberOfPairsCards), String(numberOfTypes), String(numberOfColors))
+        
+        var recordData: [RecordData] = []
+        
+        do {
+            recordData = try context.fetch(fetchRequest)
+        } catch let error as NSError {
+            throw error
+        }
+        
+        return recordData
     }
 }

@@ -92,7 +92,7 @@ final class SettingsViewModelTVC: SettingsTableViewViewModelType {
         return viewModel
     }
     
-    func titleForHead(inSection section: Int) -> String? {
+    func header(for section: Int) -> String? {
         switch section {
         case numberPairsCardsIndexPath.section:
             return "Настройки игрового процесса"
@@ -103,7 +103,7 @@ final class SettingsViewModelTVC: SettingsTableViewViewModelType {
         }
     }
     
-    func titleForFooter(inSection section: Int) -> String? {
+    func footer(for section: Int) -> String? {
         switch section {
         case isShowReverseCardsButtonIndexPath.section:
             return "Режим просмотра карт, позволяет с помощью кнопки переворачивать карты для их просмотра. При этом отключая режим записи рекордов."

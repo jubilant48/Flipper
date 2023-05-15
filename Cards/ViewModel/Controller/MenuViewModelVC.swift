@@ -40,6 +40,10 @@ final class MenuViewModelVC: MenuViewViewModelType {
         return SettingsViewModelTVC()
     }
     
+    func viewModelForRecords() -> RecordsTableViewViewModelType {
+        return NumberOfPairsCardsViewModelTVC()
+    }
+    
     func play(sound: SoundNames) throws {
         try SoundService.play(sound: sound)
     }

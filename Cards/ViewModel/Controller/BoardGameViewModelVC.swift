@@ -233,4 +233,23 @@ extension BoardGameViewModelVC {
             UIApplication.getTopViewController(base: viewController)?.showErrorAlert(description: error.localizedDescription)
         }
     }
+    
+    func saveRecord() throws {
+        let second: Int64 = Int64(timerService.returnSecond())
+        let flips: Int64 = Int64(game.numberOfCardFlips)
+        let date: Date = Date()
+        
+        let numberOfPairsCards: Int16 = Int16(settings.numberPairsCards)
+        let numberOfTypes: Int16 = Int16(settings.cardTypes.count)
+        let numberOfColors: Int16 = Int16(settings.cardColors.count)
+        
+        let record = Record(numberOfPairsCards: numberOfPairsCards,
+                            numberOfTypes: numberOfTypes,
+                            numberOfColors: numberOfColors,
+                            second: second,
+                            date: date,
+                            flips: flips)
+        
+        try storage.saveRecordData(from: record)
+    }
 }

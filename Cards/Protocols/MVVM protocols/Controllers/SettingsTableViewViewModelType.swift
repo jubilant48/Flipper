@@ -25,8 +25,8 @@ protocol SettingsTableViewViewModelType {
     func numberOfRows(inSection section: Int) throws -> Int
     func viewModelCell<T>(forIndexPath indexPath: IndexPath) -> T
     func viewModel(forIndexPath indexPath: IndexPath) -> SelectTableViewViewModelType?
-    func titleForHead(inSection section: Int) -> String?
-    func titleForFooter(inSection section: Int) -> String?
+    func header(for section: Int) -> String?
+    func footer(for section: Int) -> String?
     
     // MARK: - Data handling
     

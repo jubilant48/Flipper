@@ -88,6 +88,18 @@ final class MenuVC: UIViewController {
         navigationController?.pushViewController(SettingsTVC(style: .insetGrouped, viewModel: viewModel), animated: true)
     }
     
+    @objc private func recordButtonTapped() {
+        do {
+            try viewModel.play(sound: .click)
+        } catch {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
+        
+        let viewModel = viewModel.viewModelForRecords()
+        
+        navigationController?.pushViewController(RecordsTVC(viewModel: viewModel), animated: true)
+    }
+    
     @objc private func exitButtonTapped() {
         do {
             try viewModel.play(sound: .click)
@@ -116,6 +128,9 @@ final class MenuVC: UIViewController {
         
         // Configure setiingsButton
         settingsButton.addTarget(self, action: #selector(settingsButtonTapped), for: .touchUpInside)
+        
+        // Configure recordButton
+        recordsButton.addTarget(self, action: #selector(recordButtonTapped), for: .touchUpInside)
         
         // Configure exitButton
         exitButton.addTarget(self, action: #selector(exitButtonTapped), for: .touchUpInside)

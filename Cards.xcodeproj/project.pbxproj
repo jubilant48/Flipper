@@ -21,6 +21,9 @@
 		FA29CDA1291FFF3600E76DF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA29CD9F291FFF3600E76DF5 /* Main.storyboard */; };
 		FA29CDA3291FFF3A00E76DF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */; };
 		FA29CDA6291FFF3A00E76DF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA29CDA4291FFF3A00E76DF5 /* LaunchScreen.storyboard */; };
+		FA5BD69C2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BD69B2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift */; };
+		FA5BD6A22A1295DF00358B51 /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BD6A12A1295DF00358B51 /* TimeFormatter.swift */; };
+		FA5BD6A42A1299E900358B51 /* RecordTVViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5BD6A32A1299E900358B51 /* RecordTVViewModelCell.swift */; };
 		FA6E9D9729D885A7009AF108 /* showing_score_sheet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA6E9D9629D885A7009AF108 /* showing_score_sheet.mp3 */; };
 		FA6E9D9929D88877009AF108 /* back_to_menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA6E9D9829D88877009AF108 /* back_to_menu.mp3 */; };
 		FA6E9DAB29D89634009AF108 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA6E9DAA29D89634009AF108 /* click.mp3 */; };
@@ -91,6 +94,14 @@
 		FAEBC17829CA2B62000652FF /* ClimbInBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */; };
 		FAEBC17A29CA2B6C000652FF /* CardTouchesBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */; };
 		FAEBC17C29CA2B75000652FF /* CardFlipBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */; };
+		FAEDC8AD2A0958480014A861 /* RecordsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC8AC2A0958480014A861 /* RecordsViewModelTVC.swift */; };
+		FAEDC8AF2A0971AF0014A861 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC8AE2A0971AE0014A861 /* RecordCell.swift */; };
+		FAF71E4929EDB6AF009F0D3D /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF71E4829EDB6AF009F0D3D /* Record.swift */; };
+		FAF71E4B29EDC8B5009F0D3D /* RecordsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF71E4A29EDC8B5009F0D3D /* RecordsTVC.swift */; };
+		FAF71E4D29EDC968009F0D3D /* RecordsTableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF71E4C29EDC968009F0D3D /* RecordsTableViewViewModelType.swift */; };
+		FAF71E4F29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF71E4E29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift */; };
+		FAFC1E0229F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC1E0129F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift */; };
+		FAFC1E0429F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC1E0329F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +121,9 @@
 		FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA29CDA5291FFF3A00E76DF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA29CDA7291FFF3A00E76DF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5BD69B2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		FA5BD6A12A1295DF00358B51 /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		FA5BD6A32A1299E900358B51 /* RecordTVViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTVViewModelCell.swift; sourceTree = "<group>"; };
 		FA6E9D9629D885A7009AF108 /* showing_score_sheet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = showing_score_sheet.mp3; sourceTree = "<group>"; };
 		FA6E9D9829D88877009AF108 /* back_to_menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = back_to_menu.mp3; sourceTree = "<group>"; };
 		FA6E9DAA29D89634009AF108 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
@@ -180,6 +194,14 @@
 		FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbInBehavior.swift; sourceTree = "<group>"; };
 		FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTouchesBehavior.swift; sourceTree = "<group>"; };
 		FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFlipBehavior.swift; sourceTree = "<group>"; };
+		FAEDC8AC2A0958480014A861 /* RecordsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModelTVC.swift; sourceTree = "<group>"; };
+		FAEDC8AE2A0971AE0014A861 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		FAF71E4829EDB6AF009F0D3D /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		FAF71E4A29EDC8B5009F0D3D /* RecordsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTVC.swift; sourceTree = "<group>"; };
+		FAF71E4C29EDC968009F0D3D /* RecordsTableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewViewModelType.swift; sourceTree = "<group>"; };
+		FAF71E4E29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPairsCardsViewModelTVC.swift; sourceTree = "<group>"; };
+		FAFC1E0129F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfTypesViewModelTVC.swift; sourceTree = "<group>"; };
+		FAFC1E0329F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfColorsViewModelTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +244,10 @@
 				FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */,
 				FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */,
 				FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */,
+				FAF71E4E29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift */,
+				FAFC1E0129F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift */,
+				FAFC1E0329F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift */,
+				FAEDC8AC2A0958480014A861 /* RecordsViewModelTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +259,7 @@
 				FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */,
 				FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */,
 				FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */,
+				FAF71E4C29EDC968009F0D3D /* RecordsTableViewViewModelType.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +410,7 @@
 				FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */,
 				FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */,
 				FAAB029A29A00D1B00C68B13 /* SettingsTVViewModelCell.swift */,
+				FA5BD6A32A1299E900358B51 /* RecordTVViewModelCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -393,6 +421,7 @@
 				FAAB029229A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift */,
 				FAAB029429A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift */,
 				FAAB029829A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift */,
+				FA5BD69B2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -443,6 +472,7 @@
 				FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */,
 				FAEBB0F329770342000650A8 /* SettingsTVC.swift */,
 				FA7A0688297C777100823470 /* SelectTVC.swift */,
+				FAF71E4A29EDC8B5009F0D3D /* RecordsTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -452,13 +482,14 @@
 			children = (
 				FAEBC17D29CA2B85000652FF /* Behavior */,
 				FAEBB0F5297703B0000650A8 /* Service */,
-				FAD1F79D2992B5DF0048E17F /* CardType.swift */,
 				FAD1F79F2992B6180048E17F /* CardColor.swift */,
+				FAD1F79D2992B5DF0048E17F /* CardType.swift */,
 				FAD1F7A12992B64D0048E17F /* CardBackSide.swift */,
 				FAB2F2B529523F75002CBF79 /* Card.swift */,
 				FAD1F79B2992A0780048E17F /* ViewInfo.swift */,
 				FAB2F2B729524232002CBF79 /* Game.swift */,
 				FAEBB0F6297703EF000650A8 /* Settings.swift */,
+				FAF71E4829EDB6AF009F0D3D /* Record.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -483,6 +514,7 @@
 				FA922C4829882A2D00737D4D /* StorageService .swift */,
 				FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */,
 				FACBEE5129E1C9780061D935 /* TimerService.swift */,
+				FA5BD6A12A1295DF00358B51 /* TimeFormatter.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -493,6 +525,7 @@
 				FAEBB0FE297734D3000650A8 /* LabelAndStepperCell.swift */,
 				FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */,
 				FAAB029629A00C3000C68B13 /* SettingsTVCell.swift */,
+				FAEDC8AE2A0971AE0014A861 /* RecordCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -605,6 +638,7 @@
 				FAB2F2B329523A64002CBF79 /* BoardGameVC.swift in Sources */,
 				FA849536296CA0F000D201FA /* UIFont + Extension.swift in Sources */,
 				FAB2F2B629523F75002CBF79 /* Card.swift in Sources */,
+				FAF71E4B29EDC8B5009F0D3D /* RecordsTVC.swift in Sources */,
 				FAB2F2B829524232002CBF79 /* Game.swift in Sources */,
 				FAB2F2AF29523616002CBF79 /* CardView.swift in Sources */,
 				FAAB029B29A00D1B00C68B13 /* SettingsTVViewModelCell.swift in Sources */,
@@ -623,26 +657,33 @@
 				FA922C472988211700737D4D /* CardsCoreData.xcdatamodeld in Sources */,
 				FAEBB0F7297703EF000650A8 /* Settings.swift in Sources */,
 				FA75D45329AD280900537916 /* MenuButtonType.swift in Sources */,
+				FAFC1E0229F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift in Sources */,
 				FAD1F79E2992B5DF0048E17F /* CardType.swift in Sources */,
 				FA297E8E2959E5DD00E86552 /* CardViewFactory.swift in Sources */,
 				FAAB029929A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift in Sources */,
 				FA28B49329B7A7BB00F4A9B1 /* BoardGameButtonType.swift in Sources */,
 				FAB1BF8929C24898001D5C2D /* CardViewModelView.swift in Sources */,
 				FA84952C296C9B3800D201FA /* MenuVC.swift in Sources */,
+				FA5BD6A42A1299E900358B51 /* RecordTVViewModelCell.swift in Sources */,
+				FAF71E4F29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift in Sources */,
 				FA75D44F29AD271E00537916 /* MenuViewViewModelType.swift in Sources */,
 				FA28B48E29B79C7800F4A9B1 /* BoardGameViewModelVC.swift in Sources */,
 				FA75D44D29AD177600537916 /* MenuViewModelVC.swift in Sources */,
+				FAF71E4929EDB6AF009F0D3D /* Record.swift in Sources */,
 				FADDE9212968B69200A6FA2F /* FlippableView.swift in Sources */,
 				FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */,
 				FAEBB0F9297704BE000650A8 /* SettingsProtocol.swift in Sources */,
+				FA5BD69C2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift in Sources */,
 				FA922C4929882A2D00737D4D /* StorageService .swift in Sources */,
 				FA849532296C9D9600D201FA /* UIColor + Extension.swift in Sources */,
 				FAD1F7A22992B64D0048E17F /* CardBackSide.swift in Sources */,
 				FA7A0685297C441F00823470 /* UIViewController + Extension.swift in Sources */,
 				FA7A0680297C38EC00823470 /* SettingsStorageProtocol.swift in Sources */,
 				FAB1BF7F29C232AF001D5C2D /* TouchBehavior.swift in Sources */,
+				FAEDC8AF2A0971AF0014A861 /* RecordCell.swift in Sources */,
 				FA7A0687297C4AFD00823470 /* LabelAndSwitchCell.swift in Sources */,
 				FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */,
+				FAEDC8AD2A0958480014A861 /* RecordsViewModelTVC.swift in Sources */,
 				FA849530296C9C0C00D201FA /* UIButton + Extension.swift in Sources */,
 				FA75D45929AD2B0700537916 /* ContinueProtocol + Extension.swift in Sources */,
 				FA922C4D2988337A00737D4D /* UIApplication + Extension.swift in Sources */,
@@ -650,12 +691,15 @@
 				FA7A0689297C777100823470 /* SelectTVC.swift in Sources */,
 				FA849534296CA0B400D201FA /* UILabel + Extesion.swift in Sources */,
 				FA7A0683297C40A000823470 /* SettingsError.swift in Sources */,
+				FA5BD6A22A1295DF00358B51 /* TimeFormatter.swift in Sources */,
 				FAEBB0F429770342000650A8 /* SettingsTVC.swift in Sources */,
 				FA0AC6112997EF530005DD97 /* SelectCardBackViewModelTVC.swift in Sources */,
 				FAAB029129A0066500C68B13 /* SettingsTableViewViewModelType.swift in Sources */,
+				FAF71E4D29EDC968009F0D3D /* RecordsTableViewViewModelType.swift in Sources */,
 				FA922C4B29882E8900737D4D /* StorageServiceError.swift in Sources */,
 				FAEBC17A29CA2B6C000652FF /* CardTouchesBehavior.swift in Sources */,
 				FAAB029529A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift in Sources */,
+				FAFC1E0429F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift in Sources */,
 				FADDE91C296896FE00A6FA2F /* BackSideShapes.swift in Sources */,
 				FA28B49529B7CF3600F4A9B1 /* BoardGameViewModelError.swift in Sources */,
 				FACF7AB2297090070045DB23 /* AnimationService.swift in Sources */,

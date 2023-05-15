@@ -210,13 +210,19 @@ extension BoardGameVC {
                 self.dismiss(animated: true)
             }
         } else {
+            viewModel.timerService.stopTime()
+            
+            do {
+                try viewModel.saveRecord()
+            } catch let error {
+                self.showErrorAlert(description: error.localizedDescription)
+            }
+            
             self.showStartNewGameAlert(description: "Количество переворотов карт \(viewModel.game.numberOfCardFlips)\nВремя: \(viewModel.timerService.returnTime())") {
                 self.startGame()
             } quitCompletion: {
                 self.dismiss(animated: true)
             }
-            
-            viewModel.timerService.stopTime()
         }
     }
     

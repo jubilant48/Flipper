@@ -53,7 +53,8 @@ protocol BoardGameViewViewModelType {
     func removeCheckedCardsFromCardView()
     func removeCardFromSubview() 
     
-    // MARK: - Save game
+    // MARK: - Storage
     
     func saveGame() throws
+    func saveRecord() throws
 }

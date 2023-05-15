@@ -13,6 +13,7 @@ enum StorageServiceError {
     case entityNotFound
     case missingCardSet
     case missingPointSet
+    case failed(type: String)
 }
 
 // MARK: - Extension
@@ -26,6 +27,8 @@ extension StorageServiceError: Error, LocalizedError {
             return NSLocalizedString("Не удалось получить множество cardData", comment: "")
         case .missingPointSet:
             return NSLocalizedString("Не удалось получить множество views", comment: "")
+        case .failed(let type):
+            return NSLocalizedString("Неудачное приведеие типа \(type)", comment: "")
         }
     }
 }

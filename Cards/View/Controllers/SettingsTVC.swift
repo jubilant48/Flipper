@@ -103,11 +103,11 @@ final class SettingsTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.titleForHead(inSection: section)
+        return viewModel.header(for: section)
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        return viewModel.titleForFooter(inSection: section)
+        return viewModel.footer(for: section)
     }
     
     // MARK: - Table view delegate

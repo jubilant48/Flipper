@@ -16,6 +16,7 @@ final class TimerService {
     private var second: Int = 0
     var isRinning: Bool = true
     
+     // MARK: - Init
     
     deinit {
         timer = nil
@@ -28,7 +29,7 @@ final class TimerService {
     }
     
     func returnTime() -> String {
-        return timeFormatted(second)
+        return TimeFormatter.timeFormatted(second)
     }
     
     func startTime(target: Any, selector: Selector) {
@@ -59,13 +60,5 @@ final class TimerService {
     
     func setSecond(_ second: Int) {
         self.second = second
-    }
-    
-    // MARK: - Time formatted
-    
-    private func timeFormatted(_ totalSeconds: Int) -> String {
-            let seconds: Int = totalSeconds % 60
-            let minutes: Int = (totalSeconds / 60) % 60
-            return String(format: "%02d:%02d", minutes, seconds)
     }
 }
