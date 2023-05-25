@@ -61,6 +61,7 @@ final class RecordsViewModelTVC: RecordsTableViewViewModelType {
     
     var largeTitleDisplayMode: UINavigationItem.LargeTitleDisplayMode = .never
     var title: String { RecordsNameSpaces.title.rawValue }
+    var backButtonTitle: String { "\(numberOfCardPairs) - \(numberOfTypes) - \(numberOfColors)" }
     var cellReuseIdentifier: String { RecordsNameSpaces.cellReuseIdentifier.rawValue }
     var items: [Int] { records.map { Int($0.flips) }}
     

@@ -17,5 +17,6 @@ enum NameSpaces: String {
     case recordTitle = "Рекорды"
     case exitTitle = "Выход"
     case backTitle = "Назад"
+    case menu = "Меню"
     case newParty = "Новая партия"
 }

@@ -15,6 +15,7 @@ protocol RecordsTableViewViewModelType {
     var title: String { get }
     var cellReuseIdentifier: String { get }
     var largeTitleDisplayMode: UINavigationItem.LargeTitleDisplayMode { get }
+    var backButtonTitle: String { get }
     var items: [Int] { get }
     
     // MARK: - Methods

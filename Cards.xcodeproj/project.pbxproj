@@ -31,8 +31,7 @@
 		FA75D44F29AD271E00537916 /* MenuViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D44E29AD271E00537916 /* MenuViewViewModelType.swift */; };
 		FA75D45129AD27DA00537916 /* NameSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45029AD27DA00537916 /* NameSpaces.swift */; };
 		FA75D45329AD280900537916 /* MenuButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45229AD280900537916 /* MenuButtonType.swift */; };
-		FA75D45729AD2A9500537916 /* ContinueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45629AD2A9500537916 /* ContinueProtocol.swift */; };
-		FA75D45929AD2B0700537916 /* ContinueProtocol + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45829AD2B0700537916 /* ContinueProtocol + Extension.swift */; };
+		FA75D45729AD2A9500537916 /* ContinueProtocol + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45629AD2A9500537916 /* ContinueProtocol + Extension.swift */; };
 		FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45A29AD2DAA00537916 /* ContinueError.swift */; };
 		FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */; };
 		FA7A0680297C38EC00823470 /* SettingsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */; };
@@ -131,8 +130,7 @@
 		FA75D44E29AD271E00537916 /* MenuViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewViewModelType.swift; sourceTree = "<group>"; };
 		FA75D45029AD27DA00537916 /* NameSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpaces.swift; sourceTree = "<group>"; };
 		FA75D45229AD280900537916 /* MenuButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonType.swift; sourceTree = "<group>"; };
-		FA75D45629AD2A9500537916 /* ContinueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueProtocol.swift; sourceTree = "<group>"; };
-		FA75D45829AD2B0700537916 /* ContinueProtocol + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContinueProtocol + Extension.swift"; sourceTree = "<group>"; };
+		FA75D45629AD2A9500537916 /* ContinueProtocol + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContinueProtocol + Extension.swift"; sourceTree = "<group>"; };
 		FA75D45A29AD2DAA00537916 /* ContinueError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueError.swift; sourceTree = "<group>"; };
 		FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTVC.swift; sourceTree = "<group>"; };
 		FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorageProtocol.swift; sourceTree = "<group>"; };
@@ -215,55 +213,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA0AC60E2997E9EA0005DD97 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				FA0AC6182997FBEB0005DD97 /* Controller */,
-				FAAB028A299FF75500C68B13 /* Cell */,
-				FAB1BF8729C2485C001D5C2D /* View */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		FA0AC60F2997EA030005DD97 /* MVVM protocols */ = {
-			isa = PBXGroup;
-			children = (
-				FA0AC61C2997FCA10005DD97 /* Controllers */,
-				FAAB028F29A0063A00C68B13 /* Cells */,
-				FAB1BF8429C246FD001D5C2D /* Custom view */,
-			);
-			path = "MVVM protocols";
-			sourceTree = "<group>";
-		};
-		FA0AC6182997FBEB0005DD97 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FA75D44C29AD177600537916 /* MenuViewModelVC.swift */,
-				FA28B48D29B79C7800F4A9B1 /* BoardGameViewModelVC.swift */,
-				FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */,
-				FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */,
-				FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */,
-				FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */,
-				FAF71E4E29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift */,
-				FAFC1E0129F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift */,
-				FAFC1E0329F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift */,
-				FAEDC8AC2A0958480014A861 /* RecordsViewModelTVC.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		FA0AC61C2997FCA10005DD97 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				FA75D44E29AD271E00537916 /* MenuViewViewModelType.swift */,
-				FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */,
-				FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */,
-				FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */,
-				FAF71E4C29EDC968009F0D3D /* RecordsTableViewViewModelType.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		FA28B49129B7A77F00F4A9B1 /* for Board Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,10 +242,11 @@
 			children = (
 				FA29CD99291FFF3600E76DF5 /* AppDelegate.swift */,
 				FA29CD9B291FFF3600E76DF5 /* SceneDelegate.swift */,
-				FAB2F2B429523AA2002CBF79 /* Model */,
-				FAB2F2AB295235D6002CBF79 /* View */,
-				FA0AC60E2997E9EA0005DD97 /* ViewModel */,
 				FADDE91D2968B61100A6FA2F /* Protocols */,
+				FAEBB0F5297703B0000650A8 /* Service */,
+				FAED92792A1FB70900C45EEB /* MVVM */,
+				FAB2F2AB295235D6002CBF79 /* Custom */,
+				FAB2F2B029523870002CBF79 /* Storyboards */,
 				FA84952D296C9BE900D201FA /* Extensions */,
 				FA7A0681297C407F00823470 /* Helpers */,
 				FA9A7F9B29D207E800B60FC9 /* Resources */,
@@ -328,27 +278,10 @@
 			path = "for Menu";
 			sourceTree = "<group>";
 		};
-		FA7A0676297C2AA800823470 /* View protocols */ = {
-			isa = PBXGroup;
-			children = (
-				FADDE91E2968B62700A6FA2F /* ShapeLayerProtocol.swift */,
-				FADDE9202968B69200A6FA2F /* FlippableView.swift */,
-			);
-			path = "View protocols";
-			sourceTree = "<group>";
-		};
-		FA7A0678297C2B3400823470 /* Settings model protocols */ = {
-			isa = PBXGroup;
-			children = (
-				FAEBB0F8297704BE000650A8 /* SettingsProtocol.swift */,
-				FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */,
-			);
-			path = "Settings model protocols";
-			sourceTree = "<group>";
-		};
 		FA7A0681297C407F00823470 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FA5BD6A12A1295DF00358B51 /* TimeFormatter.swift */,
 				FA75D45029AD27DA00537916 /* NameSpaces.swift */,
 				FA9A7F9929D1FB4800B60FC9 /* SoundNames.swift */,
 				FA75D45529AD29C800537916 /* for Menu */,
@@ -361,7 +294,6 @@
 		FA84952D296C9BE900D201FA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FA75D45829AD2B0700537916 /* ContinueProtocol + Extension.swift */,
 				FA84952E296C9BF800D201FA /* UIKit */,
 			);
 			path = Extensions;
@@ -404,56 +336,13 @@
 			path = Sound;
 			sourceTree = "<group>";
 		};
-		FAAB028A299FF75500C68B13 /* Cell */ = {
+		FAB2F2AB295235D6002CBF79 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */,
-				FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */,
-				FAAB029A29A00D1B00C68B13 /* SettingsTVViewModelCell.swift */,
-				FA5BD6A32A1299E900358B51 /* RecordTVViewModelCell.swift */,
+				FAED928C2A1FBEBB00C45EEB /* Layer */,
+				FAED928B2A1FBEB200C45EEB /* View */,
 			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		FAAB028F29A0063A00C68B13 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				FAAB029229A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift */,
-				FAAB029429A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift */,
-				FAAB029829A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift */,
-				FA5BD69B2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		FAB1BF8429C246FD001D5C2D /* Custom view */ = {
-			isa = PBXGroup;
-			children = (
-				FAB1BF8529C24730001D5C2D /* CardViewViewModelType.swift */,
-			);
-			path = "Custom view";
-			sourceTree = "<group>";
-		};
-		FAB1BF8729C2485C001D5C2D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FAB1BF8829C24898001D5C2D /* CardViewModelView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FAB2F2AB295235D6002CBF79 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FAB2F2B1295238A6002CBF79 /* Controllers */,
-				FAEBB0FC29773486000650A8 /* Cells */,
-				FAB2F2AE29523616002CBF79 /* CardView.swift */,
-				FAEBB0FA29770642000650A8 /* Stepper.swift */,
-				FADDE91B296896FE00A6FA2F /* BackSideShapes.swift */,
-				FAB2F2AC29523600002CBF79 /* ForwardSideShapes.swift */,
-				FAB2F2B029523870002CBF79 /* Storyboards */,
-			);
-			path = View;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		FAB2F2B029523870002CBF79 /* Storyboards */ = {
@@ -465,30 +354,17 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FAB2F2B1295238A6002CBF79 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				FA84952B296C9B3800D201FA /* MenuVC.swift */,
-				FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */,
-				FAEBB0F329770342000650A8 /* SettingsTVC.swift */,
-				FA7A0688297C777100823470 /* SelectTVC.swift */,
-				FAF71E4A29EDC8B5009F0D3D /* RecordsTVC.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		FAB2F2B429523AA2002CBF79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				FAEBC17D29CA2B85000652FF /* Behavior */,
-				FAEBB0F5297703B0000650A8 /* Service */,
+				FAED928E2A1FBF7E00C45EEB /* Settings */,
 				FAD1F79F2992B6180048E17F /* CardColor.swift */,
 				FAD1F79D2992B5DF0048E17F /* CardType.swift */,
 				FAD1F7A12992B64D0048E17F /* CardBackSide.swift */,
 				FAB2F2B529523F75002CBF79 /* Card.swift */,
 				FAD1F79B2992A0780048E17F /* ViewInfo.swift */,
 				FAB2F2B729524232002CBF79 /* Game.swift */,
-				FAEBB0F6297703EF000650A8 /* Settings.swift */,
 				FAF71E4829EDB6AF009F0D3D /* Record.swift */,
 			);
 			path = Model;
@@ -497,11 +373,7 @@
 		FADDE91D2968B61100A6FA2F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				FA75D45629AD2A9500537916 /* ContinueProtocol.swift */,
-				FA0AC60F2997EA030005DD97 /* MVVM protocols */,
-				FA7A0676297C2AA800823470 /* View protocols */,
-				FAEBC17F29CA2BBB000652FF /* Behavior protocol */,
-				FA7A0678297C2B3400823470 /* Settings model protocols */,
+				FA75D45629AD2A9500537916 /* ContinueProtocol + Extension.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -514,20 +386,8 @@
 				FA922C4829882A2D00737D4D /* StorageService .swift */,
 				FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */,
 				FACBEE5129E1C9780061D935 /* TimerService.swift */,
-				FA5BD6A12A1295DF00358B51 /* TimeFormatter.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		FAEBB0FC29773486000650A8 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				FAEBB0FE297734D3000650A8 /* LabelAndStepperCell.swift */,
-				FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */,
-				FAAB029629A00C3000C68B13 /* SettingsTVCell.swift */,
-				FAEDC8AE2A0971AE0014A861 /* RecordCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		FAEBC17D29CA2B85000652FF /* Behavior */ = {
@@ -541,21 +401,230 @@
 		FAEBC17E29CA2B8C000652FF /* for CardView */ = {
 			isa = PBXGroup;
 			children = (
-				FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */,
-				FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */,
-				FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */,
+				FAED928A2A1FBDEA00C45EEB /* CardTouchesBehavior */,
+				FAED92892A1FBDD000C45EEB /* ClimbBehavior */,
+				FAED92882A1FBDBF00C45EEB /* FlipBehavior */,
 			);
 			path = "for CardView";
 			sourceTree = "<group>";
 		};
-		FAEBC17F29CA2BBB000652FF /* Behavior protocol */ = {
+		FAED92792A1FB70900C45EEB /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				FAB2F2B429523AA2002CBF79 /* Model */,
+				FAED927A2A1FB72B00C45EEB /* Controllers */,
+				FAED92802A1FB98300C45EEB /* Cells */,
+				FAED92862A1FBBAE00C45EEB /* Custom view */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		FAED927A2A1FB72B00C45EEB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAED927B2A1FB73F00C45EEB /* MenuVC */,
+				FAED927C2A1FB7E400C45EEB /* BoardGameVC */,
+				FAED927D2A1FB84D00C45EEB /* SettingsTVC */,
+				FAED927E2A1FB88B00C45EEB /* SelectTVC */,
+				FAED927F2A1FB8D100C45EEB /* RecordsTVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAED927B2A1FB73F00C45EEB /* MenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA84952B296C9B3800D201FA /* MenuVC.swift */,
+				FA75D44C29AD177600537916 /* MenuViewModelVC.swift */,
+				FA75D44E29AD271E00537916 /* MenuViewViewModelType.swift */,
+			);
+			path = MenuVC;
+			sourceTree = "<group>";
+		};
+		FAED927C2A1FB7E400C45EEB /* BoardGameVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */,
+				FA28B48D29B79C7800F4A9B1 /* BoardGameViewModelVC.swift */,
+				FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */,
+			);
+			path = BoardGameVC;
+			sourceTree = "<group>";
+		};
+		FAED927D2A1FB84D00C45EEB /* SettingsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBB0F329770342000650A8 /* SettingsTVC.swift */,
+				FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */,
+				FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */,
+			);
+			path = SettingsTVC;
+			sourceTree = "<group>";
+		};
+		FAED927E2A1FB88B00C45EEB /* SelectTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A0688297C777100823470 /* SelectTVC.swift */,
+				FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */,
+				FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */,
+				FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */,
+				FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */,
+			);
+			path = SelectTVC;
+			sourceTree = "<group>";
+		};
+		FAED927F2A1FB8D100C45EEB /* RecordsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FAF71E4A29EDC8B5009F0D3D /* RecordsTVC.swift */,
+				FAF71E4E29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift */,
+				FAFC1E0129F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift */,
+				FAFC1E0329F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift */,
+				FAEDC8AC2A0958480014A861 /* RecordsViewModelTVC.swift */,
+				FAF71E4C29EDC968009F0D3D /* RecordsTableViewViewModelType.swift */,
+			);
+			path = RecordsTVC;
+			sourceTree = "<group>";
+		};
+		FAED92802A1FB98300C45EEB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAED92822A1FB9E300C45EEB /* LabelAndSwitchCell */,
+				FAED92812A1FB99A00C45EEB /* LabelAndStepperCell */,
+				FAED92842A1FBA5A00C45EEB /* SettingsTVCell */,
+				FAED92852A1FBA9000C45EEB /* RecordCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAED92812A1FB99A00C45EEB /* LabelAndStepperCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBB0FE297734D3000650A8 /* LabelAndStepperCell.swift */,
+				FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */,
+				FAAB029429A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift */,
+			);
+			path = LabelAndStepperCell;
+			sourceTree = "<group>";
+		};
+		FAED92822A1FB9E300C45EEB /* LabelAndSwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */,
+				FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */,
+				FAAB029229A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift */,
+			);
+			path = LabelAndSwitchCell;
+			sourceTree = "<group>";
+		};
+		FAED92842A1FBA5A00C45EEB /* SettingsTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAAB029629A00C3000C68B13 /* SettingsTVCell.swift */,
+				FAAB029A29A00D1B00C68B13 /* SettingsTVViewModelCell.swift */,
+				FAAB029829A00CD600C68B13 /* SettingsTableViewCellViewModelType.swift */,
+			);
+			path = SettingsTVCell;
+			sourceTree = "<group>";
+		};
+		FAED92852A1FBA9000C45EEB /* RecordCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAEDC8AE2A0971AE0014A861 /* RecordCell.swift */,
+				FA5BD6A32A1299E900358B51 /* RecordTVViewModelCell.swift */,
+				FA5BD69B2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift */,
+			);
+			path = RecordCell;
+			sourceTree = "<group>";
+		};
+		FAED92862A1FBBAE00C45EEB /* Custom view */ = {
+			isa = PBXGroup;
+			children = (
+				FAED92872A1FBBC100C45EEB /* CardView */,
+			);
+			path = "Custom view";
+			sourceTree = "<group>";
+		};
+		FAED92872A1FBBC100C45EEB /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				FAED928D2A1FBF4900C45EEB /* Protocol */,
+				FAB2F2AE29523616002CBF79 /* CardView.swift */,
+				FAB1BF8829C24898001D5C2D /* CardViewModelView.swift */,
+				FAB1BF8529C24730001D5C2D /* CardViewViewModelType.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		FAED92882A1FBDBF00C45EEB /* FlipBehavior */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */,
 				FAB1BF7829C2278A001D5C2D /* FlipBehavior.swift */,
-				FAB1BF7E29C232AF001D5C2D /* TouchBehavior.swift */,
+			);
+			path = FlipBehavior;
+			sourceTree = "<group>";
+		};
+		FAED92892A1FBDD000C45EEB /* ClimbBehavior */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */,
 				FAB1BF7429C21F61001D5C2D /* ClimbBehavior.swift */,
 			);
-			path = "Behavior protocol";
+			path = ClimbBehavior;
+			sourceTree = "<group>";
+		};
+		FAED928A2A1FBDEA00C45EEB /* CardTouchesBehavior */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */,
+				FAB1BF7E29C232AF001D5C2D /* TouchBehavior.swift */,
+			);
+			path = CardTouchesBehavior;
+			sourceTree = "<group>";
+		};
+		FAED928B2A1FBEB200C45EEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBB0FA29770642000650A8 /* Stepper.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAED928C2A1FBEBB00C45EEB /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				FADDE91B296896FE00A6FA2F /* BackSideShapes.swift */,
+				FAB2F2AC29523600002CBF79 /* ForwardSideShapes.swift */,
+				FADDE91E2968B62700A6FA2F /* ShapeLayerProtocol.swift */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		FAED928D2A1FBF4900C45EEB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FADDE9202968B69200A6FA2F /* FlippableView.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FAED928E2A1FBF7E00C45EEB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FAED928F2A1FBFAF00C45EEB /* Protocols */,
+				FAEBB0F6297703EF000650A8 /* Settings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FAED928F2A1FBFAF00C45EEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAEBB0F8297704BE000650A8 /* SettingsProtocol.swift */,
+				FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,7 +716,7 @@
 				FAB1BF8629C24730001D5C2D /* CardViewViewModelType.swift in Sources */,
 				FACBEE5229E1C9780061D935 /* TimerService.swift in Sources */,
 				FAB1BF8329C23815001D5C2D /* BehaviorError.swift in Sources */,
-				FA75D45729AD2A9500537916 /* ContinueProtocol.swift in Sources */,
+				FA75D45729AD2A9500537916 /* ContinueProtocol + Extension.swift in Sources */,
 				FAD1F79C2992A0780048E17F /* ViewInfo.swift in Sources */,
 				FA29CD9A291FFF3600E76DF5 /* AppDelegate.swift in Sources */,
 				FAEBB0FB29770642000650A8 /* Stepper.swift in Sources */,
@@ -685,7 +754,6 @@
 				FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */,
 				FAEDC8AD2A0958480014A861 /* RecordsViewModelTVC.swift in Sources */,
 				FA849530296C9C0C00D201FA /* UIButton + Extension.swift in Sources */,
-				FA75D45929AD2B0700537916 /* ContinueProtocol + Extension.swift in Sources */,
 				FA922C4D2988337A00737D4D /* UIApplication + Extension.swift in Sources */,
 				FAEBC17C29CA2B75000652FF /* CardFlipBehavior.swift in Sources */,
 				FA7A0689297C777100823470 /* SelectTVC.swift in Sources */,

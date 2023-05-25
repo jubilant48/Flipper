@@ -39,6 +39,7 @@ final class NumberOfPairsCardsViewModelTVC: RecordsTableViewViewModelType {
     
     var largeTitleDisplayMode: UINavigationItem.LargeTitleDisplayMode = .automatic
     var title: String { NumberOfPairsCardsNameSpaces.title.rawValue }
+    var backButtonTitle: String { NumberOfPairsCardsNameSpaces.title.rawValue }
     var cellReuseIdentifier: String { NumberOfPairsCardsNameSpaces.cellReuseIdentifier.rawValue }
     var items: [Int] { Array(setNumberOfPairsCards).sorted(by: <) }
     
@@ -73,6 +74,7 @@ final class NumberOfPairsCardsViewModelTVC: RecordsTableViewViewModelType {
         
         content.text = NumberOfPairsCardsNameSpaces.emoji.rawValue + String(items[indexPath.row])
         cell.contentConfiguration = content
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }

@@ -30,9 +30,11 @@ final class RecordsTVC: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.title = viewModel.title
+        navigationItem.largeTitleDisplayMode = viewModel.largeTitleDisplayMode
+        navigationItem.backButtonTitle = viewModel.backButtonTitle
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: viewModel.cellReuseIdentifier)
         tableView.register(RecordCell.self, forCellReuseIdentifier: viewModel.cellReuseIdentifier)
-        navigationItem.largeTitleDisplayMode = viewModel.largeTitleDisplayMode
     }
 
     // MARK: - Table view data source

@@ -14,7 +14,7 @@ final class MenuViewModelVC: MenuViewViewModelType {
     private var storage = StorageService.shared
     
     var backTitleButton: String {
-        return NameSpaces.backTitle.rawValue
+        return NameSpaces.menu.rawValue
     }
     var navigationBarPrefersLargeTitles: Bool {
         return true

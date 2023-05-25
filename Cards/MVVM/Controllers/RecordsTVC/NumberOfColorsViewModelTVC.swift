@@ -42,6 +42,7 @@ final class NumberOfColorsViewModelTVC: RecordsTableViewViewModelType {
     
     var largeTitleDisplayMode: UINavigationItem.LargeTitleDisplayMode = .never
     var title: String { NumberOfColorsNameSpaces.title.rawValue + " '\(numberOfCardPairs) - \(numberOfTypes)'" }
+    var backButtonTitle: String { "\(numberOfCardPairs) - \(numberOfTypes)" }
     var cellReuseIdentifier: String { NumberOfColorsNameSpaces.cellReuseIdentifier.rawValue }
     var items: [Int] { Array(setNumberOfColors).sorted(by: <) }
     
@@ -83,6 +84,8 @@ final class NumberOfColorsViewModelTVC: RecordsTableViewViewModelType {
         
         content.text = NumberOfColorsNameSpaces.emoji.rawValue + String(items[indexPath.row])
         cell.contentConfiguration = content
+        
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }
