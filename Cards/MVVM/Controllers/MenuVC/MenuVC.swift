@@ -51,6 +51,7 @@ final class MenuVC: UIViewController {
             
             let gameData = try viewModel.getGameData()
             let boardGameController = viewModel.getBoardGameViewController(isContinue: true)
+            boardGameController.modalTransitionStyle = .crossDissolve
             
             do {
                 try viewModel.setGameDataFor(boardGameController, gameData: gameData)
@@ -72,6 +73,7 @@ final class MenuVC: UIViewController {
         }
         
         let boardGameController = viewModel.getBoardGameViewController(isContinue: false)
+        boardGameController.modalTransitionStyle = .crossDissolve
         
         self.present(boardGameController, animated: true)
     }

@@ -145,31 +145,24 @@ extension BoardGameViewModelVC {
     func getButtonView(for buttonType: BoardGameButtonType) -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         
-        button.backgroundColor = .getGrayWhiteColor()
-        button.layer.cornerRadius = 10
-        
         if buttonType == .reverse {
             button.setImage(UIImage(systemName: "repeat"), for: .normal)
-            button.tintColor = .black
+            button.tintColor = .getBlue()
         } else {
             button.setTitle("0", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         }
         
-        button.setTitleColor(.black, for: .normal)
-        button.setTitleColor(.gray, for: .highlighted)
-        
+        button.setTitleColor(.getBlue(), for: .normal)
+
         return button
     }
     
     func getDismissButton() -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         
-        button.setImage(UIImage(systemName: "arrowshape.backward.fill"), for: .highlighted)
-        button.setImage(UIImage(systemName: "arrowshape.backward"), for: .normal)
-        button.tintColor = .black
-        button.setTitleColor(.gray, for: .highlighted)
-        button.backgroundColor = .getGrayWhiteColor()
-        button.layer.cornerRadius = 10
+        button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        button.tintColor = .getBlue()
         
         return button
     }
