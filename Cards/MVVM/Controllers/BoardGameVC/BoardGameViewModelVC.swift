@@ -131,13 +131,10 @@ extension BoardGameViewModelVC {
     }
     
     func getTimerButtonView() -> UIButton {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        let button = TimerButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50), text: "00:00")
         
-        button.backgroundColor = .getGrayWhiteColor()
-        button.layer.cornerRadius = 10
-        button.setTitleColor(.black, for: .normal)
-        button.setTitleColor(.gray, for: .highlighted)
-        button.setTitle("00:00", for: .normal)
+        button.backgroundColor = .getTimerButtonColor()
+        button.setTitleColor(.getBlue(), for: .normal)
         
         return button
     }

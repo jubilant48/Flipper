@@ -13,21 +13,32 @@ extension UIColor {
     // MARK: - Methods
     
     static func getGrayWhiteColor() -> UIColor {
-        guard let grayWhiteColor = UIColor(named: "GrayWhite") else {
+        guard let color = UIColor(named: "GrayWhite") else {
             fatalError("Not found color GreyWhite in scope")
         }
-        return grayWhiteColor
+        return color
     }
     
     static func getWhiteGrayColor() -> UIColor {
-        guard let whiteGrayColor = UIColor(named: "WhiteGray") else {
+        guard let color = UIColor(named: "WhiteGray") else {
             fatalError("Not found color WhiteGray in scope")
         }
-        return whiteGrayColor
+        return color
+    }
+    
+    static func getTimerButtonColor() -> UIColor {
+        guard let color = UIColor(named: "F0F6F0#25252C") else {
+            fatalError("Not found color WhiteGray in scope")
+        }
+        return color
     }
     
     static func getLimeColor() -> UIColor {
         return #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
+    }
+    
+    static func getGreen() -> UIColor {
+        return #colorLiteral(red: 0.2174892128, green: 0.8184008598, blue: 0, alpha: 1)
     }
     
     static func getMercuryColor() -> UIColor {
@@ -44,6 +55,10 @@ extension UIColor {
     
     static func getBlue() -> UIColor {
         return #colorLiteral(red: 0, green: 0.4431372549, blue: 0.8901960784, alpha: 1)
+    }
+    
+    static func getRed() -> UIColor {
+        return #colorLiteral(red: 1, green: 0.1491002738, blue: 0, alpha: 1)
     }
 }
      

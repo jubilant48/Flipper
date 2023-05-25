@@ -51,7 +51,7 @@ final class MenuVC: UIViewController {
             
             let gameData = try viewModel.getGameData()
             let boardGameController = viewModel.getBoardGameViewController(isContinue: true)
-            boardGameController.modalTransitionStyle = .crossDissolve
+            boardGameController.modalTransitionStyle = .flipHorizontal
             
             do {
                 try viewModel.setGameDataFor(boardGameController, gameData: gameData)
@@ -73,7 +73,7 @@ final class MenuVC: UIViewController {
         }
         
         let boardGameController = viewModel.getBoardGameViewController(isContinue: false)
-        boardGameController.modalTransitionStyle = .crossDissolve
+        boardGameController.modalTransitionStyle = .flipHorizontal
         
         self.present(boardGameController, animated: true)
     }

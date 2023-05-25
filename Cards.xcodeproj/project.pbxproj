@@ -93,6 +93,8 @@
 		FAEBC17829CA2B62000652FF /* ClimbInBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */; };
 		FAEBC17A29CA2B6C000652FF /* CardTouchesBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */; };
 		FAEBC17C29CA2B75000652FF /* CardFlipBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */; };
+		FAED92912A1FE17500C45EEB /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED92902A1FE17500C45EEB /* TimerButton.swift */; };
+		FAED92932A1FEE4200C45EEB /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED92922A1FEE4200C45EEB /* UIView + Extension.swift */; };
 		FAEDC8AD2A0958480014A861 /* RecordsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC8AC2A0958480014A861 /* RecordsViewModelTVC.swift */; };
 		FAEDC8AF2A0971AF0014A861 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDC8AE2A0971AE0014A861 /* RecordCell.swift */; };
 		FAF71E4929EDB6AF009F0D3D /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF71E4829EDB6AF009F0D3D /* Record.swift */; };
@@ -192,6 +194,8 @@
 		FAEBC17729CA2B62000652FF /* ClimbInBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbInBehavior.swift; sourceTree = "<group>"; };
 		FAEBC17929CA2B6C000652FF /* CardTouchesBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTouchesBehavior.swift; sourceTree = "<group>"; };
 		FAEBC17B29CA2B75000652FF /* CardFlipBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFlipBehavior.swift; sourceTree = "<group>"; };
+		FAED92902A1FE17500C45EEB /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
+		FAED92922A1FEE4200C45EEB /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		FAEDC8AC2A0958480014A861 /* RecordsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewModelTVC.swift; sourceTree = "<group>"; };
 		FAEDC8AE2A0971AE0014A861 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
 		FAF71E4829EDB6AF009F0D3D /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 				FA7A0684297C441F00823470 /* UIViewController + Extension.swift */,
 				FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */,
 				FAB1BF7C29C22C9D001D5C2D /* UIResponder + Extension.swift */,
+				FAED92922A1FEE4200C45EEB /* UIView + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -587,6 +592,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEBB0FA29770642000650A8 /* Stepper.swift */,
+				FAED92902A1FE17500C45EEB /* TimerButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -724,6 +730,7 @@
 				FAAB028C299FF77400C68B13 /* LabelAndStepperViewModelCell.swift in Sources */,
 				FA9A7F9A29D1FB4800B60FC9 /* SoundNames.swift in Sources */,
 				FA922C472988211700737D4D /* CardsCoreData.xcdatamodeld in Sources */,
+				FAED92932A1FEE4200C45EEB /* UIView + Extension.swift in Sources */,
 				FAEBB0F7297703EF000650A8 /* Settings.swift in Sources */,
 				FA75D45329AD280900537916 /* MenuButtonType.swift in Sources */,
 				FAFC1E0229F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift in Sources */,
@@ -741,6 +748,7 @@
 				FAF71E4929EDB6AF009F0D3D /* Record.swift in Sources */,
 				FADDE9212968B69200A6FA2F /* FlippableView.swift in Sources */,
 				FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */,
+				FAED92912A1FE17500C45EEB /* TimerButton.swift in Sources */,
 				FAEBB0F9297704BE000650A8 /* SettingsProtocol.swift in Sources */,
 				FA5BD69C2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift in Sources */,
 				FA922C4929882A2D00737D4D /* StorageService .swift in Sources */,
@@ -948,7 +956,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -977,7 +985,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.02;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -238,7 +238,6 @@ extension BoardGameVC {
             viewModel.timerService.isRinning = false
             
             UIView.animate(withDuration: 0.5) {
-                self.timerButtonView.backgroundColor = .getBlue()
                 self.boardGameView.backgroundColor = .blue
                 self.boardGameView.isUserInteractionEnabled = false
             }
@@ -247,7 +246,6 @@ extension BoardGameVC {
             viewModel.timerService.isRinning = true
             
             UIView.animate(withDuration: 0.5) {
-                self.timerButtonView.backgroundColor = .getGrayWhiteColor()
                 self.boardGameView.backgroundColor = UIColor(red: 0.1, green: 0.9, blue: 0.1, alpha: 0.3)
                 self.boardGameView.isUserInteractionEnabled = true
             }
