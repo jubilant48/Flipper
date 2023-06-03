@@ -47,7 +47,7 @@ final class MenuVC: UIViewController {
     
     @objc private func continueButtonTapped() {
         do {
-            try viewModel.play(sound: .click)
+            try SoundService.play(sound: .flip)
             
             let gameData = try viewModel.getGameData()
             let boardGameController = viewModel.getBoardGameViewController(isContinue: true)
@@ -66,11 +66,7 @@ final class MenuVC: UIViewController {
     }
     
     @objc private func startNewGameButtonTapped() {
-        do {
-            try viewModel.play(sound: .click)
-        } catch {
-            self.showErrorAlert(description: error.localizedDescription)
-        }
+        playSound(.flip)
         
         let boardGameController = viewModel.getBoardGameViewController(isContinue: false)
         boardGameController.modalTransitionStyle = .flipHorizontal
@@ -79,11 +75,7 @@ final class MenuVC: UIViewController {
     }
     
     @objc private func settingsButtonTapped() {
-        do {
-            try viewModel.play(sound: .click)
-        } catch {
-            self.showErrorAlert(description: error.localizedDescription)
-        }
+        playSound(.click)
         
         let viewModel = viewModel.viewModelForSttings()
         
@@ -91,11 +83,7 @@ final class MenuVC: UIViewController {
     }
     
     @objc private func recordButtonTapped() {
-        do {
-            try viewModel.play(sound: .click)
-        } catch {
-            self.showErrorAlert(description: error.localizedDescription)
-        }
+        playSound(.click)
         
         let viewModel = viewModel.viewModelForRecords()
         
@@ -103,11 +91,7 @@ final class MenuVC: UIViewController {
     }
     
     @objc private func exitButtonTapped() {
-        do {
-            try viewModel.play(sound: .click)
-        } catch {
-            self.showErrorAlert(description: error.localizedDescription)
-        }
+        playSound(.click)
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             UIApplication.shared.perform(#selector(NSXPCConnection.suspend))

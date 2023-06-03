@@ -37,6 +37,14 @@ extension UIViewController {
         
         self.present(alertController, animated: true)
     }
+    
+    func playSound(_ name: SoundNames) {
+        do {
+            try SoundService.play(sound: name)
+        } catch {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
+    }
 }
 
 // MARK: - Extension of get safe area information

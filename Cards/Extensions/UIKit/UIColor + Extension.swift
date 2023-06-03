@@ -57,6 +57,10 @@ extension UIColor {
         return #colorLiteral(red: 0, green: 0.4431372549, blue: 0.8901960784, alpha: 1)
     }
     
+    static func getBoardColor() -> UIColor {
+        return #colorLiteral(red: 0, green: 0.1921568627, blue: 0.3254901961, alpha: 1)
+    }
+    
     static func getRed() -> UIColor {
         return #colorLiteral(red: 1, green: 0.1491002738, blue: 0, alpha: 1)
     }

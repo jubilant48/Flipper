@@ -32,7 +32,7 @@ final class ClimbInBehavior: ClimbBehavior {
                 view.parentViewController?.showErrorAlert(description: error.localizedDescription)
             }
             
-            AnimationService.returnToStartTouchPoint(superview: superview, subview: view, startPoint: startPoint)
+            AnimationHelper.returnToStartTouchPoint(superview: superview, subview: view, startPoint: startPoint)
         }
     }
 }

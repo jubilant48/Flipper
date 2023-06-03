@@ -1,5 +1,5 @@
 //
-//  AnimationService.swift
+//  AnimationHelper.swift
 //  Cards
 //
 //  Created by macbook on 12.01.2023.
@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - Class
 
-final class AnimationService {
+final class AnimationHelper {
     // MARK: Methods
     
     static func removeCards(arrayOfCards cards: [UIView], compliteion: (() -> Void)?) {
@@ -44,6 +44,32 @@ final class AnimationService {
                 card.layer.borderWidth = 3
                 card.layer.borderColor = color.cgColor
             }
+        }
+    }
+    
+    static func animationOn(timerButton: TimerButton) {
+        UIView.animate(withDuration: 0.5) {
+            timerButton.layer.borderColor = UIColor.clear.cgColor
+            timerButton.layer.borderWidth = 0
+            timerButton.hiddenLabel.layer.opacity = 0
+            timerButton.setTitleColor(.getBlue(), for: .normal)
+            timerButton.titleLabel?.transform = .identity
+        }
+    }
+    
+    static func animationOff(timerButton: TimerButton) {
+        UIView.animate(withDuration: 0.5) {
+            timerButton.layer.borderColor = UIColor.getRed().cgColor
+            timerButton.layer.borderWidth = 3
+            timerButton.hiddenLabel.layer.opacity = 1.0
+            timerButton.setTitleColor(.getRed(), for: .normal)
+            timerButton.titleLabel?.transform = CGAffineTransform(scaleX: 0.6, y: 0.6).translatedBy(x: 0, y: 20)
+        }
+    }
+    
+    static func flip(_ boardView: BoardGameView) {
+        UIView.animate(withDuration: 0.5) {
+            boardView.flip()
         }
     }
 }

@@ -103,7 +103,7 @@ final class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
         isFlipped.toggle()
     }
     
-    // MARK: - update UI
+    // MARK: - Update UI
     
     private func setupBorders() {
         self.clipsToBounds = true

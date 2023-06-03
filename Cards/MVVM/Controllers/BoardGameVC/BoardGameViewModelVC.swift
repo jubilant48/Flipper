@@ -45,10 +45,6 @@ final class BoardGameViewModelVC: BoardGameViewViewModelType {
         
         return CGPoint(x: randomXCoordinate, y: randomYCoordinate)
     }
-    
-    func play(sound: SoundNames) throws {
-        try SoundService.play(sound: sound)
-    }
 }
 
 // MARK: - Beginning game
@@ -76,7 +72,7 @@ extension BoardGameViewModelVC {
                 try SoundService.play(sound: .remove)
             }
             
-            AnimationService.removeCards(arrayOfCards: flippedCards) { self.flippedCards = [] }
+            AnimationHelper.removeCards(arrayOfCards: flippedCards) { self.flippedCards = [] }
     
             self.removeCheckedCardsFromCardView()
             completion()
@@ -164,14 +160,8 @@ extension BoardGameViewModelVC {
         return button
     }
     
-    func getBoardGameView() -> UIView {
-        let boardView = UIView()
-                
-        boardView.layer.cornerRadius = 5
-        boardView.layer.borderWidth = 1.9
-        boardView.layer.borderColor = UIColor.clear.cgColor
-        boardView.clipsToBounds = true
-        boardView.backgroundColor = UIColor(red: 0.1, green: 0.9, blue: 0.1, alpha: 0.3)
+    func getBoardGameView() -> BoardGameView {
+        let boardView = BoardGameView(frame: .zero)
         
         return boardView
     }

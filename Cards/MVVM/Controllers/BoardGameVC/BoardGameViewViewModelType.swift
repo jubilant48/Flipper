@@ -32,12 +32,11 @@ protocol BoardGameViewViewModelType {
     func getTimerButtonView() -> UIButton
     func getButtonView(for buttonType: BoardGameButtonType) -> UIButton
     func getDismissButton() -> UIButton
-    func getBoardGameView() -> UIView
+    func getBoardGameView() -> BoardGameView
     
     // MARK: - Methods
     
     func getViewModelforCardView() -> CardViewViewModelType
-    func play(sound: SoundNames) throws
     
     // MARK: - Beginning game
     

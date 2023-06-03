@@ -100,7 +100,7 @@ final class BoardGameVC: UIViewController {
     func resetTouchesOnCard() {
         viewModel.countTouchesOnCard = 0
         
-        self.boardGameView.isUserInteractionEnabled = true
+        self.boardGameView.frontSideView.isUserInteractionEnabled = true
         self.dismissButton.isEnabled = true
     }
 }
@@ -174,10 +174,10 @@ extension BoardGameVC {
         
         viewModel.cardViews.forEach { card in
             if !isContinue {
-                card.frame.origin = viewModel.getRandomPoint(from: boardGameView.frame)
+                card.frame.origin = viewModel.getRandomPoint(from: boardGameView.frontSideView.frame)
             }
             
-            boardGameView.addSubview(card)
+            boardGameView.frontSideView.addSubview(card)
         }
     }
     
@@ -234,30 +234,22 @@ extension BoardGameVC {
     
     @objc private func switchTimer() {
         if viewModel.timerService.isRinning {
+            playSound(.flip)
             viewModel.timerService.stopTime()
             viewModel.timerService.isRinning = false
             
-            UIView.animate(withDuration: 0.5) {
-                self.boardGameView.backgroundColor = .blue
-                self.boardGameView.isUserInteractionEnabled = false
-            }
+            AnimationHelper.flip(boardGameView)
         } else {
+            playSound(.flip)
             viewModel.timerService.createTimer(self, selector: #selector(updateTimer))
             viewModel.timerService.isRinning = true
             
-            UIView.animate(withDuration: 0.5) {
-                self.boardGameView.backgroundColor = UIColor(red: 0.1, green: 0.9, blue: 0.1, alpha: 0.3)
-                self.boardGameView.isUserInteractionEnabled = true
-            }
+            AnimationHelper.flip(boardGameView)
         }
     }
     
     @objc private func startGameTapped(_ sender: UIButton) {
-        do {
-            try viewModel.play(sound: .click)
-        } catch {
-            self.showErrorAlert(description: error.localizedDescription)
-        }
+        playSound(.click)
         
         if !viewModel.isShowReverseCardsButton && viewModel.timerService.isRinning {
                 viewModel.timerService.stopTime()
@@ -273,7 +265,7 @@ extension BoardGameVC {
         
         do {
             try viewModel.saveGame()
-            try viewModel.play(sound: .backToMenu)
+            try SoundService.play(sound: .flip)
         } catch {
             showErrorAlert(description: error.localizedDescription)
         }
@@ -281,11 +273,7 @@ extension BoardGameVC {
     }
     
     @objc func reverseCards(_ sender: UIButton) {
-        do {
-            try viewModel.play(sound: .click)
-        } catch {
-            self.showErrorAlert(description: error.localizedDescription)
-        }
+        playSound(.click)
         
         viewModel.flippedCards = []
         viewModel.countTouchesOnCard = 0
@@ -346,7 +334,7 @@ extension BoardGameVC {
     private func setupTimerButtonView() {
         setupInCenter(timerButtonView)
         
-        timerButtonView.addTarget(self, action: #selector(switchTimer), for: .touchUpInside)
+        timerButtonView.addTarget(self, action: #selector(switchTimer), for: [.touchUpInside, .touchUpOutside])
     }
     
     private func setup(button: UIButton) {
@@ -374,6 +362,7 @@ extension BoardGameVC {
         boardGameView.frame.origin.y = getTopPadding() + dismissButton.frame.height + viewModel.margin
         boardGameView.frame.size.width = UIScreen.main.bounds.width - viewModel.margin * 2
         boardGameView.frame.size.height = UIScreen.main.bounds.height - boardGameView.frame.origin.y - viewModel.margin - getBottomPadding()
+        boardGameView.setupFlipView()
     }
 }
 

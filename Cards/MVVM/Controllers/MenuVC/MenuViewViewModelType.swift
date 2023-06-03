@@ -22,7 +22,6 @@ protocol MenuViewViewModelType: ContinueProtocol {
     func getBoardGameViewController(isContinue: Bool) -> BoardGameVC
     func viewModelForSttings() -> SettingsTableViewViewModelType
     func viewModelForRecords() -> RecordsTableViewViewModelType
-    func play(sound: SoundNames) throws
     
     // MARK: - Data handling
     

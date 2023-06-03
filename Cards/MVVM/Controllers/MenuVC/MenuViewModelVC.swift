@@ -43,10 +43,6 @@ final class MenuViewModelVC: MenuViewViewModelType {
     func viewModelForRecords() -> RecordsTableViewViewModelType {
         return NumberOfPairsCardsViewModelTVC()
     }
-    
-    func play(sound: SoundNames) throws {
-        try SoundService.play(sound: sound)
-    }
 }
 
 // MARK: - Subview

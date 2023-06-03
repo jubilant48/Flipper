@@ -59,27 +59,19 @@ final class TimerButton: UIButton {
         hiddenLabel.textAlignment = .center
         hiddenLabel.layer.opacity = 0
     }
-    
+}
+
+// MARK: - Touches methods
+
+extension TimerButton {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         isOn.toggle()
         
         if isOn {
-            UIView.animate(withDuration: 0.5) {
-                self.layer.borderColor = UIColor.clear.cgColor
-                self.layer.borderWidth = 0
-                self.setTitleColor(.getBlue(), for: .normal)
-                self.titleLabel?.transform = .identity
-                self.hiddenLabel.layer.opacity = 0
-            }
+            AnimationHelper.animationOn(timerButton: self)
         } else {
-            UIView.animate(withDuration: 0.5) {
-                self.layer.borderColor = UIColor.getRed().cgColor
-                self.layer.borderWidth = 3
-                self.hiddenLabel.layer.opacity = 1.0
-                self.setTitleColor(.getRed(), for: .normal)
-                self.titleLabel?.transform = CGAffineTransform(scaleX: 0.6, y: 0.6).translatedBy(x: 0, y: 20)
-            }
+            AnimationHelper.animationOff(timerButton: self)
         }
     }
 }

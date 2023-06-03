@@ -76,8 +76,9 @@
 		FAB2F2B329523A64002CBF79 /* BoardGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */; };
 		FAB2F2B629523F75002CBF79 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2B529523F75002CBF79 /* Card.swift */; };
 		FAB2F2B829524232002CBF79 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2B729524232002CBF79 /* Game.swift */; };
+		FAC953912A2A83EA0024D11F /* BoardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC953902A2A83EA0024D11F /* BoardGameView.swift */; };
 		FACBEE5229E1C9780061D935 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACBEE5129E1C9780061D935 /* TimerService.swift */; };
-		FACF7AB2297090070045DB23 /* AnimationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF7AB1297090070045DB23 /* AnimationService.swift */; };
+		FACF7AB2297090070045DB23 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF7AB1297090070045DB23 /* AnimationHelper.swift */; };
 		FAD1F79C2992A0780048E17F /* ViewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F79B2992A0780048E17F /* ViewInfo.swift */; };
 		FAD1F79E2992B5DF0048E17F /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F79D2992B5DF0048E17F /* CardType.swift */; };
 		FAD1F7A02992B6180048E17F /* CardColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F79F2992B6180048E17F /* CardColor.swift */; };
@@ -177,8 +178,9 @@
 		FAB2F2B229523A64002CBF79 /* BoardGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameVC.swift; sourceTree = "<group>"; };
 		FAB2F2B529523F75002CBF79 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FAB2F2B729524232002CBF79 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FAC953902A2A83EA0024D11F /* BoardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameView.swift; sourceTree = "<group>"; };
 		FACBEE5129E1C9780061D935 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
-		FACF7AB1297090070045DB23 /* AnimationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationService.swift; sourceTree = "<group>"; };
+		FACF7AB1297090070045DB23 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		FAD1F79B2992A0780048E17F /* ViewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInfo.swift; sourceTree = "<group>"; };
 		FAD1F79D2992B5DF0048E17F /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		FAD1F79F2992B6180048E17F /* CardColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardColor.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		FA7A0681297C407F00823470 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FACF7AB1297090070045DB23 /* AnimationHelper.swift */,
 				FA5BD6A12A1295DF00358B51 /* TimeFormatter.swift */,
 				FA75D45029AD27DA00537916 /* NameSpaces.swift */,
 				FA9A7F9929D1FB4800B60FC9 /* SoundNames.swift */,
@@ -386,7 +389,6 @@
 		FAEBB0F5297703B0000650A8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FACF7AB1297090070045DB23 /* AnimationService.swift */,
 				FA297E8D2959E5DD00E86552 /* CardViewFactory.swift */,
 				FA922C4829882A2D00737D4D /* StorageService .swift */,
 				FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */,
@@ -593,6 +595,7 @@
 			children = (
 				FAEBB0FA29770642000650A8 /* Stepper.swift */,
 				FAED92902A1FE17500C45EEB /* TimerButton.swift */,
+				FAC953902A2A83EA0024D11F /* BoardGameView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				FAB2F2B329523A64002CBF79 /* BoardGameVC.swift in Sources */,
 				FA849536296CA0F000D201FA /* UIFont + Extension.swift in Sources */,
 				FAB2F2B629523F75002CBF79 /* Card.swift in Sources */,
+				FAC953912A2A83EA0024D11F /* BoardGameView.swift in Sources */,
 				FAF71E4B29EDC8B5009F0D3D /* RecordsTVC.swift in Sources */,
 				FAB2F2B829524232002CBF79 /* Game.swift in Sources */,
 				FAB2F2AF29523616002CBF79 /* CardView.swift in Sources */,
@@ -778,7 +782,7 @@
 				FAFC1E0429F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift in Sources */,
 				FADDE91C296896FE00A6FA2F /* BackSideShapes.swift in Sources */,
 				FA28B49529B7CF3600F4A9B1 /* BoardGameViewModelError.swift in Sources */,
-				FACF7AB2297090070045DB23 /* AnimationService.swift in Sources */,
+				FACF7AB2297090070045DB23 /* AnimationHelper.swift in Sources */,
 				FA29CD9C291FFF3600E76DF5 /* SceneDelegate.swift in Sources */,
 				FAAB028E299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift in Sources */,
 				FA849538296CA72800D201FA /* UIStackView + Extension.swift in Sources */,
@@ -956,7 +960,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.02;
+				MARKETING_VERSION = 1.03;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -985,7 +989,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.02;
+				MARKETING_VERSION = 1.03;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
