@@ -78,7 +78,7 @@ extension BoardGameViewModelVC {
             completion()
         } else {
             self.flippedCards.forEach { card in
-                (card as! FlippableView).flip()
+                (card as! FlippableCard).flip()
                 completion()
             }
         }
@@ -117,7 +117,7 @@ extension BoardGameViewModelVC {
     func getStartButtonView() -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
 
-        button.backgroundColor = .getGrayWhiteColor()
+        button.backgroundColor = .get(color: ._D1D1D6_FFFFFF)
         button.layer.cornerRadius = 10
         button.setTitleColor(.black, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
@@ -129,7 +129,7 @@ extension BoardGameViewModelVC {
     func getTimerButtonView() -> UIButton {
         let button = TimerButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50), text: "00:00")
         
-        button.backgroundColor = .getTimerButtonColor()
+        button.backgroundColor = .get(color: ._F0F6F0_25252C)
         button.setTitleColor(.getBlue(), for: .normal)
         
         return button
@@ -161,7 +161,7 @@ extension BoardGameViewModelVC {
     }
     
     func getBoardGameView() -> BoardGameView {
-        let boardView = BoardGameView(frame: .zero)
+        let boardView = BoardGameView(frame: .zero, animation: .swingInUFO)
         
         return boardView
     }
@@ -178,7 +178,7 @@ extension BoardGameViewModelVC {
         var cards = [Card]()
         
         for view in cardViews {
-            guard let cardView = view as? FlippableView else {
+            guard let cardView = view as? FlippableCard else {
                 throw BoardGameViewModelError.conversationError
             }
             

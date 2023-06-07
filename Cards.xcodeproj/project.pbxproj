@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C134B7B6434E7C702A144BA5 /* Pods_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D0B8CC5840FAF9C2D97009 /* Pods_Cards.framework */; };
 		FA0AC6112997EF530005DD97 /* SelectCardBackViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */; };
 		FA0AC6152997F6AC0005DD97 /* SelectTableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */; };
 		FA0AC626299823770005DD97 /* SelectCardColorViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */; };
@@ -85,7 +86,7 @@
 		FAD1F7A22992B64D0048E17F /* CardBackSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1F7A12992B64D0048E17F /* CardBackSide.swift */; };
 		FADDE91C296896FE00A6FA2F /* BackSideShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDE91B296896FE00A6FA2F /* BackSideShapes.swift */; };
 		FADDE91F2968B62700A6FA2F /* ShapeLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDE91E2968B62700A6FA2F /* ShapeLayerProtocol.swift */; };
-		FADDE9212968B69200A6FA2F /* FlippableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDE9202968B69200A6FA2F /* FlippableView.swift */; };
+		FADDE9212968B69200A6FA2F /* FlippableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDE9202968B69200A6FA2F /* FlippableCard.swift */; };
 		FAEBB0F429770342000650A8 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0F329770342000650A8 /* SettingsTVC.swift */; };
 		FAEBB0F7297703EF000650A8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0F6297703EF000650A8 /* Settings.swift */; };
 		FAEBB0F9297704BE000650A8 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBB0F8297704BE000650A8 /* SettingsProtocol.swift */; };
@@ -104,9 +105,19 @@
 		FAF71E4F29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF71E4E29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift */; };
 		FAFC1E0229F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC1E0129F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift */; };
 		FAFC1E0429F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC1E0329F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift */; };
+		FAFF8CEF2A30EA05001544DA /* FlippableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF8CEE2A30EA05001544DA /* FlippableView.swift */; };
+		FAFF8CFC2A3104A4001544DA /* cat_is_sleeping_and_rolling_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFF8CFA2A3104A4001544DA /* cat_is_sleeping_and_rolling_dark.json */; };
+		FAFF8CFD2A3104A4001544DA /* cat_is_sleeping_and_rolling_light.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFF8CFB2A3104A4001544DA /* cat_is_sleeping_and_rolling_light.json */; };
+		FAFF8CFF2A3113EF001544DA /* AnimationObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF8CFE2A3113EF001544DA /* AnimationObjects.swift */; };
+		FAFF8D022A3115F9001544DA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF8D012A3115F9001544DA /* Animations.swift */; };
+		FAFF8D062A311AE3001544DA /* swing_in_ufo_light.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFF8D042A311AE3001544DA /* swing_in_ufo_light.json */; };
+		FAFF8D072A311AE3001544DA /* swing_in_ufo_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFF8D052A311AE3001544DA /* swing_in_ufo_dark.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33D2CF290DA38AE719C822B6 /* Pods-Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.debug.xcconfig"; path = "Target Support Files/Pods-Cards/Pods-Cards.debug.xcconfig"; sourceTree = "<group>"; };
+		57D0B8CC5840FAF9C2D97009 /* Pods_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1150D7B6A73ACABC4B256A6 /* Pods-Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.release.xcconfig"; path = "Target Support Files/Pods-Cards/Pods-Cards.release.xcconfig"; sourceTree = "<group>"; };
 		FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardBackViewModelTVC.swift; sourceTree = "<group>"; };
 		FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewViewModelType.swift; sourceTree = "<group>"; };
 		FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardColorViewModelTVC.swift; sourceTree = "<group>"; };
@@ -187,7 +198,7 @@
 		FAD1F7A12992B64D0048E17F /* CardBackSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackSide.swift; sourceTree = "<group>"; };
 		FADDE91B296896FE00A6FA2F /* BackSideShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackSideShapes.swift; sourceTree = "<group>"; };
 		FADDE91E2968B62700A6FA2F /* ShapeLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLayerProtocol.swift; sourceTree = "<group>"; };
-		FADDE9202968B69200A6FA2F /* FlippableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableView.swift; sourceTree = "<group>"; };
+		FADDE9202968B69200A6FA2F /* FlippableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableCard.swift; sourceTree = "<group>"; };
 		FAEBB0F329770342000650A8 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		FAEBB0F6297703EF000650A8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FAEBB0F8297704BE000650A8 /* SettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
@@ -206,6 +217,13 @@
 		FAF71E4E29EDCA55009F0D3D /* NumberOfPairsCardsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPairsCardsViewModelTVC.swift; sourceTree = "<group>"; };
 		FAFC1E0129F59DA6007F4568 /* NumberOfTypesViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfTypesViewModelTVC.swift; sourceTree = "<group>"; };
 		FAFC1E0329F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfColorsViewModelTVC.swift; sourceTree = "<group>"; };
+		FAFF8CEE2A30EA05001544DA /* FlippableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlippableView.swift; sourceTree = "<group>"; };
+		FAFF8CFA2A3104A4001544DA /* cat_is_sleeping_and_rolling_dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat_is_sleeping_and_rolling_dark.json; sourceTree = "<group>"; };
+		FAFF8CFB2A3104A4001544DA /* cat_is_sleeping_and_rolling_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat_is_sleeping_and_rolling_light.json; sourceTree = "<group>"; };
+		FAFF8CFE2A3113EF001544DA /* AnimationObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationObjects.swift; sourceTree = "<group>"; };
+		FAFF8D012A3115F9001544DA /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		FAFF8D042A311AE3001544DA /* swing_in_ufo_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = swing_in_ufo_light.json; sourceTree = "<group>"; };
+		FAFF8D052A311AE3001544DA /* swing_in_ufo_dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = swing_in_ufo_dark.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,12 +231,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C134B7B6434E7C702A144BA5 /* Pods_Cards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		977DDEE4164C3906BCAE9A52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57D0B8CC5840FAF9C2D97009 /* Pods_Cards.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5BD0E2285703E85D7B32563 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33D2CF290DA38AE719C822B6 /* Pods-Cards.debug.xcconfig */,
+				A1150D7B6A73ACABC4B256A6 /* Pods-Cards.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA28B49129B7A77F00F4A9B1 /* for Board Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +268,8 @@
 			children = (
 				FA29CD98291FFF3600E76DF5 /* Cards */,
 				FA29CD97291FFF3600E76DF5 /* Products */,
+				A5BD0E2285703E85D7B32563 /* Pods */,
+				977DDEE4164C3906BCAE9A52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -327,6 +365,7 @@
 			children = (
 				FA29CDA2291FFF3A00E76DF5 /* Assets.xcassets */,
 				FA9A7F9C29D207F400B60FC9 /* Sound */,
+				FAFF8CF02A30EE01001544DA /* Animation */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -365,6 +404,7 @@
 		FAB2F2B429523AA2002CBF79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAFF8D002A3114DC001544DA /* Animation */,
 				FAEBC17D29CA2B85000652FF /* Behavior */,
 				FAED928E2A1FBF7E00C45EEB /* Settings */,
 				FAD1F79F2992B6180048E17F /* CardColor.swift */,
@@ -382,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				FA75D45629AD2A9500537916 /* ContinueProtocol + Extension.swift */,
+				FAFF8CEE2A30EA05001544DA /* FlippableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -613,7 +654,7 @@
 		FAED928D2A1FBF4900C45EEB /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				FADDE9202968B69200A6FA2F /* FlippableView.swift */,
+				FADDE9202968B69200A6FA2F /* FlippableCard.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -636,6 +677,34 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		FAFF8CF02A30EE01001544DA /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF8CFA2A3104A4001544DA /* cat_is_sleeping_and_rolling_dark.json */,
+				FAFF8CFB2A3104A4001544DA /* cat_is_sleeping_and_rolling_light.json */,
+				FAFF8D052A311AE3001544DA /* swing_in_ufo_dark.json */,
+				FAFF8D042A311AE3001544DA /* swing_in_ufo_light.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FAFF8D002A3114DC001544DA /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF8D032A3119C0001544DA /* Protocol */,
+				FAFF8D012A3115F9001544DA /* Animations.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FAFF8D032A3119C0001544DA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF8CFE2A3113EF001544DA /* AnimationObjects.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -643,9 +712,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA29CDAA291FFF3A00E76DF5 /* Build configuration list for PBXNativeTarget "Cards" */;
 			buildPhases = (
+				69D50EDB6C1387DDD8938F57 /* [CP] Check Pods Manifest.lock */,
 				FA29CD92291FFF3600E76DF5 /* Sources */,
 				FA29CD93291FFF3600E76DF5 /* Frameworks */,
 				FA29CD94291FFF3600E76DF5 /* Resources */,
+				1B2B582452EBD5373D20C52D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -695,9 +766,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6E9DAB29D89634009AF108 /* click.mp3 in Resources */,
+				FAFF8D062A311AE3001544DA /* swing_in_ufo_light.json in Resources */,
 				FA29CDA6291FFF3A00E76DF5 /* LaunchScreen.storyboard in Resources */,
+				FAFF8D072A311AE3001544DA /* swing_in_ufo_dark.json in Resources */,
 				FA9A7FAF29D2151400B60FC9 /* flip.mp3 in Resources */,
 				FA29CDA3291FFF3A00E76DF5 /* Assets.xcassets in Resources */,
+				FAFF8CFD2A3104A4001544DA /* cat_is_sleeping_and_rolling_light.json in Resources */,
+				FAFF8CFC2A3104A4001544DA /* cat_is_sleeping_and_rolling_dark.json in Resources */,
 				FA29CDA1291FFF3600E76DF5 /* Main.storyboard in Resources */,
 				FA6E9D9729D885A7009AF108 /* showing_score_sheet.mp3 in Resources */,
 				FA6E9D9929D88877009AF108 /* back_to_menu.mp3 in Resources */,
@@ -707,6 +782,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B2B582452EBD5373D20C52D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cards/Pods-Cards-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cards/Pods-Cards-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cards/Pods-Cards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69D50EDB6C1387DDD8938F57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cards-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA29CD92291FFF3600E76DF5 /* Sources */ = {
@@ -724,6 +841,7 @@
 				FAD1F7A02992B6180048E17F /* CardColor.swift in Sources */,
 				FA9A7F9629D1F5BB00B60FC9 /* SoundService.swift in Sources */,
 				FAB1BF8629C24730001D5C2D /* CardViewViewModelType.swift in Sources */,
+				FAFF8CEF2A30EA05001544DA /* FlippableView.swift in Sources */,
 				FACBEE5229E1C9780061D935 /* TimerService.swift in Sources */,
 				FAB1BF8329C23815001D5C2D /* BehaviorError.swift in Sources */,
 				FA75D45729AD2A9500537916 /* ContinueProtocol + Extension.swift in Sources */,
@@ -732,6 +850,7 @@
 				FAEBB0FB29770642000650A8 /* Stepper.swift in Sources */,
 				FAAB029729A00C3000C68B13 /* SettingsTVCell.swift in Sources */,
 				FAAB028C299FF77400C68B13 /* LabelAndStepperViewModelCell.swift in Sources */,
+				FAFF8D022A3115F9001544DA /* Animations.swift in Sources */,
 				FA9A7F9A29D1FB4800B60FC9 /* SoundNames.swift in Sources */,
 				FA922C472988211700737D4D /* CardsCoreData.xcdatamodeld in Sources */,
 				FAED92932A1FEE4200C45EEB /* UIView + Extension.swift in Sources */,
@@ -750,7 +869,7 @@
 				FA28B48E29B79C7800F4A9B1 /* BoardGameViewModelVC.swift in Sources */,
 				FA75D44D29AD177600537916 /* MenuViewModelVC.swift in Sources */,
 				FAF71E4929EDB6AF009F0D3D /* Record.swift in Sources */,
-				FADDE9212968B69200A6FA2F /* FlippableView.swift in Sources */,
+				FADDE9212968B69200A6FA2F /* FlippableCard.swift in Sources */,
 				FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */,
 				FAED92912A1FE17500C45EEB /* TimerButton.swift in Sources */,
 				FAEBB0F9297704BE000650A8 /* SettingsProtocol.swift in Sources */,
@@ -761,6 +880,7 @@
 				FA7A0685297C441F00823470 /* UIViewController + Extension.swift in Sources */,
 				FA7A0680297C38EC00823470 /* SettingsStorageProtocol.swift in Sources */,
 				FAB1BF7F29C232AF001D5C2D /* TouchBehavior.swift in Sources */,
+				FAFF8CFF2A3113EF001544DA /* AnimationObjects.swift in Sources */,
 				FAEDC8AF2A0971AF0014A861 /* RecordCell.swift in Sources */,
 				FA7A0687297C4AFD00823470 /* LabelAndSwitchCell.swift in Sources */,
 				FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */,
@@ -942,6 +1062,7 @@
 		};
 		FA29CDAB291FFF3A00E76DF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D2CF290DA38AE719C822B6 /* Pods-Cards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -960,7 +1081,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.03;
+				MARKETING_VERSION = 1.04;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -971,6 +1092,7 @@
 		};
 		FA29CDAC291FFF3A00E76DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1150D7B6A73ACABC4B256A6 /* Pods-Cards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -989,7 +1111,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.03;
+				MARKETING_VERSION = 1.04;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.planethost.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

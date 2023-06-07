@@ -10,27 +10,45 @@ import UIKit
 // MARK: - Extension
 
 extension UIColor {
+    // MARK: - Enumeration
+    
+    enum AssetName: String {
+        // MARK: - Cases
+        
+        case _F0F6F0_25252C = "F0F6F0_25252C"
+        case _FFFFFF_1E1E1E = "FFFFFF_1E1E1E"
+        case _D1D1D6_FFFFFF = "D1D1D6_FFFFFF"
+        
+        // MARK: - Properties
+        
+        typealias Value = String
+        var name: String { getValue() }
+        
+        // MARK: - Methods
+        
+        private func getValue() -> Value {
+            switch self {
+            case ._F0F6F0_25252C:
+                return rawValue
+            case ._FFFFFF_1E1E1E:
+                return rawValue
+            case ._D1D1D6_FFFFFF:
+                return rawValue
+            }
+        }
+    }
+    
     // MARK: - Methods
     
-    static func getGrayWhiteColor() -> UIColor {
-        guard let color = UIColor(named: "GrayWhite") else {
-            fatalError("Not found color GreyWhite in scope")
+    static func get(color asset: AssetName) -> UIColor {
+        switch asset {
+        case ._F0F6F0_25252C:
+            return UIColor(named: asset.name)!
+        case ._FFFFFF_1E1E1E:
+            return UIColor(named: asset.name)!
+        case ._D1D1D6_FFFFFF:
+            return UIColor(named: asset.name)!
         }
-        return color
-    }
-    
-    static func getWhiteGrayColor() -> UIColor {
-        guard let color = UIColor(named: "WhiteGray") else {
-            fatalError("Not found color WhiteGray in scope")
-        }
-        return color
-    }
-    
-    static func getTimerButtonColor() -> UIColor {
-        guard let color = UIColor(named: "F0F6F0#25252C") else {
-            fatalError("Not found color WhiteGray in scope")
-        }
-        return color
     }
     
     static func getLimeColor() -> UIColor {

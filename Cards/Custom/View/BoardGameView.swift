@@ -6,26 +6,29 @@
 //
 
 import UIKit
+import Lottie
 
 // MARK: - Class
 
-final class BoardGameView: UIView {
+final class BoardGameView: UIView, FlippableView {
     // MARK: - Properties
     
     private var cornerRadius: CGFloat = 5
     
     lazy var frontSideView: UIView = self.getFrontSideView()
-    lazy var backSideView: UIView = self.getBackSideView()
+    lazy var backSideView: LottieAnimationView = self.getBackSideView()
     
     var isFlipped: Bool = true {
         didSet {
             self.setNeedsDisplay()
         }
     }
+    var animation: AnimationHelper.Animation
     
     // MARK: - Init
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, animation: AnimationHelper.Animation) {
+        self.animation = animation
         super.init(frame: frame)
                 
         setupBorders()
@@ -36,7 +39,7 @@ final class BoardGameView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Daraw method
+    // MARK: - Override method
     
     override func draw(_ rect: CGRect) {
         backSideView.removeFromSuperview()
@@ -51,12 +54,30 @@ final class BoardGameView: UIView {
         }
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        setupAnimation()
+        self.backSideView.play()
+    }
     
     // MARK: - Setup view
     
     private func setupBorders() {
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRadius
+    }
+    
+    private func setupAnimation() {
+        switch traitCollection.userInterfaceStyle {
+        case .light, .unspecified:
+            self.backSideView.animation = LottieAnimation.named(animation.objects.light)
+        case .dark:
+            self.backSideView.animation = LottieAnimation.named(animation.objects.dark)
+        @unknown default:
+            break
+        }
+
     }
     
     func setupFlipView() {
@@ -75,7 +96,12 @@ final class BoardGameView: UIView {
         let fromView = isFlipped ? frontSideView : backSideView
         let toView = isFlipped ? backSideView : frontSideView
         
-        UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionFlipFromRight], completion: nil)
+        self.setupAnimation()
+        UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.transitionFlipFromRight]) { _ in
+            if !self.isFlipped {
+                self.backSideView.play()
+            }
+        }
         
         isFlipped.toggle()
     }
@@ -96,13 +122,14 @@ extension BoardGameView {
         return view
     }
     
-    private func getBackSideView() -> UIView {
-        let view = UIView(frame: self.bounds)
+    private func getBackSideView() -> LottieAnimationView {
+        let animationView = LottieAnimationView(frame: self.bounds)
         
-        view.backgroundColor = .getTimerButtonColor()
-        view.layer.masksToBounds = true
-        view.layer.cornerRadius = cornerRadius
+        animationView.backgroundColor = .get(color: ._F0F6F0_25252C)
+        animationView.layer.masksToBounds = true
+        animationView.layer.cornerRadius = cornerRadius
+        animationView.loopMode = animation.objects.loopMode
         
-        return view
+        return animationView
     }
 }

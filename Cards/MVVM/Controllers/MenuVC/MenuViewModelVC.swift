@@ -20,7 +20,7 @@ final class MenuViewModelVC: MenuViewViewModelType {
         return true
     }
     var backgroundColor: UIColor {
-        return .getWhiteGrayColor()
+        return .get(color: ._FFFFFF_1E1E1E)
     }
     
     // MARK: - Methods
@@ -58,7 +58,7 @@ extension MenuViewModelVC {
     }
     
     func getButton(for buttonType: MenuButtonType) -> UIButton {
-        return UIButton(title: buttonType.name, titleColor: .black, backgroundColor: .getGrayWhiteColor(), font: .getCharter17())
+        return UIButton(title: buttonType.name, titleColor: .black, backgroundColor: .get(color: ._D1D1D6_FFFFFF), font: .getCharter17())
     }
 }
 

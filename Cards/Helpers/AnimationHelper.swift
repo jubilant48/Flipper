@@ -10,6 +10,31 @@ import UIKit
 // MARK: - Class
 
 final class AnimationHelper {
+    // MARK: - Enumeration
+    
+    enum Animation {
+        // MARK: - Cases
+        
+        case catIsSleepingAndRolling
+        case swingInUFO
+        
+        // MARK: - Properties
+        
+        typealias Value = AnimationObjects
+        var objects: AnimationObjects { getValue() }
+        
+        // MARK: - Methods
+        
+        private func getValue() -> Value {
+            switch self {
+            case .catIsSleepingAndRolling:
+                return CatIsSleepingAndRolling()
+            case .swingInUFO:
+                return SwingInUFO()
+            }
+        }
+    }
+    
     // MARK: Methods
     
     static func removeCards(arrayOfCards cards: [UIView], compliteion: (() -> Void)?) {

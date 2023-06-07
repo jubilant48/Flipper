@@ -9,14 +9,12 @@ import UIKit
 
 // MARK: - Protocol
 
-protocol FlippableView: UIView {
+protocol FlippableCard: FlippableView {
     // MARK: - Properties
     
     var backSideType: CardBackSide! { get set }
-    var isFlipped: Bool { get set }
     
     // MARK: - Methods
         
-    func flip()
     func cleanFlip()
 }

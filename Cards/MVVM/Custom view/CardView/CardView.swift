@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
+final class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableCard {
     // MARK: - Properties
     
     private var viewModel: CardViewViewModelType!

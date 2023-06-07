@@ -22,8 +22,8 @@ final class CardFlipBehavior: FlipBehavior {
         try SoundService.play(sound: .flip)
     }
     
-    private func getCardAndVC(_ view: UIView) throws -> (FlippableView, BoardGameVC, BoardGameViewViewModelType) {
-        guard let card = view as? FlippableView else {
+    private func getCardAndVC(_ view: UIView) throws -> (FlippableCard, BoardGameVC, BoardGameViewViewModelType) {
+        guard let card = view as? FlippableCard else {
             throw BehaviorError.failCastToFlippableView
         }
         

@@ -153,7 +153,7 @@ extension BoardGameVC {
                     let card = cardViewFactory.get(modelCard.type, withSize: viewModel.cardSize, andColor: modelCard.color, andBackSide: data.back, viewModel: cardViewModel)
                     card.tag = index
                     card.frame.origin = data.point
-                    (card as? FlippableView)?.isFlipped = data.isFlipped
+                    (card as? FlippableCard)?.isFlipped = data.isFlipped
                     cardView.append(card)
                     
                     if data.isFlipped {
@@ -278,11 +278,11 @@ extension BoardGameVC {
         viewModel.flippedCards = []
         viewModel.countTouchesOnCard = 0
         
-        var flippedCards: [FlippableView] = []
-        var noFlippedCards: [FlippableView] = []
+        var flippedCards: [FlippableCard] = []
+        var noFlippedCards: [FlippableCard] = []
         
         viewModel.cardViews.forEach { card in
-            let flippedCard = (card as! FlippableView)
+            let flippedCard = (card as! FlippableCard)
             
             if flippedCard.isFlipped {
                 flippedCards.append(flippedCard)
@@ -315,7 +315,7 @@ extension BoardGameVC {
     }
     
     private func setupView() {
-        view.backgroundColor = .getWhiteGrayColor()
+        view.backgroundColor = .get(color: ._FFFFFF_1E1E1E)
         view.isMultipleTouchEnabled = false
         view.isExclusiveTouch = true
     }
