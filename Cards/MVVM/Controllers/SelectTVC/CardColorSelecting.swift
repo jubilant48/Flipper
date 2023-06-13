@@ -1,5 +1,5 @@
 //
-//  SelectCardColorViewModelTVC.swift
+//  CardColorSelecting.swift
 //  Cards
 //
 //  Created by macbook on 11.02.2023.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class SelectCardColorViewModelTVC: SelectTableViewViewModelType {
+final class CardColorSelecting: SelectTableViewViewModelType {
     // MARK: - Enumeration
     
-    enum SelectCardColorNameSpaces: String {
+    enum NameSpaces: String {
         case title = "Цвета фигур"
         case cellReuseIdentifier = "CardColorCell"
     }
@@ -20,8 +20,8 @@ final class SelectCardColorViewModelTVC: SelectTableViewViewModelType {
     private let settings = Settings.shared
     private let cardColors: [CardColor] = [.red, .green, .black, .gray, .brown, .yellow, .purple, .orange, .white]
     
-    var title: String { SelectCardColorNameSpaces.title.rawValue }
-    var cellReuseIdentifier: String { SelectCardColorNameSpaces.cellReuseIdentifier.rawValue }
+    var title: String { NameSpaces.title.rawValue }
+    var cellReuseIdentifier: String { NameSpaces.cellReuseIdentifier.rawValue }
     var itemsCount: Int { settings.cardColors.count }
     
     // MARK: - Methods
@@ -42,13 +42,24 @@ final class SelectCardColorViewModelTVC: SelectTableViewViewModelType {
         return isCheckmark
     }
     
+    func operationForSelected(cell: UITableViewCell, indexPath: IndexPath, tableView: UITableView) {
+        if isCheckmark(forIndexPath: indexPath) && itemsCount > 1 {
+            cell.accessoryType = .none
+            removeItem(forIndexPath: indexPath)
+            
+        } else if !isCheckmark(forIndexPath: indexPath) {
+            cell.accessoryType = .checkmark
+            insertItem(forIndexPath: indexPath)
+        }
+    }
+    
     // MARK: - Settings handle
     
-    func removeItem(forIndexPath indexPath: IndexPath) {
+    private func removeItem(forIndexPath indexPath: IndexPath) {
         settings.cardColors.remove(textForCell(forIndexPath: indexPath))
     }
     
-    func insertItem(forIndexPath indexPath: IndexPath) {
+    private func insertItem(forIndexPath indexPath: IndexPath) {
         settings.cardColors.insert(textForCell(forIndexPath: indexPath))
     }
     

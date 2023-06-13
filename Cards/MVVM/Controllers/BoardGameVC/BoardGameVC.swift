@@ -17,7 +17,7 @@ final class BoardGameVC: UIViewController {
     lazy var buttonForNumberOfCardFlips = viewModel.getButtonView(for: .restart)
     private lazy var reverseCardsButtonView = viewModel.getButtonView(for: .reverse)
     lazy var dismissButton = viewModel.getDismissButton()
-    private lazy var boardGameView = viewModel.getBoardGameView()
+    private lazy var boardGameView: BoardGameView! = getBoardGameView()
     
     // MARK: - Init
     
@@ -109,7 +109,11 @@ final class BoardGameVC: UIViewController {
 
 extension BoardGameVC {
     func startGame() {
-        viewModel.newGame()
+        do {
+            try viewModel.newGame()
+        } catch let error {
+            self.showErrorAlert(description: error.localizedDescription)
+        }
         
         if !viewModel.isShowReverseCardsButton && viewModel.timerService.isRinning {
             viewModel.timerService.createTimer(self, selector: #selector(updateTimer))
@@ -139,13 +143,21 @@ extension BoardGameVC {
         
         if !isContinue {
             for (index, modelCard) in modelData.enumerated() {
-                let cardOne = cardViewFactory.get(modelCard.type, withSize: viewModel.cardSize, andColor: modelCard.color, viewModel: cardViewModel)
-                cardOne.tag = index
-                cardView.append(cardOne)
+                do {
+                    let cardOne = try cardViewFactory.get(modelCard.type, withSize: viewModel.cardSize, andColor: modelCard.color, viewModel: cardViewModel)
+                    cardOne.tag = index
+                    cardView.append(cardOne)
+                } catch let error {
+                    showErrorAlert(description: error.localizedDescription)
+                }
                 
-                let cardTwo = cardViewFactory.get(modelCard.type, withSize: viewModel.cardSize, andColor: modelCard.color, viewModel: cardViewModel)
-                cardTwo.tag = index
-                cardView.append(cardTwo)
+                do {
+                    let cardTwo = try cardViewFactory.get(modelCard.type, withSize: viewModel.cardSize, andColor: modelCard.color, viewModel: cardViewModel)
+                    cardTwo.tag = index
+                    cardView.append(cardTwo)
+                } catch let error {
+                    showErrorAlert(description: error.localizedDescription)
+                }
             }
         } else {
             for (index, modelCard) in modelData.enumerated() {
@@ -310,6 +322,20 @@ extension BoardGameVC {
 // MARK: - Setup view
 
 extension BoardGameVC {
+    private func getBoardGameView() -> BoardGameView? {
+        var board: BoardGameView?
+        
+        do {
+            board = try viewModel.getBoardGameView()
+            
+            return board
+        } catch let error {
+            showErrorAlert(description: error.localizedDescription)
+        }
+        
+        return board
+    }
+    
     private func registerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(startNewGameWithAlert), name: Game.cardCountNotification, object: nil)
     }

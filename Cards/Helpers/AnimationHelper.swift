@@ -12,11 +12,11 @@ import UIKit
 final class AnimationHelper {
     // MARK: - Enumeration
     
-    enum Animation {
+    enum Animation: String {
         // MARK: - Cases
         
-        case catIsSleepingAndRolling
-        case swingInUFO
+        case catIsSleepingAndRolling = "Спящий кот"
+        case swingInUFO = "НЛО качели"
         
         // MARK: - Properties
         

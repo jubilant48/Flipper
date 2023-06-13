@@ -24,7 +24,7 @@ final class CardTouchesBehavior: TouchesBehavior {
     
     private func getBoardGameVC(_ view: UIView) throws -> BoardGameVC {
         guard let boardGameVC = view.parentViewController as? BoardGameVC else {
-            throw BehaviorError.failCastToBoardGameVC
+            throw CommonError.complexUnwrapAndConversation(file: #fileID, line: #line)
         }
         
         return boardGameVC

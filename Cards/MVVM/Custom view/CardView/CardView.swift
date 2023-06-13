@@ -29,9 +29,7 @@ final class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableCard {
     
     // MARK: - Init
     
-    init(frame: CGRect,
-         color: UIColor,
-         backSide: CardBackSide = Settings.shared.getCardBackSides().randomElement()!, viewModel: CardViewViewModelType) {
+    init(frame: CGRect, color: UIColor, backSide: CardBackSide, viewModel: CardViewViewModelType) {
         super.init(frame: frame)
         
         self.viewModel = viewModel

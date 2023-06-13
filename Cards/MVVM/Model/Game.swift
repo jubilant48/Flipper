@@ -10,9 +10,11 @@ import UIKit
 // MARK: - Class
 
 final class Game {
-    // MARK: Properties
+    // MARK: - Properties
     
     static let cardCountNotification = Notification.Name("Game.cardCountEqualZero")
+    
+    private let settings = Settings.shared
     
     var cardsCount: Int = 0 {
         didSet {
@@ -29,13 +31,18 @@ final class Game {
     }
     var remainingCards = [Card]()
     
-    // MARK: Methods
+    // MARK: - Methods
     
-    func generateCard() {
+    func generateCard() throws {
         var cards = [Card]()
         
-        for _ in 0..<cardsCount {
-            let randomElement = Card(type: Settings.shared.getCardTypes().randomElement()!, color: Settings.shared.getCardColors().randomElement()!)
+        for _ in 0 ..< cardsCount {
+            guard let randomType = try settings.getCardTypes().randomElement(),
+                  let randomColor = try settings.getCardColors().randomElement() else {
+                throw CommonError.unwrapFailed(file: #file, line: #line)
+            }
+            
+            let randomElement = Card(type: randomType, color: randomColor)
             
             cards.append(randomElement)
         }
@@ -56,7 +63,7 @@ final class Game {
         numberOfCardFlips += 1
     }
     
-    // MARK: Private methods
+    // MARK: - Private methods
     
     private func decreaseCardCount() {
         cardsCount -= 1

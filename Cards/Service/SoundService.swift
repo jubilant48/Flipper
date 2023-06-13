@@ -43,7 +43,7 @@ final class SoundService {
     
     private static func findSound(name: String) throws -> URL {
         guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else {
-            throw SoundError.sondNotFound
+            throw CommonError.dataNotFound(file: #fileID, line: #line)
         }
         
         let url = URL(fileURLWithPath: path)

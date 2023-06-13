@@ -50,10 +50,10 @@ final class BoardGameViewModelVC: BoardGameViewViewModelType {
 // MARK: - Beginning game
 
 extension BoardGameViewModelVC {
-    func newGame() {
+    func newGame() throws {
         let game = Game()
         game.cardsCount = cardsParisCounts
-        game.generateCard()
+        try game.generateCard()
         
         self.game = game
     }
@@ -117,10 +117,11 @@ extension BoardGameViewModelVC {
     func getStartButtonView() -> UIButton {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
 
-        button.backgroundColor = .get(color: ._D1D1D6_FFFFFF)
+        button.backgroundColor = .get(color: ._F0F6F0_25252C)
         button.layer.cornerRadius = 10
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.getBlue(), for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
+        
         button.setTitle(NameSpaces.newParty.rawValue, for: .normal)
         
         return button
@@ -160,8 +161,10 @@ extension BoardGameViewModelVC {
         return button
     }
     
-    func getBoardGameView() -> BoardGameView {
-        let boardView = BoardGameView(frame: .zero, animation: .swingInUFO)
+    func getBoardGameView() throws -> BoardGameView {
+        let animation = try Settings.shared.getBoardAnimation()
+        
+        let boardView = BoardGameView(frame: .zero, animation: animation)
         
         return boardView
     }
@@ -179,7 +182,7 @@ extension BoardGameViewModelVC {
         
         for view in cardViews {
             guard let cardView = view as? FlippableCard else {
-                throw BoardGameViewModelError.conversationError
+                throw CommonError.conversationFiled(file: #file, line: #line)
             }
             
             if cards.contains(game.allExistingCards[view.tag]) {
@@ -201,7 +204,7 @@ extension BoardGameViewModelVC {
         return cards
     }
     
-    func saveGame() throws {  //from cardView: [UIView]
+    func saveGame() throws {
         game.remainingCards = try createCardsForSave(from: self.cardViews)
         
         do {

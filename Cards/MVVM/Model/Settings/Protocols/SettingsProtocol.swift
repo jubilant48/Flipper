@@ -15,10 +15,12 @@ protocol SettingsProtocol {
     var cardTypes: Set<String> { get set }
     var cardColors: Set<String> { get set }
     var cardBackSides: Set<String> { get set }
+    var animationBoardGameView: String { get set }
     
     // MARK: - Methods
     
-    func getCardTypes() -> [CardType]
-    func getCardColors() -> [CardColor]
-    func getCardBackSides() -> [CardBackSide]
+    func getCardTypes() throws -> [CardType]
+    func getCardColors() throws -> [CardColor]
+    func getCardBackSides() throws -> [CardBackSide]
+    func getBoardAnimation() throws -> AnimationHelper.Animation
 }

@@ -89,14 +89,7 @@ final class SelectTVC: UITableViewController {
         
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         
-        if viewModel.isCheckmark(forIndexPath: indexPath) && viewModel.itemsCount > 1 {
-            cell.accessoryType = .none
-            viewModel.removeItem(forIndexPath: indexPath)
-            
-        } else if !viewModel.isCheckmark(forIndexPath: indexPath) {
-            cell.accessoryType = .checkmark
-            viewModel.insertItem(forIndexPath: indexPath)
-        }
+        viewModel.operationForSelected(cell: cell, indexPath: indexPath, tableView: tableView)
         
         tableView.reloadData()
     }

@@ -11,13 +11,13 @@ import CoreData
 // MARK: - Class
 
 final class StorageService {
-    // MARK: Properties
+    // MARK: - Properties
     
     static let shared = StorageService()
     
     private let context: NSManagedObjectContext!
     
-    // MARK: Init
+    // MARK: - Init
     
     init() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -44,7 +44,7 @@ final class StorageService {
             cardData.cardColor = card.color.rawValue
             
             guard let setViews = cardData.views?.mutableCopy() as? NSMutableOrderedSet else {
-                throw StorageServiceError.missingPointSet
+                throw CommonError.complexUnwrapAndConversation(file: #fileID, line: #line)
             }
             
             card.viewData.forEach { view in
@@ -72,12 +72,12 @@ final class StorageService {
         removeGameData()
         
         guard let entity = NSEntityDescription.entity(forEntityName: "GameData", in: context) else {
-            throw StorageServiceError.entityNotFound
+            throw CommonError.dataNotFound(file: #fileID, line: #line)
         }
         
         let gameDataObject = GameData(entity: entity, insertInto: context)
         guard let setCards = gameDataObject.cards?.mutableCopy() as? NSMutableOrderedSet else {
-            throw StorageServiceError.missingCardSet
+            throw CommonError.complexUnwrapAndConversation(file: #fileID, line: #line)
         }
         
         gameDataObject.numberOfCardFlips = numberOfCardFlips

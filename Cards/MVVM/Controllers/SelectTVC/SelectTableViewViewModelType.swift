@@ -20,8 +20,10 @@ protocol SelectTableViewViewModelType {
     func numberOfRowsInSection() -> Int
     func textForCell(forIndexPath indexPath: IndexPath) -> String
     func isCheckmark(forIndexPath indexPath: IndexPath) -> Bool
-    func removeItem(forIndexPath indexPath: IndexPath)
-    func insertItem(forIndexPath indexPath: IndexPath)
+    func operationForSelected(cell: UITableViewCell, indexPath: IndexPath, tableView: UITableView)
+    
+//    func removeItem(forIndexPath indexPath: IndexPath)
+//    func insertItem(forIndexPath indexPath: IndexPath)
     
     // MARK: - Data handling
     

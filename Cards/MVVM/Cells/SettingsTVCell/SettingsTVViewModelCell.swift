@@ -14,6 +14,7 @@ final class SettingsTVViewModelCell: SettingsTableViewCellViewModelType {
         case cardsTypes = "Фигуры"
         case cardsColors = "Цвета фигур"
         case cardsBacks = "Рубашки"
+        case animations = "Анимации"
     }
     
     // MARK: - Properties
@@ -21,6 +22,7 @@ final class SettingsTVViewModelCell: SettingsTableViewCellViewModelType {
     private let cardsTypesIndexPath: IndexPath = IndexPath(row: 0, section: 1)
     private let cardsColorIndexPath: IndexPath = IndexPath(row: 1, section: 1)
     private let backTypeIndexPath: IndexPath = IndexPath(row: 2, section: 1)
+    private let animationsBoardIndexPath: IndexPath = IndexPath(row: 0, section: 2)
     
     var indexPath: IndexPath
     
@@ -34,6 +36,8 @@ final class SettingsTVViewModelCell: SettingsTableViewCellViewModelType {
             title = TitleSpaces.cardsColors.rawValue
         case backTypeIndexPath:
             title = TitleSpaces.cardsBacks.rawValue
+        case animationsBoardIndexPath:
+            title = TitleSpaces.animations.rawValue
         default:
             break
         }

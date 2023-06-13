@@ -24,7 +24,7 @@ extension ContinueProtocol {
         try setViews.forEach { view in
             if let viewData = view as? ViewData {
                 guard let backTypeString = viewData.backSideType,
-                      let back = CardBackSide(rawValue: backTypeString) else { throw ContinueError.backCardNotExist }
+                      let back = CardBackSide(rawValue: backTypeString) else { throw CommonError.creationFailed(file: #fileID, line: #line) }
                 
                 let point = CGPoint(x: CGFloat(viewData.x), y: CGFloat(viewData.y))
         
@@ -51,12 +51,12 @@ extension ContinueProtocol {
             if let cardData = card as? CardData {
                 guard let cardTypeString = cardData.cardType,
                       let type = CardType(rawValue: cardTypeString) else {
-                    throw ContinueError.cardTypeNotExist
+                    throw CommonError.creationFailed(file: #fileID, line: #line)
                 }
                 
                 guard let cardColorString = cardData.cardColor,
                       let color = CardColor(rawValue: cardColorString) else {
-                    throw ContinueError.cardColorNotExist
+                    throw CommonError.creationFailed(file: #fileID, line: #line)
                 }
                 
                 let card = Card(type: type, color: color)

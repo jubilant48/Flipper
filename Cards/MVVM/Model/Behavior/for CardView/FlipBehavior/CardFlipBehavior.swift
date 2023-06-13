@@ -24,15 +24,15 @@ final class CardFlipBehavior: FlipBehavior {
     
     private func getCardAndVC(_ view: UIView) throws -> (FlippableCard, BoardGameVC, BoardGameViewViewModelType) {
         guard let card = view as? FlippableCard else {
-            throw BehaviorError.failCastToFlippableView
+            throw CommonError.conversationFiled(file: #fileID, line: #line)
         }
         
         guard let boardGameVC = view.parentViewController as? BoardGameVC else {
-            throw BehaviorError.failCastToBoardGameVC
+            throw CommonError.complexUnwrapAndConversation(file: #fileID, line: #line)
         }
         
         guard let viewModel = boardGameVC.viewModel else {
-            throw BehaviorError.failGettingViewModel
+            throw CommonError.dataNotFound(file: #fileID, line: #line)
         }
         
         return (card, boardGameVC, viewModel)

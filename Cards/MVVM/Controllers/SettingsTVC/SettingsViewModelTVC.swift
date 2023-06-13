@@ -27,11 +27,14 @@ final class SettingsViewModelTVC: SettingsTableViewViewModelType {
     private let cardsColorIndexPath: IndexPath = IndexPath(row: 1, section: 1)
     private let backTypeIndexPath: IndexPath = IndexPath(row: 2, section: 1)
     
+    private let animationsBoardIndexPath: IndexPath = IndexPath(row: 0, section: 2)
+    
     private let settings: Settings = Settings.shared
     private var settingsTable: [Section: [IndexPath]] {
         let settingsTable = [
             0 : [numberPairsCardsIndexPath, isShowReverseCardsButtonIndexPath],
-            1 : [backTypeIndexPath, cardsColorIndexPath, backTypeIndexPath]
+            1 : [backTypeIndexPath, cardsColorIndexPath, backTypeIndexPath],
+            2 : [animationsBoardIndexPath]
         ]
         
         return settingsTable
@@ -48,7 +51,7 @@ final class SettingsViewModelTVC: SettingsTableViewViewModelType {
     
     func numberOfRows(inSection section: Int) throws -> Int {
         guard let numberOfRows = settingsTable[section]?.count else {
-            throw SettingsViewModelError.sectionNotExist
+            throw CommonError.unwrapFailed(file: #fileID, line: #line)
         }
         
         return numberOfRows
@@ -80,11 +83,13 @@ final class SettingsViewModelTVC: SettingsTableViewViewModelType {
         
         switch indexPath {
         case cardsTypesIndexPath:
-            viewModel = SelectCardTypeViewModelTVC()
+            viewModel = CardTypeSelecting()
         case cardsColorIndexPath:
-            viewModel = SelectCardColorViewModelTVC()
+            viewModel = CardColorSelecting()
         case backTypeIndexPath:
-            viewModel = SelectCardBackViewModelTVC()
+            viewModel = CardBackSelecting()
+        case animationsBoardIndexPath:
+            viewModel = BoardAnimationSelecting()
         default:
             break
         }
@@ -97,7 +102,9 @@ final class SettingsViewModelTVC: SettingsTableViewViewModelType {
         case numberPairsCardsIndexPath.section:
             return "Настройки игрового процесса"
         case cardsTypesIndexPath.section:
-            return "Настройки оформления"
+            return "Настройки оформления карт"
+        case animationsBoardIndexPath.section:
+            return "Настройки игрового поля"
         default:
             return nil
         }

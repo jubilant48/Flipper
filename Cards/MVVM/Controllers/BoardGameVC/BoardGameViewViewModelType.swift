@@ -32,7 +32,7 @@ protocol BoardGameViewViewModelType {
     func getTimerButtonView() -> UIButton
     func getButtonView(for buttonType: BoardGameButtonType) -> UIButton
     func getDismissButton() -> UIButton
-    func getBoardGameView() -> BoardGameView
+    func getBoardGameView() throws -> BoardGameView
     
     // MARK: - Methods
     
@@ -40,7 +40,7 @@ protocol BoardGameViewViewModelType {
     
     // MARK: - Beginning game
     
-    func newGame()
+    func newGame() throws
     func getRandomPoint(from rect: CGRect) -> CGPoint
     
     // MARK: - Game methods

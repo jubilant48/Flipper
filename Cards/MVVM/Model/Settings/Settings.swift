@@ -22,15 +22,16 @@ final class Settings: Codable, SettingsProtocol {
     var cardTypes: Set<String> = [CardType.circle.rawValue, CardType.cross.rawValue, CardType.square.rawValue, CardType.fill.rawValue]
     var cardColors: Set<String> = [CardColor.red.rawValue, CardColor.green.rawValue, CardColor.black.rawValue, CardColor.gray.rawValue, CardColor.brown.rawValue, CardColor.yellow.rawValue, CardColor.purple.rawValue, CardColor.orange.rawValue, CardColor.white.rawValue]
     var cardBackSides: Set<String> = [CardBackSide.circle.rawValue, CardBackSide.line.rawValue]
+    var animationBoardGameView: String = AnimationHelper.Animation.swingInUFO.rawValue
     
     // MARK: Methods
     
-    func getCardTypes() -> [CardType] {
+    func getCardTypes() throws -> [CardType] {
         var types = [CardType]()
-        
+
         for value in cardTypes {
             guard let type = CardType(rawValue: value) else {
-                fatalError("Не получилось создать тип фигуры карты")
+                throw CommonError.creationFailed(file: #fileID, line: #line)
             }
             
             types.append(type)
@@ -39,12 +40,12 @@ final class Settings: Codable, SettingsProtocol {
         return types
     }
     
-    func getCardColors() -> [CardColor] {
+    func getCardColors() throws -> [CardColor] {
         var colors = [CardColor]()
         
         for value in cardColors {
             guard let color = CardColor(rawValue: value) else {
-                fatalError("Не получилось создать цвет фигуры")
+                throw CommonError.creationFailed(file: #fileID, line: #line)
             }
             
             colors.append(color)
@@ -53,18 +54,26 @@ final class Settings: Codable, SettingsProtocol {
         return colors
     }
     
-    func getCardBackSides() -> [CardBackSide] {
+    func getCardBackSides() throws -> [CardBackSide] {
         var backSides = [CardBackSide]()
         
         for value in cardBackSides {
             guard let backSide = CardBackSide(rawValue: value) else {
-                fatalError("Не получилось создать рубашку карты")
+                throw CommonError.creationFailed(file: #fileID, line: #line)
             }
             
             backSides.append(backSide)
         }
         
         return backSides
+    }
+    
+    func getBoardAnimation() throws -> AnimationHelper.Animation {
+        guard let animation = AnimationHelper.Animation(rawValue: animationBoardGameView) else {
+            throw CommonError.creationFailed(file: #fileID, line: #line)
+        }
+        
+        return animation
     }
 }
 
@@ -77,15 +86,16 @@ extension Settings: SettinsStorageProtocol {
         Settings.shared.cardTypes = settings.cardTypes
         Settings.shared.cardColors = settings.cardColors
         Settings.shared.cardBackSides = settings.cardBackSides
+        Settings.shared.animationBoardGameView = settings.animationBoardGameView
     }
     
     func loadSettings() throws {
-        guard let codedSettings = try? Data(contentsOf: Settings.archiveURL) else { throw SettingsError.dataNotExist }
+        guard let codedSettings = try? Data(contentsOf: Settings.archiveURL) else { throw CommonError.dataNotFound(file: #fileID, line: #line) }
         
         let propertyListDecoder = PropertyListDecoder()
         let settings = try? propertyListDecoder.decode(Settings.self, from: codedSettings)
         
-        guard let settings = settings else { throw SettingsError.unwrapFailed }
+        guard let settings = settings else { throw CommonError.unwrapFailed(file: #fileID, line: #line) }
         
         setup(settings)
     }

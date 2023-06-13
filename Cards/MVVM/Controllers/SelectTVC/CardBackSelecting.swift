@@ -1,5 +1,5 @@
 //
-//  SelectCardBackViewModelTVC.swift
+//  CardBackSelecting.swift
 //  Cards
 //
 //  Created by macbook on 11.02.2023.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class SelectCardBackViewModelTVC: SelectTableViewViewModelType {
+final class CardBackSelecting: SelectTableViewViewModelType {
     // MARK:  - Enumeration
     
-    enum SelectCardBackNameSpaces: String {
+    enum NameSpaces: String {
         case title = "Рубашки"
         case cellReuseIdentifier = "BackSideCardCell"
     }
@@ -20,8 +20,8 @@ final class SelectCardBackViewModelTVC: SelectTableViewViewModelType {
     private let settings = Settings.shared
     private let cardBackSides: [CardBackSide] = [.circle, .line]
     
-    var title: String { SelectCardBackNameSpaces.title.rawValue }
-    var cellReuseIdentifier: String { SelectCardBackNameSpaces.cellReuseIdentifier.rawValue }
+    var title: String { NameSpaces.title.rawValue }
+    var cellReuseIdentifier: String { NameSpaces.cellReuseIdentifier.rawValue }
     var itemsCount: Int { settings.cardBackSides.count }
     
     // MARK: - Methods
@@ -42,13 +42,24 @@ final class SelectCardBackViewModelTVC: SelectTableViewViewModelType {
         return isCheckmark
     }
     
+    func operationForSelected(cell: UITableViewCell, indexPath: IndexPath, tableView: UITableView) {
+        if isCheckmark(forIndexPath: indexPath) && itemsCount > 1 {
+            cell.accessoryType = .none
+            removeItem(forIndexPath: indexPath)
+            
+        } else if !isCheckmark(forIndexPath: indexPath) {
+            cell.accessoryType = .checkmark
+            insertItem(forIndexPath: indexPath)
+        }
+    }
+    
     // MARK: - Settings handle
     
-    func removeItem(forIndexPath indexPath: IndexPath) {
+    private func removeItem(forIndexPath indexPath: IndexPath) {
         settings.cardBackSides.remove(textForCell(forIndexPath: indexPath))
     }
     
-    func insertItem(forIndexPath indexPath: IndexPath) {
+    private func insertItem(forIndexPath indexPath: IndexPath) {
         settings.cardBackSides.insert(textForCell(forIndexPath: indexPath))
     }
     

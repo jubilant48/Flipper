@@ -113,7 +113,7 @@ extension BoardGameView {
     private func getFrontSideView() -> UIView {
         let view = UIView(frame: self.bounds)
         
-        view.backgroundColor = .getBoardColor()
+        view.backgroundColor = .get(color: ._CCCCFF_003153)
         view.layer.masksToBounds = true
         view.layer.cornerRadius = cornerRadius
         view.layer.borderWidth = 1.9

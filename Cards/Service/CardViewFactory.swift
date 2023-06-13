@@ -10,21 +10,37 @@ import UIKit
 // MARK: - Class
 
 final class CardViewFactory {
-    // MARK: Methods
+    // MARK: - Properties
     
-    func  get(_ shape: CardType, withSize size: CGSize, andColor color: CardColor, viewModel: CardViewViewModelType) -> UIView {
+    private let settings = Settings.shared
+    
+    // MARK: - Methods
+    
+    func  get(_ shape: CardType, withSize size: CGSize, andColor color: CardColor, viewModel: CardViewViewModelType) throws -> UIView {
         let frame = CGRect(origin: .zero, size: size)
         let viewColor = getViewColorBy(modelColor: color)
         
         switch shape {
         case .circle:
-            return CardView<CircleShape>(frame: frame, color: viewColor, viewModel: viewModel)
+            return CardView<CircleShape>(frame: frame,
+                                         color: viewColor,
+                                         backSide: try getRandomBackSide(),
+                                         viewModel: viewModel)
         case .cross:
-            return CardView<CrossShape>(frame: frame, color: viewColor, viewModel: viewModel)
+            return CardView<CrossShape>(frame: frame,
+                                        color: viewColor,
+                                        backSide: try getRandomBackSide(),
+                                        viewModel: viewModel)
         case .square:
-            return CardView<SquareShape>(frame: frame, color: viewColor, viewModel: viewModel)
+            return CardView<SquareShape>(frame: frame,
+                                         color: viewColor,
+                                         backSide: try getRandomBackSide(),
+                                         viewModel: viewModel)
         case .fill:
-            return CardView<FillShape>(frame: frame, color: viewColor, viewModel: viewModel)
+            return CardView<FillShape>(frame: frame,
+                                       color: viewColor,
+                                       backSide: try getRandomBackSide(),
+                                       viewModel: viewModel)
         }
     }
     
@@ -44,7 +60,7 @@ final class CardViewFactory {
         }
     }
     
-    // MARK: Private methods
+    // MARK: - Private methods
     
     private func getViewColorBy(modelColor: CardColor) -> UIColor {
         switch modelColor {
@@ -67,5 +83,13 @@ final class CardViewFactory {
         case .white:
             return .white
         }
+    }
+    
+    private func getRandomBackSide() throws -> CardBackSide {
+        guard let randomBack = try settings.getCardBackSides().randomElement() else {
+            throw CommonError.unwrapFailed(file: #fileID, line: #line)
+        }
+        
+        return randomBack
     }
 }

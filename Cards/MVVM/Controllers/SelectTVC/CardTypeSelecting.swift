@@ -1,5 +1,5 @@
 //
-//  SelectCardTypeViewModelTVC.swift
+//  CardTypeSelecting.swift
 //  Cards
 //
 //  Created by macbook on 11.02.2023.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class SelectCardTypeViewModelTVC: SelectTableViewViewModelType {
+final class CardTypeSelecting: SelectTableViewViewModelType {
     // MARK: - Enumeration
     
-    enum SelectCardTypeNameSpaces: String {
+    enum NameSpaces: String {
         case title = "Фигуры"
         case cellReuseIdentifier = "CardTypeCell"
     }
@@ -20,8 +20,8 @@ final class SelectCardTypeViewModelTVC: SelectTableViewViewModelType {
     private let settings = Settings.shared
     private let cardTypes: [CardType] = [.circle, .cross, .square, .fill]
     
-    var title: String { SelectCardTypeNameSpaces.title.rawValue }
-    var cellReuseIdentifier: String { SelectCardTypeNameSpaces.cellReuseIdentifier.rawValue }
+    var title: String { NameSpaces.title.rawValue }
+    var cellReuseIdentifier: String { NameSpaces.cellReuseIdentifier.rawValue }
     var itemsCount: Int { settings.cardTypes.count }
     
     // MARK: - Methods
@@ -42,13 +42,24 @@ final class SelectCardTypeViewModelTVC: SelectTableViewViewModelType {
         return isCheckmark
     }
     
+    func operationForSelected(cell: UITableViewCell, indexPath: IndexPath, tableView: UITableView) {
+        if isCheckmark(forIndexPath: indexPath) && itemsCount > 1 {
+            cell.accessoryType = .none
+            removeItem(forIndexPath: indexPath)
+            
+        } else if !isCheckmark(forIndexPath: indexPath) {
+            cell.accessoryType = .checkmark
+            insertItem(forIndexPath: indexPath)
+        }
+    }
+    
     // MARK: - Settings handle
     
-    func removeItem(forIndexPath indexPath: IndexPath) {
+    private func removeItem(forIndexPath indexPath: IndexPath) {
         settings.cardTypes.remove(textForCell(forIndexPath: indexPath))
     }
     
-    func insertItem(forIndexPath indexPath: IndexPath) {
+    private func insertItem(forIndexPath indexPath: IndexPath) {
         settings.cardTypes.insert(textForCell(forIndexPath: indexPath))
     }
     

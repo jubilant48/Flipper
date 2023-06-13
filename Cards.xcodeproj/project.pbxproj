@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C134B7B6434E7C702A144BA5 /* Pods_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D0B8CC5840FAF9C2D97009 /* Pods_Cards.framework */; };
-		FA0AC6112997EF530005DD97 /* SelectCardBackViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */; };
+		FA0AC6112997EF530005DD97 /* CardBackSelecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC6102997EF530005DD97 /* CardBackSelecting.swift */; };
 		FA0AC6152997F6AC0005DD97 /* SelectTableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */; };
-		FA0AC626299823770005DD97 /* SelectCardColorViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */; };
-		FA0AC62A29982A440005DD97 /* SelectCardTypeViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */; };
+		FA0AC626299823770005DD97 /* CardColorSelecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC625299823770005DD97 /* CardColorSelecting.swift */; };
+		FA0AC62A29982A440005DD97 /* CardTypeSelecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AC62929982A440005DD97 /* CardTypeSelecting.swift */; };
 		FA28B48E29B79C7800F4A9B1 /* BoardGameViewModelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B48D29B79C7800F4A9B1 /* BoardGameViewModelVC.swift */; };
 		FA28B49029B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */; };
 		FA28B49329B7A7BB00F4A9B1 /* BoardGameButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B49229B7A7BB00F4A9B1 /* BoardGameButtonType.swift */; };
-		FA28B49529B7CF3600F4A9B1 /* BoardGameViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA28B49429B7CF3600F4A9B1 /* BoardGameViewModelError.swift */; };
 		FA297E8E2959E5DD00E86552 /* CardViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA297E8D2959E5DD00E86552 /* CardViewFactory.swift */; };
 		FA29CD9A291FFF3600E76DF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29CD99291FFF3600E76DF5 /* AppDelegate.swift */; };
 		FA29CD9C291FFF3600E76DF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA29CD9B291FFF3600E76DF5 /* SceneDelegate.swift */; };
@@ -33,10 +32,8 @@
 		FA75D45129AD27DA00537916 /* NameSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45029AD27DA00537916 /* NameSpaces.swift */; };
 		FA75D45329AD280900537916 /* MenuButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45229AD280900537916 /* MenuButtonType.swift */; };
 		FA75D45729AD2A9500537916 /* ContinueProtocol + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45629AD2A9500537916 /* ContinueProtocol + Extension.swift */; };
-		FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA75D45A29AD2DAA00537916 /* ContinueError.swift */; };
 		FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */; };
 		FA7A0680297C38EC00823470 /* SettingsStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */; };
-		FA7A0683297C40A000823470 /* SettingsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0682297C40A000823470 /* SettingsError.swift */; };
 		FA7A0685297C441F00823470 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0684297C441F00823470 /* UIViewController + Extension.swift */; };
 		FA7A0687297C4AFD00823470 /* LabelAndSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */; };
 		FA7A0689297C777100823470 /* SelectTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A0688297C777100823470 /* SelectTVC.swift */; };
@@ -48,15 +45,14 @@
 		FA849538296CA72800D201FA /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA849537296CA72800D201FA /* UIStackView + Extension.swift */; };
 		FA922C472988211700737D4D /* CardsCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA922C452988211700737D4D /* CardsCoreData.xcdatamodeld */; };
 		FA922C4929882A2D00737D4D /* StorageService .swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4829882A2D00737D4D /* StorageService .swift */; };
-		FA922C4B29882E8900737D4D /* StorageServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4A29882E8900737D4D /* StorageServiceError.swift */; };
 		FA922C4D2988337A00737D4D /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */; };
 		FA9A7F9629D1F5BB00B60FC9 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */; };
-		FA9A7F9829D1F6D000B60FC9 /* SondError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A7F9729D1F6D000B60FC9 /* SondError.swift */; };
 		FA9A7F9A29D1FB4800B60FC9 /* SoundNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A7F9929D1FB4800B60FC9 /* SoundNames.swift */; };
 		FA9A7FAF29D2151400B60FC9 /* flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA9A7FAE29D2151400B60FC9 /* flip.mp3 */; };
 		FA9A7FB529D224FE00B60FC9 /* remove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA9A7FB429D224FE00B60FC9 /* remove.mp3 */; };
 		FA9A7FB729D2307C00B60FC9 /* push_to_limits.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA9A7FB629D2307C00B60FC9 /* push_to_limits.mp3 */; };
-		FAAB0289299FEED900C68B13 /* SettingsViewModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */; };
+		FAAA51092A38DB6E00B70B7C /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA51082A38DB6E00B70B7C /* CommonError.swift */; };
+		FAAA510B2A38F5DD00B70B7C /* BoardAnimationSelecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA510A2A38F5DD00B70B7C /* BoardAnimationSelecting.swift */; };
 		FAAB028C299FF77400C68B13 /* LabelAndStepperViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */; };
 		FAAB028E299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */; };
 		FAAB029129A0066500C68B13 /* SettingsTableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */; };
@@ -69,7 +65,6 @@
 		FAB1BF7929C2278A001D5C2D /* FlipBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF7829C2278A001D5C2D /* FlipBehavior.swift */; };
 		FAB1BF7D29C22C9D001D5C2D /* UIResponder + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF7C29C22C9D001D5C2D /* UIResponder + Extension.swift */; };
 		FAB1BF7F29C232AF001D5C2D /* TouchBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF7E29C232AF001D5C2D /* TouchBehavior.swift */; };
-		FAB1BF8329C23815001D5C2D /* BehaviorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF8229C23815001D5C2D /* BehaviorError.swift */; };
 		FAB1BF8629C24730001D5C2D /* CardViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF8529C24730001D5C2D /* CardViewViewModelType.swift */; };
 		FAB1BF8929C24898001D5C2D /* CardViewModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB1BF8829C24898001D5C2D /* CardViewModelView.swift */; };
 		FAB2F2AD29523600002CBF79 /* ForwardSideShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2F2AC29523600002CBF79 /* ForwardSideShapes.swift */; };
@@ -118,14 +113,13 @@
 		33D2CF290DA38AE719C822B6 /* Pods-Cards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.debug.xcconfig"; path = "Target Support Files/Pods-Cards/Pods-Cards.debug.xcconfig"; sourceTree = "<group>"; };
 		57D0B8CC5840FAF9C2D97009 /* Pods_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1150D7B6A73ACABC4B256A6 /* Pods-Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cards.release.xcconfig"; path = "Target Support Files/Pods-Cards/Pods-Cards.release.xcconfig"; sourceTree = "<group>"; };
-		FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardBackViewModelTVC.swift; sourceTree = "<group>"; };
+		FA0AC6102997EF530005DD97 /* CardBackSelecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackSelecting.swift; sourceTree = "<group>"; };
 		FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTableViewViewModelType.swift; sourceTree = "<group>"; };
-		FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardColorViewModelTVC.swift; sourceTree = "<group>"; };
-		FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCardTypeViewModelTVC.swift; sourceTree = "<group>"; };
+		FA0AC625299823770005DD97 /* CardColorSelecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardColorSelecting.swift; sourceTree = "<group>"; };
+		FA0AC62929982A440005DD97 /* CardTypeSelecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypeSelecting.swift; sourceTree = "<group>"; };
 		FA28B48D29B79C7800F4A9B1 /* BoardGameViewModelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModelVC.swift; sourceTree = "<group>"; };
 		FA28B48F29B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewViewModelType.swift; sourceTree = "<group>"; };
 		FA28B49229B7A7BB00F4A9B1 /* BoardGameButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameButtonType.swift; sourceTree = "<group>"; };
-		FA28B49429B7CF3600F4A9B1 /* BoardGameViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameViewModelError.swift; sourceTree = "<group>"; };
 		FA297E8D2959E5DD00E86552 /* CardViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewFactory.swift; sourceTree = "<group>"; };
 		FA29CD96291FFF3600E76DF5 /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA29CD99291FFF3600E76DF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,10 +139,8 @@
 		FA75D45029AD27DA00537916 /* NameSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpaces.swift; sourceTree = "<group>"; };
 		FA75D45229AD280900537916 /* MenuButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonType.swift; sourceTree = "<group>"; };
 		FA75D45629AD2A9500537916 /* ContinueProtocol + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContinueProtocol + Extension.swift"; sourceTree = "<group>"; };
-		FA75D45A29AD2DAA00537916 /* ContinueError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueError.swift; sourceTree = "<group>"; };
 		FA7A067D297C2E2500823470 /* SettingsViewModelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTVC.swift; sourceTree = "<group>"; };
 		FA7A067F297C38EC00823470 /* SettingsStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorageProtocol.swift; sourceTree = "<group>"; };
-		FA7A0682297C40A000823470 /* SettingsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsError.swift; sourceTree = "<group>"; };
 		FA7A0684297C441F00823470 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		FA7A0686297C4AFD00823470 /* LabelAndSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndSwitchCell.swift; sourceTree = "<group>"; };
 		FA7A0688297C777100823470 /* SelectTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTVC.swift; sourceTree = "<group>"; };
@@ -160,15 +152,14 @@
 		FA849537296CA72800D201FA /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		FA922C462988211700737D4D /* CardsCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardsCoreData.xcdatamodel; sourceTree = "<group>"; };
 		FA922C4829882A2D00737D4D /* StorageService .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageService .swift"; sourceTree = "<group>"; };
-		FA922C4A29882E8900737D4D /* StorageServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceError.swift; sourceTree = "<group>"; };
 		FA922C4C2988337A00737D4D /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + Extension.swift"; sourceTree = "<group>"; };
 		FA9A7F9529D1F5BB00B60FC9 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
-		FA9A7F9729D1F6D000B60FC9 /* SondError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SondError.swift; sourceTree = "<group>"; };
 		FA9A7F9929D1FB4800B60FC9 /* SoundNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNames.swift; sourceTree = "<group>"; };
 		FA9A7FAE29D2151400B60FC9 /* flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flip.mp3; sourceTree = "<group>"; };
 		FA9A7FB429D224FE00B60FC9 /* remove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = remove.mp3; sourceTree = "<group>"; };
 		FA9A7FB629D2307C00B60FC9 /* push_to_limits.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = push_to_limits.mp3; sourceTree = "<group>"; };
-		FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelError.swift; sourceTree = "<group>"; };
+		FAAA51082A38DB6E00B70B7C /* CommonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		FAAA510A2A38F5DD00B70B7C /* BoardAnimationSelecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardAnimationSelecting.swift; sourceTree = "<group>"; };
 		FAAB028B299FF77400C68B13 /* LabelAndStepperViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndStepperViewModelCell.swift; sourceTree = "<group>"; };
 		FAAB028D299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndSwitchViewModelCell.swift; sourceTree = "<group>"; };
 		FAAB029029A0066500C68B13 /* SettingsTableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewViewModelType.swift; sourceTree = "<group>"; };
@@ -181,7 +172,6 @@
 		FAB1BF7829C2278A001D5C2D /* FlipBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipBehavior.swift; sourceTree = "<group>"; };
 		FAB1BF7C29C22C9D001D5C2D /* UIResponder + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder + Extension.swift"; sourceTree = "<group>"; };
 		FAB1BF7E29C232AF001D5C2D /* TouchBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBehavior.swift; sourceTree = "<group>"; };
-		FAB1BF8229C23815001D5C2D /* BehaviorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorError.swift; sourceTree = "<group>"; };
 		FAB1BF8529C24730001D5C2D /* CardViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewViewModelType.swift; sourceTree = "<group>"; };
 		FAB1BF8829C24898001D5C2D /* CardViewModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelView.swift; sourceTree = "<group>"; };
 		FAB2F2AC29523600002CBF79 /* ForwardSideShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardSideShapes.swift; sourceTree = "<group>"; };
@@ -303,13 +293,7 @@
 		FA75D45429AD299800537916 /* for Error */ = {
 			isa = PBXGroup;
 			children = (
-				FA75D45A29AD2DAA00537916 /* ContinueError.swift */,
-				FA7A0682297C40A000823470 /* SettingsError.swift */,
-				FA28B49429B7CF3600F4A9B1 /* BoardGameViewModelError.swift */,
-				FAAB0288299FEED900C68B13 /* SettingsViewModelError.swift */,
-				FA922C4A29882E8900737D4D /* StorageServiceError.swift */,
-				FAB1BF8229C23815001D5C2D /* BehaviorError.swift */,
-				FA9A7F9729D1F6D000B60FC9 /* SondError.swift */,
+				FAAA51082A38DB6E00B70B7C /* CommonError.swift */,
 			);
 			path = "for Error";
 			sourceTree = "<group>";
@@ -513,9 +497,10 @@
 			isa = PBXGroup;
 			children = (
 				FA7A0688297C777100823470 /* SelectTVC.swift */,
-				FA0AC62929982A440005DD97 /* SelectCardTypeViewModelTVC.swift */,
-				FA0AC625299823770005DD97 /* SelectCardColorViewModelTVC.swift */,
-				FA0AC6102997EF530005DD97 /* SelectCardBackViewModelTVC.swift */,
+				FA0AC62929982A440005DD97 /* CardTypeSelecting.swift */,
+				FA0AC625299823770005DD97 /* CardColorSelecting.swift */,
+				FA0AC6102997EF530005DD97 /* CardBackSelecting.swift */,
+				FAAA510A2A38F5DD00B70B7C /* BoardAnimationSelecting.swift */,
 				FA0AC6142997F6AC0005DD97 /* SelectTableViewViewModelType.swift */,
 			);
 			path = SelectTVC;
@@ -843,7 +828,6 @@
 				FAB1BF8629C24730001D5C2D /* CardViewViewModelType.swift in Sources */,
 				FAFF8CEF2A30EA05001544DA /* FlippableView.swift in Sources */,
 				FACBEE5229E1C9780061D935 /* TimerService.swift in Sources */,
-				FAB1BF8329C23815001D5C2D /* BehaviorError.swift in Sources */,
 				FA75D45729AD2A9500537916 /* ContinueProtocol + Extension.swift in Sources */,
 				FAD1F79C2992A0780048E17F /* ViewInfo.swift in Sources */,
 				FA29CD9A291FFF3600E76DF5 /* AppDelegate.swift in Sources */,
@@ -873,6 +857,8 @@
 				FA7A067E297C2E2500823470 /* SettingsViewModelTVC.swift in Sources */,
 				FAED92912A1FE17500C45EEB /* TimerButton.swift in Sources */,
 				FAEBB0F9297704BE000650A8 /* SettingsProtocol.swift in Sources */,
+				FAAA510B2A38F5DD00B70B7C /* BoardAnimationSelecting.swift in Sources */,
+				FAAA51092A38DB6E00B70B7C /* CommonError.swift in Sources */,
 				FA5BD69C2A1292DD00358B51 /* RecordTableViewCellViewModelType.swift in Sources */,
 				FA922C4929882A2D00737D4D /* StorageService .swift in Sources */,
 				FA849532296C9D9600D201FA /* UIColor + Extension.swift in Sources */,
@@ -883,43 +869,37 @@
 				FAFF8CFF2A3113EF001544DA /* AnimationObjects.swift in Sources */,
 				FAEDC8AF2A0971AF0014A861 /* RecordCell.swift in Sources */,
 				FA7A0687297C4AFD00823470 /* LabelAndSwitchCell.swift in Sources */,
-				FA75D45B29AD2DAA00537916 /* ContinueError.swift in Sources */,
 				FAEDC8AD2A0958480014A861 /* RecordsViewModelTVC.swift in Sources */,
 				FA849530296C9C0C00D201FA /* UIButton + Extension.swift in Sources */,
 				FA922C4D2988337A00737D4D /* UIApplication + Extension.swift in Sources */,
 				FAEBC17C29CA2B75000652FF /* CardFlipBehavior.swift in Sources */,
 				FA7A0689297C777100823470 /* SelectTVC.swift in Sources */,
 				FA849534296CA0B400D201FA /* UILabel + Extesion.swift in Sources */,
-				FA7A0683297C40A000823470 /* SettingsError.swift in Sources */,
 				FA5BD6A22A1295DF00358B51 /* TimeFormatter.swift in Sources */,
 				FAEBB0F429770342000650A8 /* SettingsTVC.swift in Sources */,
-				FA0AC6112997EF530005DD97 /* SelectCardBackViewModelTVC.swift in Sources */,
+				FA0AC6112997EF530005DD97 /* CardBackSelecting.swift in Sources */,
 				FAAB029129A0066500C68B13 /* SettingsTableViewViewModelType.swift in Sources */,
 				FAF71E4D29EDC968009F0D3D /* RecordsTableViewViewModelType.swift in Sources */,
-				FA922C4B29882E8900737D4D /* StorageServiceError.swift in Sources */,
 				FAEBC17A29CA2B6C000652FF /* CardTouchesBehavior.swift in Sources */,
 				FAAB029529A00AB800C68B13 /* LabelAndStepperCellViewModelType.swift in Sources */,
 				FAFC1E0429F5AC25007F4568 /* NumberOfColorsViewModelTVC.swift in Sources */,
 				FADDE91C296896FE00A6FA2F /* BackSideShapes.swift in Sources */,
-				FA28B49529B7CF3600F4A9B1 /* BoardGameViewModelError.swift in Sources */,
 				FACF7AB2297090070045DB23 /* AnimationHelper.swift in Sources */,
 				FA29CD9C291FFF3600E76DF5 /* SceneDelegate.swift in Sources */,
 				FAAB028E299FFCFC00C68B13 /* LabelAndSwitchViewModelCell.swift in Sources */,
 				FA849538296CA72800D201FA /* UIStackView + Extension.swift in Sources */,
 				FAEBB0FF297734D3000650A8 /* LabelAndStepperCell.swift in Sources */,
-				FA9A7F9829D1F6D000B60FC9 /* SondError.swift in Sources */,
-				FA0AC62A29982A440005DD97 /* SelectCardTypeViewModelTVC.swift in Sources */,
+				FA0AC62A29982A440005DD97 /* CardTypeSelecting.swift in Sources */,
 				FAB1BF7529C21F61001D5C2D /* ClimbBehavior.swift in Sources */,
 				FAAB029329A009E300C68B13 /* LabelAndSwitchCellViewModelType.swift in Sources */,
 				FA0AC6152997F6AC0005DD97 /* SelectTableViewViewModelType.swift in Sources */,
 				FA28B49029B79DDE00F4A9B1 /* BoardGameViewViewModelType.swift in Sources */,
 				FA75D45129AD27DA00537916 /* NameSpaces.swift in Sources */,
 				FAB2F2AD29523600002CBF79 /* ForwardSideShapes.swift in Sources */,
-				FAAB0289299FEED900C68B13 /* SettingsViewModelError.swift in Sources */,
 				FADDE91F2968B62700A6FA2F /* ShapeLayerProtocol.swift in Sources */,
 				FAB1BF7929C2278A001D5C2D /* FlipBehavior.swift in Sources */,
 				FAEBC17829CA2B62000652FF /* ClimbInBehavior.swift in Sources */,
-				FA0AC626299823770005DD97 /* SelectCardColorViewModelTVC.swift in Sources */,
+				FA0AC626299823770005DD97 /* CardColorSelecting.swift in Sources */,
 				FAB1BF7D29C22C9D001D5C2D /* UIResponder + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

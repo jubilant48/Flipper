@@ -18,6 +18,7 @@ extension UIColor {
         case _F0F6F0_25252C = "F0F6F0_25252C"
         case _FFFFFF_1E1E1E = "FFFFFF_1E1E1E"
         case _D1D1D6_FFFFFF = "D1D1D6_FFFFFF"
+        case _CCCCFF_003153 = "CCCCFF_003153"
         
         // MARK: - Properties
         
@@ -34,6 +35,8 @@ extension UIColor {
                 return rawValue
             case ._D1D1D6_FFFFFF:
                 return rawValue
+            case ._CCCCFF_003153:
+                return rawValue
             }
         }
     }
@@ -47,6 +50,8 @@ extension UIColor {
         case ._FFFFFF_1E1E1E:
             return UIColor(named: asset.name)!
         case ._D1D1D6_FFFFFF:
+            return UIColor(named: asset.name)!
+        case ._CCCCFF_003153:
             return UIColor(named: asset.name)!
         }
     }
